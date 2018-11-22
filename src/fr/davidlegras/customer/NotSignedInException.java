@@ -1,6 +1,6 @@
 package fr.davidlegras.customer;
 
-public class NotSignedInException extends Exception {
+public class NotSignedInException extends SigningException {
 
     public NotSignedInException() {
         super();
