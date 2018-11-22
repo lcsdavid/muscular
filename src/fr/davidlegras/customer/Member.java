@@ -1,16 +1,18 @@
 package fr.davidlegras.customer;
 
-public class Member implements CustomerState {
+public class Member implements SignedInCustomer {
 
     Member() {
         super();
     }
 
-    public void handle(String login, String password) {
-
+    @Override
+    public int price(Customer customer) {
+        return 0;
     }
 
-    public void handle() {
+    @Override
+    public void signOut() throws NotSignedInException {
 
     }
 }

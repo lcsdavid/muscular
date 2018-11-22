@@ -1,18 +1,18 @@
 package fr.davidlegras.customer;
 
 
-public class Visitor implements CustomerState {
-    private static Visitor uniqueInstance;
-
+public class Visitor implements NotSignedInCustomer {
     private Visitor() {
         super();
     }
 
-    public void handle(String login, String password) {
-
-    }
-    public void handle() {
-
+    @Override
+    public int price(Customer customer) {
+        return 0;
     }
 
+    @Override
+    public void signIn(String login, String password) throws AlreadySignedInException {
+
+    }
 }
