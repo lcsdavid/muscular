@@ -2,7 +2,8 @@ package fr.davidlegras.customer;
 
 
 public class Visitor implements NotSignedInCustomer {
-    private Visitor() {
+
+    Visitor() {
         super();
     }
 

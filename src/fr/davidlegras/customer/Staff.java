@@ -2,7 +2,7 @@ package fr.davidlegras.customer;
 
 public class Staff implements SignedInCustomer {
 
-    private Staff() {
+    Staff() {
         super();
     }
 
