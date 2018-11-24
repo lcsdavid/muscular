@@ -2,7 +2,7 @@ package fr.davidlegras.serviceMarketing;
 
 import java.util.ArrayList;
 
-public class FlashOffer {
+public class FlashOffer extends CommercialOffer{
 
     public FlashOffer(float reduction, ArrayList<String> target){
         used = false;
