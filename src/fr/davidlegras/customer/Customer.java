@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Customer {
+
     private String firstName;
     private CustomerState customerState;
     private Map<Product, Integer> cart;
@@ -45,7 +46,10 @@ public class Customer {
     public void addToCart(Product product, int count) {
         if (product == null)
             throw new NullPointerException();
-        // TODO
+        if (cart.containsKey(product))
+            cart.replace(product, cart.get(product) + count);
+        else
+            cart.put(product, count);
     }
 
     public void addToCart(Product product) {
