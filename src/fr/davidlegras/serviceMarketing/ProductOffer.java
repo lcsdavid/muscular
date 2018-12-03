@@ -5,6 +5,9 @@ import fr.davidlegras.product.Product;
 import java.util.ArrayList;
 
 public class ProductOffer extends CommercialOffer {
+
+    private String target; //le nom ou la catégorie du/des produits ciblés
+
     public ProductOffer (float reduction, String target){
         if(reduction > 100)
             reduction = 0;//créer une exception
@@ -12,8 +15,7 @@ public class ProductOffer extends CommercialOffer {
         this.target = target;
     }
 
-    private float reduction;
-    private String target;//le nom ou la catégorie du/des produits ciblés
+
 
     public float getReduction(){return reduction;}
 

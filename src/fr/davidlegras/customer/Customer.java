@@ -5,8 +5,9 @@ import fr.davidlegras.product.Product;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.Flow;
 
-public class Customer {
+public class Customer implements Flow.Publisher<Integer> {
 
     private String firstName;
     private CustomerState customerState;
@@ -54,5 +55,10 @@ public class Customer {
 
     public void addToCart(Product product) {
         addToCart(product, 1);
+    }
+
+    @Override
+    public void subscribe(Flow.Subscriber<? super Integer> subscriber) {
+
     }
 }

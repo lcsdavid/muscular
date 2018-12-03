@@ -1,4 +1,5 @@
 package fr.davidlegras.serviceMarketing;
 
-public abstract class Alarme {
+public abstract class Alert {
+
 }
