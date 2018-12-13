@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="807b764d-bfa5-443e-8747-90ab2412eca4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/customer/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/SignedInCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/customer/SignedInCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/customer/Staff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/customer/Visitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/VisitorFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/customer/VisitorFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/ProductOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/ProductOffer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,7 +52,7 @@
                 <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/SigningException.java">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="136">
-                      <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+                      <caret line="12" selection-start-line="12" selection-end-line="12" />
                     </state>
                   </provider>
                 </entry>
@@ -68,7 +61,7 @@
                 <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerListener.java">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="187">
-                      <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+                      <caret line="11" selection-start-line="11" selection-end-line="11" />
                       <folding>
                         <element signature="imports" expanded="true" />
                       </folding>
@@ -93,17 +86,35 @@
               <file leaf-file-name="StaffFactory.java" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/StaffFactory.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="68">
-                      <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+                    <state relative-caret-position="170">
+                      <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="Visitor.java" pinned="false" current-in-tab="true">
+              <file leaf-file-name="MemberFactory.java" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/MemberFactory.java">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="170">
+                      <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="VisitorFactory.java" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/VisitorFactory.java">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="153">
+                      <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="Visitor.java" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Visitor.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="187">
-                      <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+                    <state relative-caret-position="102">
+                      <caret line="8" selection-start-line="8" selection-end-line="8" />
                       <folding>
                         <element signature="method#signIn#0;class#Visitor#0" />
                       </folding>
@@ -137,7 +148,7 @@
                 <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Customer.java">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="68">
-                      <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+                      <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
                       <folding>
                         <element signature="method#Customer#0;class#Customer#0" />
                         <element signature="method#Customer#1;class#Customer#0" />
@@ -174,8 +185,8 @@
               <file leaf-file-name="ProductOffer.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/ProductOffer.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="357">
-                      <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+                    <state relative-caret-position="153">
+                      <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
                       <folding>
                         <element signature="method#ProductOffer#0;class#ProductOffer#0" />
                         <element signature="method#getReduction#0;class#ProductOffer#0" />
@@ -304,7 +315,6 @@
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/Product.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/CommercialOffer.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/FlashOffer.java" />
-        <option value="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/ProductOffer.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerListener.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/NotSignedInCustomer.java" />
@@ -313,11 +323,14 @@
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerState.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/SignedInCustomer.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/Staff.java" />
-        <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/VisitorFactory.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/state/SignedInCustomer.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/state/Member.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/Member.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/Visitor.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/StaffFactory.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/MemberFactory.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/VisitorFactory.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/ProductOffer.java" />
       </list>
     </option>
   </component>
@@ -444,12 +457,12 @@
       <option name="presentableId" value="Default" />
       <updated>1542901034735</updated>
       <workItem from="1542901039951" duration="2409000" />
-      <workItem from="1544722314368" duration="5125000" />
+      <workItem from="1544722314368" duration="5257000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13682000" />
+    <option name="totallyTimeSpent" value="13814000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -457,6 +470,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.329718" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -478,7 +492,6 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -567,18 +580,11 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/Throwable.java" />
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/Exception.java" />
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/MemberFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Basket.java" />
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/SigningException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -620,17 +626,10 @@
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/StaffFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -671,21 +670,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/ProductOffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="method#ProductOffer#0;class#ProductOffer#0" />
-            <element signature="method#getReduction#0;class#ProductOffer#0" />
-            <element signature="method#getPrice#0;class#ProductOffer#0" />
-            <element signature="method#getPrice#1;class#ProductOffer#0" />
-            <element signature="method#getReduction#1;class#ProductOffer#0" />
-            <element signature="method#getReduction#2;class#ProductOffer#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/EventListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -703,17 +687,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/VisitorFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        <state relative-caret-position="421">
+          <caret line="60" column="61" selection-start-line="60" selection-start-column="61" selection-end-line="60" selection-end-column="61" />
           <folding>
             <element signature="method#Customer#0;class#Customer#0" />
             <element signature="method#Customer#1;class#Customer#0" />
@@ -773,10 +750,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Visitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state relative-caret-position="102">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="method#signIn#0;class#Visitor#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/MemberFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/StaffFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/VisitorFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/ProductOffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding>
+            <element signature="method#ProductOffer#0;class#ProductOffer#0" />
+            <element signature="method#getReduction#0;class#ProductOffer#0" />
+            <element signature="method#getPrice#0;class#ProductOffer#0" />
+            <element signature="method#getPrice#1;class#ProductOffer#0" />
+            <element signature="method#getReduction#1;class#ProductOffer#0" />
+            <element signature="method#getReduction#2;class#ProductOffer#0" />
           </folding>
         </state>
       </provider>

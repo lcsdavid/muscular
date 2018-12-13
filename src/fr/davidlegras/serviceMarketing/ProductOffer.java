@@ -15,8 +15,6 @@ public class ProductOffer extends CommercialOffer {
         this.target = target;
     }
 
-
-
     public float getReduction(){return reduction;}
 
     public String getTarget() {
