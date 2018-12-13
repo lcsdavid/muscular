@@ -1,8 +1,8 @@
 package fr.davidlegras.serviceMarketing;
 
-import java.util.ArrayList;
-
 import fr.davidlegras.product.Product;
+
+import java.util.ArrayList;
 
 public class FlashOffer extends CommercialOffer {
     private boolean used; /* Indique si la réduction à été utilisé ou pas */

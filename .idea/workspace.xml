@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="807b764d-bfa5-443e-8747-90ab2412eca4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/ProductOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/ProductOffer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fr/davidlegras/customer/FidelityCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fr/davidlegras/customer/NotEnoughFidelityPointsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/muscular-tp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/muscular-tp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/Alert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/Alert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/FlashOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/FlashOffer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,13 +76,14 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="MarketingService.java" pinned="false" current-in-tab="false">
+              <file leaf-file-name="MarketingService.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="153">
-                      <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+                    <state relative-caret-position="425">
+                      <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
                       <folding>
-                        <element signature="imports" expanded="true" />
+                        <element signature="e#384#385#0" expanded="true" />
+                        <element signature="e#407#408#0" expanded="true" />
                         <element signature="method#addCustomerListener#0;class#MarketingService#0" />
                         <element signature="method#reCustomerListener#0;class#MarketingService#0" />
                       </folding>
@@ -101,7 +109,7 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="VisitorFactory.java" pinned="false" current-in-tab="true">
+              <file leaf-file-name="VisitorFactory.java" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/VisitorFactory.java">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="153">
@@ -182,11 +190,11 @@
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="ProductOffer.java" pinned="false" current-in-tab="true">
+              <file leaf-file-name="ProductOffer.java" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/ProductOffer.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="153">
-                      <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+                    <state relative-caret-position="391">
+                      <caret line="52" selection-start-line="52" selection-end-line="52" />
                       <folding>
                         <element signature="method#ProductOffer#0;class#ProductOffer#0" />
                         <element signature="method#getReduction#0;class#ProductOffer#0" />
@@ -194,6 +202,115 @@
                         <element signature="method#getPrice#1;class#ProductOffer#0" />
                         <element signature="method#getReduction#1;class#ProductOffer#0" />
                         <element signature="method#getReduction#2;class#ProductOffer#0" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="FlashOffer.java" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/FlashOffer.java">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="102">
+                      <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+                      <folding>
+                        <element signature="method#FlashOffer#0;class#FlashOffer#0" />
+                        <element signature="method#getPrice#0;class#FlashOffer#0" />
+                        <element signature="method#getREduc#0;class#FlashOffer#0" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="FidelityCard.java" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/FidelityCard.java">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="289">
+                      <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+                      <folding>
+                        <element signature="method#FidelityCard#1;class#FidelityCard#0" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="NotEnoughFidelityPointsException.java" pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/NotEnoughFidelityPointsException.java">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="119">
+                      <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="Throwable.java" pinned="false" current-in-tab="false">
+                <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Throwable.java">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="183">
+                      <caret line="650" column="8" selection-start-line="650" selection-start-column="8" selection-end-line="650" selection-end-column="9" />
+                      <folding>
+                        <element signature="docComment;class#Throwable#0" />
+                        <element signature="e#5075#5138#0" />
+                        <element signature="e#5216#5301#0" />
+                        <element signature="e#5347#5548#0" />
+                        <element signature="e#5589#5695#0" />
+                        <element signature="e#5589#6539#0" />
+                        <element signature="e#5746#6125#0" />
+                        <element signature="e#6280#6394#0" />
+                        <element signature="e#6545#6598#0" />
+                        <element signature="e#7787#8160#0" />
+                        <element signature="e#8202#8560#0" />
+                        <element signature="e#8629#8712#0" />
+                        <element signature="e#8959#9348#0" />
+                        <element signature="e#9426#9481#0" />
+                        <element signature="e#9577#9623#0" />
+                        <element signature="e#9722#9783#0" />
+                        <element signature="e#9852#9913#0" />
+                        <element signature="e#9988#10327#0" />
+                        <element signature="e#10392#10880#0" />
+                        <element signature="e#10392#10986#0" />
+                        <element signature="e#10992#11782#0" />
+                        <element signature="e#10992#11933#0" />
+                        <element signature="e#11939#12760#0" />
+                        <element signature="e#11939#12927#0" />
+                        <element signature="e#12933#15118#0" />
+                        <element signature="e#12933#15544#0" />
+                        <element signature="e#15550#15750#0" />
+                        <element signature="e#15825#16219#0" />
+                        <element signature="e#16302#17348#0" />
+                        <element signature="e#17452#19034#0" />
+                        <element signature="e#17452#19459#0" />
+                        <element signature="e#19465#19982#0" />
+                        <element signature="e#19465#20169#0" />
+                        <element signature="e#20175#26255#0" />
+                        <element signature="e#26340#26490#0" />
+                        <element signature="e#26603#27567#0" />
+                        <element signature="e#26665#26724#0" />
+                        <element signature="e#27573#27676#0" />
+                        <element signature="e#27573#29339#0" />
+                        <element signature="e#29345#29522#0" />
+                        <element signature="e#29635#30050#0" />
+                        <element signature="e#29825#29894#0" />
+                        <element signature="e#29936#30003#0" />
+                        <element signature="e#30056#30434#0" />
+                        <element signature="e#30440#30818#0" />
+                        <element signature="e#30824#31352#0" />
+                        <element signature="e#30824#31616#0" />
+                        <element signature="e#31681#33034#0" />
+                        <element signature="e#33138#33635#0" />
+                        <element signature="e#33208#33261#0" />
+                        <element signature="e#33641#34903#0" />
+                        <element signature="e#33641#35489#0" />
+                        <element signature="e#35495#36238#0" />
+                        <element signature="e#35495#38795#0" />
+                        <element signature="e#36828#36878#0" />
+                        <element signature="e#38504#38560#0" />
+                        <element signature="e#38801#39073#0" />
+                        <element signature="e#38801#39710#0" />
+                        <element signature="e#39175#39230#0" />
+                        <element signature="e#39716#42278#0" />
+                        <element signature="e#39716#42828#0" />
+                        <element signature="e#42914#43548#0" />
+                        <element signature="e#42914#43842#0" />
                       </folding>
                     </state>
                   </provider>
@@ -268,16 +385,16 @@
           </split-first>
           <split-second>
             <leaf>
-              <file leaf-file-name="CustomerState.java" pinned="false" current-in-tab="false">
+              <file leaf-file-name="CustomerState.java" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerState.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="102">
-                      <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+                    <state relative-caret-position="34">
+                      <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
                     </state>
                   </provider>
                 </entry>
               </file>
-              <file leaf-file-name="Staff.java" pinned="false" current-in-tab="true">
+              <file leaf-file-name="Staff.java" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Staff.java">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="34">
@@ -295,8 +412,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -315,7 +432,6 @@
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/Product.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/CommercialOffer.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/FlashOffer.java" />
-        <option value="$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerListener.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/NotSignedInCustomer.java" />
         <option value="$PROJECT_DIR$/.gitignore/.gitignore" />
@@ -331,6 +447,10 @@
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/MemberFactory.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/VisitorFactory.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/ProductOffer.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/Alert.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/NotEnoughFidelityPointsException.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/FidelityCard.java" />
       </list>
     </option>
   </component>
@@ -360,22 +480,6 @@
             <path>
               <item name="muscular-tp" type="b2602c69:ProjectViewProjectNode" />
               <item name="muscular-tp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="muscular-tp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="muscular-tp" type="462c0819:PsiDirectoryNode" />
-              <item name=".gitignore" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="muscular-tp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="muscular-tp" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="muscular-tp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="muscular-tp" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
-              <item name="dictionaries" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="muscular-tp" type="b2602c69:ProjectViewProjectNode" />
@@ -457,12 +561,12 @@
       <option name="presentableId" value="Default" />
       <updated>1542901034735</updated>
       <workItem from="1542901039951" duration="2409000" />
-      <workItem from="1544722314368" duration="5257000" />
+      <workItem from="1544722314368" duration="7198000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13814000" />
+    <option name="totallyTimeSpent" value="15755000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
@@ -511,16 +615,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Basket.java" />
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/FlashOffer.java" />
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/CommercialOffer.java" />
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/VisitorFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Visitor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -592,7 +686,6 @@
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/lang/String.java" />
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/Map.java" />
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/Alarme.java" />
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/Alert.java" />
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/Checkout.java" />
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/concurrent/Flow.java" />
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Product.java">
@@ -603,19 +696,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/CommercialOffer.java" />
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/FlashOffer.java" />
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#addCustomerListener#0;class#MarketingService#0" />
-            <element signature="method#reCustomerListener#0;class#MarketingService#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerStateFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -712,20 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Staff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Member.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -772,17 +838,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/VisitorFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Staff.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/ProductOffer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        <state relative-caret-position="391">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
           <folding>
             <element signature="method#ProductOffer#0;class#ProductOffer#0" />
             <element signature="method#getReduction#0;class#ProductOffer#0" />
@@ -790,6 +863,141 @@
             <element signature="method#getPrice#1;class#ProductOffer#0" />
             <element signature="method#getReduction#1;class#ProductOffer#0" />
             <element signature="method#getReduction#2;class#ProductOffer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/FlashOffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+          <folding>
+            <element signature="method#FlashOffer#0;class#FlashOffer#0" />
+            <element signature="method#getPrice#0;class#FlashOffer#0" />
+            <element signature="method#getREduc#0;class#FlashOffer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Exception.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="33" column="57" lean-forward="true" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/Alert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Throwable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="650" column="8" selection-start-line="650" selection-start-column="8" selection-end-line="650" selection-end-column="9" />
+          <folding>
+            <element signature="docComment;class#Throwable#0" />
+            <element signature="e#5075#5138#0" />
+            <element signature="e#5216#5301#0" />
+            <element signature="e#5347#5548#0" />
+            <element signature="e#5589#5695#0" />
+            <element signature="e#5589#6539#0" />
+            <element signature="e#5746#6125#0" />
+            <element signature="e#6280#6394#0" />
+            <element signature="e#6545#6598#0" />
+            <element signature="e#7787#8160#0" />
+            <element signature="e#8202#8560#0" />
+            <element signature="e#8629#8712#0" />
+            <element signature="e#8959#9348#0" />
+            <element signature="e#9426#9481#0" />
+            <element signature="e#9577#9623#0" />
+            <element signature="e#9722#9783#0" />
+            <element signature="e#9852#9913#0" />
+            <element signature="e#9988#10327#0" />
+            <element signature="e#10392#10880#0" />
+            <element signature="e#10392#10986#0" />
+            <element signature="e#10992#11782#0" />
+            <element signature="e#10992#11933#0" />
+            <element signature="e#11939#12760#0" />
+            <element signature="e#11939#12927#0" />
+            <element signature="e#12933#15118#0" />
+            <element signature="e#12933#15544#0" />
+            <element signature="e#15550#15750#0" />
+            <element signature="e#15825#16219#0" />
+            <element signature="e#16302#17348#0" />
+            <element signature="e#17452#19034#0" />
+            <element signature="e#17452#19459#0" />
+            <element signature="e#19465#19982#0" />
+            <element signature="e#19465#20169#0" />
+            <element signature="e#20175#26255#0" />
+            <element signature="e#26340#26490#0" />
+            <element signature="e#26603#27567#0" />
+            <element signature="e#26665#26724#0" />
+            <element signature="e#27573#27676#0" />
+            <element signature="e#27573#29339#0" />
+            <element signature="e#29345#29522#0" />
+            <element signature="e#29635#30050#0" />
+            <element signature="e#29825#29894#0" />
+            <element signature="e#29936#30003#0" />
+            <element signature="e#30056#30434#0" />
+            <element signature="e#30440#30818#0" />
+            <element signature="e#30824#31352#0" />
+            <element signature="e#30824#31616#0" />
+            <element signature="e#31681#33034#0" />
+            <element signature="e#33138#33635#0" />
+            <element signature="e#33208#33261#0" />
+            <element signature="e#33641#34903#0" />
+            <element signature="e#33641#35489#0" />
+            <element signature="e#35495#36238#0" />
+            <element signature="e#35495#38795#0" />
+            <element signature="e#36828#36878#0" />
+            <element signature="e#38504#38560#0" />
+            <element signature="e#38801#39073#0" />
+            <element signature="e#38801#39710#0" />
+            <element signature="e#39175#39230#0" />
+            <element signature="e#39716#42278#0" />
+            <element signature="e#39716#42828#0" />
+            <element signature="e#42914#43548#0" />
+            <element signature="e#42914#43842#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/VisitorFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
+            <element signature="method#addCustomerListener#0;class#MarketingService#0" />
+            <element signature="method#reCustomerListener#0;class#MarketingService#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/NotEnoughFidelityPointsException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/FidelityCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="method#FidelityCard#1;class#FidelityCard#0" />
           </folding>
         </state>
       </provider>
