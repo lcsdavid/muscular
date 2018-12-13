@@ -19,5 +19,30 @@ public class FlashOffer extends CommercialOffer {
         return used;
     }
 
+    public float getPrice(ArrayList<Product> products){
+        float res = 0;
+            if(products.containsAll(target)) {//on fait la réduction
+                for(Product p : products){//on parcours tous les produits que l'on nous a donné
+                    if(target.contains(p))
+                        res+= p.getPrice() - p.getPrice()*reduction/100;
+                }
+            }else{
+                for(Product p : products){//on parcours tous les produits que l'on nous a donné
+                    res+= p.getPrice();
+                }
+            }
+        return res;
+    }
+
+    public float getREduc(ArrayList<Product> products){
+        float res = 0;
+        if(products.containsAll(target)) {//on fait la réduction
+            for(Product p : products){//on parcours tous les produits que l'on nous a donné
+                if(target.contains(p))
+                    res+= p.getPrice()*reduction/100;
+            }
+        }
+        return res;
+    }
 
 }
