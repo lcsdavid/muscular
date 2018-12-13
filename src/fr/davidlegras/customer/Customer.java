@@ -2,10 +2,8 @@ package fr.davidlegras.customer;
 
 import fr.davidlegras.product.Product;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.Flow;
 
 public class Customer {
     private CustomerState customerState;
@@ -60,8 +58,8 @@ public class Customer {
 
     /* Connexion & Déconnexion */
 
-    public void signIn(final String login, final String hashPassword) throws AlreadySignedInException {
-        customerState.signIn(this, login, password);
+    public void signIn(final String login, final String passwordHash) throws AlreadySignedInException {
+        customerState.signIn(this, login, passwordHash);
     }
 
     public void signOut() throws NotSignedInException {

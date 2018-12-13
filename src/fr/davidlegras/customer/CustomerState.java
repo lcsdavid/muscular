@@ -1,5 +1,9 @@
 package fr.davidlegras.customer;
 
+import fr.davidlegras.customer.AlreadySignedInException;
+import fr.davidlegras.customer.Customer;
+import fr.davidlegras.customer.NotSignedInException;
+
 public interface CustomerState {
 
     String name();

@@ -1,18 +1,13 @@
 package fr.davidlegras.customer;
 
-public class Member implements SignedInCustomer {
+public class Member extends SignedInCustomer {
 
-    Member() {
-        super();
+    public Member(String name) {
+        super(name);
     }
 
     @Override
     public int price(Customer customer) {
         return 0;
-    }
-
-    @Override
-    public void signOut() throws NotSignedInException {
-
     }
 }

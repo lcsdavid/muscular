@@ -7,7 +7,8 @@ public class VisitorFactory implements CustomerStateFactory {
     @Override
     public CustomerState makeCustomerState() {
         if (UNIQUE_VISITOR_INSTANCE == null)
-            UNIQUE_VISITOR_INSTANCE = new Staff();
+            UNIQUE_VISITOR_INSTANCE = new Staff("");
+        // TODO le nom
         return UNIQUE_VISITOR_INSTANCE;
     }
 }

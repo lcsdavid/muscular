@@ -1,9 +1,9 @@
 package fr.davidlegras.customer;
 
 
-public class Visitor implements NotSignedInCustomer {
+public class Visitor extends NotSignedInCustomer {
 
-    Visitor() {
+    public Visitor() {
         super();
     }
 
@@ -13,7 +13,7 @@ public class Visitor implements NotSignedInCustomer {
     }
 
     @Override
-    public void signIn(String login, String password) throws AlreadySignedInException {
+    public void signIn(final Customer context, final String login, final String passwordHash) throws AlreadySignedInException {
 
     }
 }

@@ -10,9 +10,4 @@ public class Staff extends SignedInCustomer {
     public int price(Customer customer) {
         return 0;
     }
-
-    @Override
-    public void signOut() throws NotSignedInException {
-
-    }
 }

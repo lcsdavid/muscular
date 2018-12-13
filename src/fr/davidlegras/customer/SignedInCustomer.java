@@ -4,7 +4,7 @@ public abstract class SignedInCustomer implements CustomerState {
 
     private final String name;
 
-    protected SignedInCustomer(String name) {
+    public SignedInCustomer(String name) {
         super();
         this.name = name;
     }
@@ -21,6 +21,6 @@ public abstract class SignedInCustomer implements CustomerState {
 
     @Override
     public final void signOut(final Customer context) {
-        context.
+        context.customerState(new VisitorFactory().makeCustomerState());
     }
 }
