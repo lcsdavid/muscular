@@ -7,7 +7,8 @@ public class MemberFactory implements CustomerStateFactory {
     @Override
     public CustomerState makeCustomerState() {
         if (UNIQUE_MEMBER_INSTANCE == null)
-            UNIQUE_MEMBER_INSTANCE = new Member();
+            UNIQUE_MEMBER_INSTANCE = new Member("");
+        // TODO name
         return UNIQUE_MEMBER_INSTANCE;
     }
 }
