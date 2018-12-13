@@ -1,9 +1,14 @@
 package fr.davidlegras.customer;
 
-public interface NotSignedInCustomer extends CustomerState {
+public abstract class NotSignedInCustomer implements CustomerState {
 
     @Override
-    default void signOut() throws NotSignedInException {
+    public String name() {
+        return "Guest";
+    }
+
+    @Override
+    public final void signOut(final Customer context) throws NotSignedInException {
         throw new NotSignedInException();
     }
 }

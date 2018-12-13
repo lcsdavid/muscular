@@ -1,28 +1,22 @@
 package fr.davidlegras;
 
-import java.util.concurrent.Flow;
+import fr.davidlegras.customer.CustomerListener;
 
-public class MarketingService implements Flow.Subscriber<Integer> {
+import javax.swing.event.EventListenerList;
 
 
+public class MarketingService {
 
-    @Override
-    public void onSubscribe(Flow.Subscription subscription) {
-        subscription.request(1);
+    private final EventListenerList listeners = new EventListenerList();
+
+    public synchronized void addCustomerListener(CustomerListener listener) {
+        listeners.add(CustomerListener.class, listener);
     }
 
-    @Override
-    public void onNext(Integer item) {
-
+    public synchronized void removeCustomerListener(CustomerListener listener) {
+        listeners.remove(CustomerListener.class, listener);
     }
 
-    @Override
-    public void onError(Throwable throwable) {
 
-    }
 
-    @Override
-    public void onComplete() {
-
-    }
 }

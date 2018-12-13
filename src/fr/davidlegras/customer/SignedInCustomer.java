@@ -1,9 +1,26 @@
 package fr.davidlegras.customer;
 
-public interface SignedInCustomer extends CustomerState {
+public abstract class SignedInCustomer implements CustomerState {
+
+    private final String name;
+
+    protected SignedInCustomer(String name) {
+        super();
+        this.name = name;
+    }
 
     @Override
-    public default void signIn(String login, String password) throws AlreadySignedInException {
+    public String name() {
+        return name;
+    }
+
+    @Override
+    public final void signIn(final Customer context, final String login, final String passwordHash) throws AlreadySignedInException {
         throw new AlreadySignedInException();
+    }
+
+    @Override
+    public final void signOut(final Customer context) {
+        context.
     }
 }

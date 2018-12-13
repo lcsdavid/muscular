@@ -7,41 +7,28 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Flow;
 
-public class Customer implements Flow.Publisher<Integer> {
-
-    private String firstName;
+public class Customer {
     private CustomerState customerState;
     private Map<Product, Integer> cart;
 
     public Customer() {
         super();
-        firstName = null;
         customerState = new VisitorFactory().makeCustomerState();
         cart = new HashMap<>();
     }
 
-    public Customer(String login, String password) {
+    public Customer(String login, String passwordHash) {
+        this();
+        try {
+            signIn(login, passwordHash);
+        } catch (AlreadySignedInException ignored) {} /* Never catch in this case. */
 
     }
 
-    public final int rawPrice() {
-        int cartPrice = 0;
-        for (Map.Entry<Product, Integer> entry: cart.entrySet()) {
-            cartPrice += entry.getKey().getPrice() * entry.getValue();
-        }
-        return cartPrice;
-    }
+    /* Acesseurs & Mutateurs */
 
-    public int price() {
-        return customerState.price(this);
-    }
-
-    public void signIn(String login, String password) throws AlreadySignedInException {
-        customerState.signIn(login, password);
-    }
-
-    public void signOut() throws NotSignedInException {
-        customerState.signOut();
+    void customerState(CustomerState state) {
+        customerState = state;
     }
 
     public void addToCart(Product product, int count) {
@@ -57,8 +44,27 @@ public class Customer implements Flow.Publisher<Integer> {
         addToCart(product, 1);
     }
 
-    @Override
-    public void subscribe(Flow.Subscriber<? super Integer> subscriber) {
+    /* Prix */
 
+    public int price() {
+        return customerState.price(this);
+    }
+
+    public int rawPrice() {
+        int cartPrice = 0;
+        for (Map.Entry<Product, Integer> entry: cart.entrySet()) {
+            cartPrice += entry.getKey().getPrice() * entry.getValue();
+        }
+        return cartPrice;
+    }
+
+    /* Connexion & Déconnexion */
+
+    public void signIn(final String login, final String hashPassword) throws AlreadySignedInException {
+        customerState.signIn(this, login, password);
+    }
+
+    public void signOut() throws NotSignedInException {
+        customerState.signOut(this);
     }
 }

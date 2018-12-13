@@ -2,7 +2,8 @@ package fr.davidlegras.customer;
 
 public interface CustomerState {
 
-    int price(Customer customer);
-    void signIn(String login, String password) throws AlreadySignedInException;
-    void signOut() throws NotSignedInException;
+    String name();
+    int price(final Customer context);
+    void signIn(final Customer context, final String login, final String passwordHash) throws AlreadySignedInException;
+    void signOut(final Customer context) throws NotSignedInException;
 }

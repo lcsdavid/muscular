@@ -1,9 +1,9 @@
 package fr.davidlegras.customer;
 
-public class Staff implements SignedInCustomer {
+public class Staff extends SignedInCustomer {
 
-    Staff() {
-        super();
+    Staff(final String name) {
+        super(name);
     }
 
     @Override
