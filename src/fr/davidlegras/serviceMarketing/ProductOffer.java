@@ -62,4 +62,9 @@ public class ProductOffer extends CommercialOffer {
         return res;
     }
 
+    @Override
+    public String toString(){
+        return "Cible : " + target + ", " + reduction + "%";
+    }
+
 }

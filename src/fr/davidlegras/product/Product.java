@@ -1,9 +1,13 @@
 package fr.davidlegras.product;
 
-public abstract class Product {
+public class Product {
     private float price;
     private String categorie;
     private String name;
+
+    public String toString(){
+        return "Catégorie : " + categorie + ", Produit : " + name + "   Prix : " + price + " euros" ;
+    }
 
     public final float getPrice() {
         return price;

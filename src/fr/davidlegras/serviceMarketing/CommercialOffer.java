@@ -12,4 +12,6 @@ public abstract class CommercialOffer {
     }
 
     public abstract float getReduction(Map<Product, Integer> cart);
+
+    public abstract String toString();
 }

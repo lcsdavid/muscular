@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class FlashOffer extends CommercialOffer {
-    private boolean used; /* Indique si la réduction à été utilisé ou pas */
     private ArrayList<Product> target; /* La liste des artciles qui sont concernés */
 
 
@@ -14,11 +13,6 @@ public class FlashOffer extends CommercialOffer {
     public FlashOffer(float reduction, ArrayList<Product> target) {
         this.reduction = reduction;
         this.target = target;
-        used = false;
-    }
-
-    public Boolean getUsed() {
-        return used;
     }
 
     public float getPrice(ArrayList<Product> products){
@@ -76,6 +70,17 @@ public class FlashOffer extends CommercialOffer {
         //on va appliquer la réduction sur tous les produits
         for(Product entry : target){
             res += cart.get(entry)*(reduction/100);
+        }
+
+        return res;
+    }
+
+    @Override
+    public String toString(){
+        String res = "Flash Offer : " + reduction + "%";
+
+        for (Product product: target) {
+            res += "\n" + product.toString() ;
         }
 
         return res;
