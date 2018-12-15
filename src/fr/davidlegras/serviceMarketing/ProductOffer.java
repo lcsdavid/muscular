@@ -50,6 +50,7 @@ public class ProductOffer extends CommercialOffer {
         return res;
     }
 
+    @Override
     public float getReduction(Map<Product, Integer> cart){
 
         float res = 0;

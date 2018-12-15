@@ -63,6 +63,7 @@ public class FlashOffer extends CommercialOffer {
         return true;
     }
 
+    @Override
     public float getReduction(Map<Product, Integer> cart){
 
         float res = 0;
