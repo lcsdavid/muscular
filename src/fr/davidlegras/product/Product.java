@@ -20,4 +20,18 @@ public class Product {
     }
     public final String getCategorie(){ return categorie;}
     public final String getName() {return name;}
+
+    @Override
+    public boolean equals(Object object){
+        if(object == null)
+            return false;
+        if(object == this)
+            return false;
+        if(object.getClass() != this.getClass())
+            return false;
+        Product p = (Product)object;
+        if(p.getName() == this.getName() && p.getCategorie() == this.getCategorie())
+            return true;
+        return false;
+    }
 }
