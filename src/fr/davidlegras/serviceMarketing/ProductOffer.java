@@ -3,6 +3,7 @@ package fr.davidlegras.serviceMarketing;
 import fr.davidlegras.product.Product;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public class ProductOffer extends CommercialOffer {
 
@@ -46,6 +47,17 @@ public class ProductOffer extends CommercialOffer {
         for(Product p : products){
             res += getReduction(p);
         }
+        return res;
+    }
+
+    public float getReduction(Map<Product, Integer> cart){
+
+        float res = 0;
+
+        for(Map.Entry<Product, Integer> entry : cart.entrySet()){
+            res += getReduction(entry.getKey());
+        }
+
         return res;
     }
 
