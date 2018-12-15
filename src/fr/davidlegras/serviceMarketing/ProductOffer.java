@@ -9,9 +9,10 @@ public class ProductOffer extends CommercialOffer {
 
     private String target; //le nom ou la catégorie du/des produits ciblés
 
-    public ProductOffer (float reduction, String target){
-        if(reduction > 100)
-            reduction = 0;//créer une exception
+    public ProductOffer (float reduction, String target) throws notInBoundsReduction {
+        if(reduction >100 || reduction < 0){
+            throw new notInBoundsReduction("Reduction non comprise entre 0 et 100");
+        }
         this.reduction = reduction;
         this.target = target;
     }

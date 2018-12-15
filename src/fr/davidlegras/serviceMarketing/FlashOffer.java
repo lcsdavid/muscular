@@ -10,7 +10,10 @@ public class FlashOffer extends CommercialOffer {
 
 
 
-    public FlashOffer(float reduction, ArrayList<Product> target) {
+    public FlashOffer(float reduction, ArrayList<Product> target) throws notInBoundsReduction {
+        if(reduction >100 || reduction < 0){
+            throw new notInBoundsReduction("Reduction non comprise entre 0 et 100");
+        }
         this.reduction = reduction;
         this.target = target;
     }
