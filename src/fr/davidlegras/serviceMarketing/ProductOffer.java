@@ -57,7 +57,7 @@ public class ProductOffer extends CommercialOffer {
         float res = 0;
 
         for(Map.Entry<Product, Integer> entry : cart.entrySet()){
-            res += getReduction(entry.getKey());
+            res += getReduction(entry.getKey())*entry.getValue();
         }
 
         return res;
