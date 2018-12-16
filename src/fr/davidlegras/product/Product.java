@@ -30,7 +30,7 @@ public class Product {
         if(object.getClass() != this.getClass())
             return false;
         Product p = (Product)object;
-        if(p.getName() == this.getName() && p.getCategorie() == this.getCategorie())
+        if(p.getName() == this.getName())//les produits sont identifiés par leur noms
             return true;
         return false;
     }

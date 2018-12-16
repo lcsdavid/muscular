@@ -65,4 +65,15 @@ public class Customer {
     public void signOut() throws NotSignedInException {
         customerState.signOut(this);
     }
+
+    /* Affichage */
+    public String cartToString(){
+        String res= "";
+
+        for (Map.Entry<Product,Integer> entry:cart.entrySet()) {
+            res += entry.getKey().toString() + " : " + entry.getValue() + "\n";
+        }
+
+        return res;
+    }
 }

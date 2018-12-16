@@ -1,5 +1,6 @@
 package fr.davidlegras;
 
+import fr.davidlegras.customer.Customer;
 import fr.davidlegras.customer.CustomerListener;
 import fr.davidlegras.product.Product;
 
@@ -43,17 +44,25 @@ public class MarketingService {
     //fonction de creation des produits
     private void initProduct(ArrayList<Product> produits){
         addProduct(new Product(294, "Jeux vidéos", "Switch"));
-        addProduct(new Product(150, "Jeux vidéos", "Wii U"));
+        addProduct(new Product(150, "Jeux vidéos", "Wii_U"));
         addProduct(new Product(70, "Jeux vidéos", "Manette"));
         addProduct(new Product(30, "Jeux vidéos", "Pad"));
         addProduct(new Product(10, "Fromage", "Comté"));
-        addProduct(new Product(24, "Fromage", "Saint nectaire"));
+        addProduct(new Product(24, "Fromage", "Saint-nectaire"));
         addProduct(new Product(94, "Fromage", "Brie"));
         addProduct(new Product(54, "Fromage", "Camembert"));
         addProduct(new Product(42, "Fromage", "Roblochon"));
-        addProduct(new Product(54, "Viande", "Fliet de boeuf"));
+        addProduct(new Product(54, "Viande", "Filet_de_boeuf"));
         addProduct(new Product(64, "Viande", "Araignée"));
 
+    }
+
+    public Product existingProduct(String name){
+        for (Product product:produits) {
+            if(product.getName().equals(name))
+                return product;
+        }
+        return null;
     }
 
     public void afficheProducts(){
@@ -72,9 +81,10 @@ public class MarketingService {
     }
 
 
-
+    //fonction qui va gérer le client pendant son shopping
     public void shopping(){
         boolean shopping = true;
+        Customer customer = new Customer();
         String reponse = "0";
         Scanner sc = new Scanner(System.in);
         System.out.println("\nBienvenue cher client !\n");
@@ -83,7 +93,9 @@ public class MarketingService {
             //TODO gerer la connexion du client
 
             System.out.println("Voulez-vous afficher la liste entière ou la liste par categories ?\n");
-            System.out.println("1 pour la liste entière, 2 pour la liste par categories, 0 pour quitter le magazin (vos achats seront alors perdu), 3 pour passer à la caisse");
+            System.out.println("0 pour quitter le magazin (vos achats seront alors perdu),1 pour la liste entière, 2 pour la liste par categories,  3 pour passer à la caisse\n");
+            System.out.println("4 pour afficher l'etat actuel de votre panier\n");
+            System.out.println("Pour ajouter un ou plusieurs produits a votre panier entrer le nom du produit");
             reponse = sc.next();
             switch(reponse){
                 case "0" :
@@ -98,7 +110,19 @@ public class MarketingService {
                 case "3" :
                     //TODO
                     break;
+                case "4" :
+                    System.out.println("Panier :\n\n" + customer.cartToString()+"\n\n");
+                    break;
                 default:
+                    Product res = existingProduct(reponse);
+                    if(res != null){
+                        System.out.println("Combien en voulez-vous ? (entre 1 et 9)\n");
+                        reponse = sc.next();
+                        if(reponse.charAt(0) <= '9' && reponse.charAt(0) >='1' && reponse.length() == 1) {
+                            customer.addToCart(res, reponse.charAt(0) - '0');
+                            continue;
+                        }
+                    }
                     System.out.println("\nCette entrée n'est pas valide!!\n");
                     continue;
             }
