@@ -3,6 +3,10 @@ package fr.davidlegras;
 import fr.davidlegras.customer.Customer;
 import fr.davidlegras.customer.CustomerListener;
 import fr.davidlegras.product.Product;
+import fr.davidlegras.serviceMarketing.Checkout;
+import fr.davidlegras.serviceMarketing.FlashOffer;
+import fr.davidlegras.serviceMarketing.ProductOffer;
+import fr.davidlegras.serviceMarketing.notInBoundsReduction;
 
 import javax.swing.event.EventListenerList;
 import java.io.IOException;
@@ -41,6 +45,7 @@ public class MarketingService {
         this.listeCate.put(produit.getCategorie(), produit);
     }
 
+    /* initialmisations */
     //fonction de creation des produits
     private void initProduct(ArrayList<Product> produits){
         addProduct(new Product(294, "Jeux vidéos", "Switch"));
@@ -57,6 +62,20 @@ public class MarketingService {
 
     }
 
+    private void initCheckoutV1(Checkout checkout){
+        try {
+            checkout.addOffer(new ProductOffer(50, "Switch"));
+            checkout.addOffer(new ProductOffer(20, "Brie"));
+            checkout.addOffer(new FlashOffer(30, produits));
+        } catch (fr.davidlegras.serviceMarketing.notInBoundsReduction notInBoundsReduction) {
+            notInBoundsReduction.printStackTrace();
+        }
+    }
+
+
+
+    /* test d'existance*/
+
     public Product existingProduct(String name){
         for (Product product:produits) {
             if(product.getName().equals(name))
@@ -65,6 +84,7 @@ public class MarketingService {
         return null;
     }
 
+    /*affichage */
     public void afficheProducts(){
         System.out.println("Liste des produits :\n");
         for (Product product: produits) {
@@ -84,6 +104,8 @@ public class MarketingService {
     //fonction qui va gérer le client pendant son shopping
     public void shopping(){
         boolean shopping = true;
+        Checkout checkout = Checkout.getCheckout();
+        initCheckoutV1(checkout);
         Customer customer = new Customer();
         String reponse = "0";
         Scanner sc = new Scanner(System.in);
@@ -108,7 +130,8 @@ public class MarketingService {
                     printProductsByCate();
                     break;
                 case "3" :
-                    //TODO
+                    System.out.println("Prix de base : " + customer.rawPrice() + " euros.\n" + "Prix a payer : " + checkout.getPrice(customer.getCart()) + " euros");
+                    shopping = false;
                     break;
                 case "4" :
                     System.out.println("Panier :\n\n" + customer.cartToString()+"\n\n");

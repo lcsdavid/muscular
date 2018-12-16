@@ -6,11 +6,19 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public final class Checkout {
+
+    /* declaration du singleton*/
+
     private Checkout (){
         offers = new ArrayList<>();
     }
 
     private static final Checkout instance = new Checkout();
+    public static Checkout getCheckout(){
+        return instance;
+    }
+    /* fin de la déclaration du singleton */
+
 
     private ArrayList<CommercialOffer> offers;
 
@@ -22,9 +30,6 @@ public final class Checkout {
     }
     public void addOffer(CommercialOffer offer){
         offers.add(offer);
-    }
-    public static Checkout getCheckout(){
-        return instance;
     }
 
     private float getReduction(Map<Product,Integer> cart){

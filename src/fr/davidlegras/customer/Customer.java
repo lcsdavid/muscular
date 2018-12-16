@@ -42,6 +42,10 @@ public class Customer {
         addToCart(product, 1);
     }
 
+    public Map<Product, Integer> getCart() {
+        return cart;
+    }
+
     /* Prix */
 
     public int price() {
@@ -73,6 +77,8 @@ public class Customer {
         for (Map.Entry<Product,Integer> entry:cart.entrySet()) {
             res += entry.getKey().toString() + " : " + entry.getValue() + "\n";
         }
+
+        res += "Prix total = " + rawPrice() + " euros\n\n";
 
         return res;
     }
