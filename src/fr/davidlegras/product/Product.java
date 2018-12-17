@@ -2,10 +2,10 @@ package fr.davidlegras.product;
 
 public class Product {
     private float price;
-    private String categorie;
+    private Categorie categorie;
     private String name;
 
-    public Product(float price, String categorie, String name){
+    public Product(float price, Categorie categorie, String name){
         this.price = price;
         this.categorie = categorie;
         this.name = name;
@@ -18,20 +18,8 @@ public class Product {
     public final float getPrice() {
         return price;
     }
-    public final String getCategorie(){ return categorie;}
+    public final String getCategorie(){ return categorie.getName();}
     public final String getName() {return name;}
+    public final boolean isPromouvable(){return categorie.isPromouvable();}
 
-    @Override
-    public boolean equals(Object object){
-        if(object == null)
-            return false;
-        if(object == this)
-            return false;
-        if(object.getClass() != this.getClass())
-            return false;
-        Product p = (Product)object;
-        if(p.getName() == this.getName())//les produits sont identifiés par leur noms
-            return true;
-        return false;
-    }
 }

@@ -10,9 +10,13 @@ public class FlashOffer extends CommercialOffer {
 
 
 
-    public FlashOffer(float reduction, ArrayList<Product> target) throws notInBoundsReduction {
+    public FlashOffer(float reduction, ArrayList<Product> target) throws NotInBoundsReductionException, NotAPromouvableProductException {
         if(reduction >100 || reduction < 0){
-            throw new notInBoundsReduction("Reduction non comprise entre 0 et 100");
+            throw new NotInBoundsReductionException("Reduction non comprise entre 0 et 100");
+        }
+        for(Product product : target){
+            if(!product.isPromouvable())
+                throw new NotAPromouvableProductException("Il est impossible de promouvoir ce produit");
         }
         this.reduction = reduction;
         this.target = target;

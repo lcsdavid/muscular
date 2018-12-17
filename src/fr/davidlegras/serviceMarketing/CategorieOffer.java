@@ -1,16 +1,17 @@
 package fr.davidlegras.serviceMarketing;
 
+import fr.davidlegras.product.Categorie;
 import fr.davidlegras.product.Product;
 
 import java.util.ArrayList;
 import java.util.Map;
 
-public class ProductOffer extends CommercialOffer {
+public class CategorieOffer extends CommercialOffer {
 
-    private Product target; //le nom ou la catégorie du/des produits ciblés
+    private Categorie target; //le nom ou la catégorie du/des produits ciblés
 
 
-    public ProductOffer (float reduction, Product target) throws NotInBoundsReductionException, NotAPromouvableProductException {
+    public CategorieOffer (float reduction, Categorie target) throws NotInBoundsReductionException, NotAPromouvableProductException {
         if(reduction >100 || reduction < 0){
             throw new NotInBoundsReductionException("Reduction non comprise entre 0 et 100");
         }
@@ -22,12 +23,12 @@ public class ProductOffer extends CommercialOffer {
 
     public float getReduction(){return reduction;}
 
-    public Product getTarget() {
+    public Categorie getTarget() {
         return target;
     }
 
     public float getPrice(Product product){//on renvoie la valeur du produit après réduction
-        if(product.getName().equals(target.getName()))
+        if(product.getCategorie().equals(target.getName()))
             return (product.getPrice() - (product.getPrice()*reduction/100));
         return product.getPrice();//le prix du produit ne change pas avec cette réduction
     }
@@ -41,7 +42,7 @@ public class ProductOffer extends CommercialOffer {
     }
 
     public float getReduction(Product product){//on renvoie la valeur du produit après réduction
-        if(product.getName().equals(target.getName()))
+        if(product.getCategorie().equals(target.getName()))
             return (product.getPrice()*reduction/100);
         return 0;//le prix du produit ne change pas avec cette réduction
     }
@@ -70,5 +71,4 @@ public class ProductOffer extends CommercialOffer {
     public String toString(){
         return "Cible : " + target.toString() + ", " + reduction + "%";
     }
-
 }

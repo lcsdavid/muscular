@@ -2,15 +2,12 @@ package fr.davidlegras;
 
 import fr.davidlegras.customer.Customer;
 import fr.davidlegras.customer.CustomerListener;
+import fr.davidlegras.product.Hight_tech;
+import fr.davidlegras.product.Livres;
 import fr.davidlegras.product.Product;
-import fr.davidlegras.serviceMarketing.Checkout;
-import fr.davidlegras.serviceMarketing.FlashOffer;
-import fr.davidlegras.serviceMarketing.ProductOffer;
-import fr.davidlegras.serviceMarketing.notInBoundsReduction;
+import fr.davidlegras.serviceMarketing.*;
 
 import javax.swing.event.EventListenerList;
-import java.io.IOException;
-import java.net.SocketOption;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -48,27 +45,24 @@ public class MarketingService {
     /* initialmisations */
     //fonction de creation des produits
     private void initProduct(ArrayList<Product> produits){
-        addProduct(new Product(294, "Jeux vidéos", "Switch"));
-        addProduct(new Product(150, "Jeux vidéos", "Wii_U"));
-        addProduct(new Product(70, "Jeux vidéos", "Manette"));
-        addProduct(new Product(30, "Jeux vidéos", "Pad"));
-        addProduct(new Product(10, "Fromage", "Comté"));
-        addProduct(new Product(24, "Fromage", "Saint-nectaire"));
-        addProduct(new Product(94, "Fromage", "Brie"));
-        addProduct(new Product(54, "Fromage", "Camembert"));
-        addProduct(new Product(42, "Fromage", "Roblochon"));
-        addProduct(new Product(54, "Viande", "Filet_de_boeuf"));
-        addProduct(new Product(64, "Viande", "Araignée"));
+        addProduct(new Product(294, new Hight_tech(), "Switch"));
+        addProduct(new Product(150, new Hight_tech(), "Wii_U"));
+        addProduct(new Product(70, new Hight_tech(), "Manette"));
+        addProduct(new Product(30, new Hight_tech(), "Pad"));
+        addProduct(new Product(54, new Livres("Stéphane King", "01/07/1996"), "La ligne verte"));
+        addProduct(new Product(64, new Livres("Stéphane King", "01/02/1999"), "La tempête du siècle"));
 
     }
 
     private void initCheckoutV1(Checkout checkout){
         try {
-            checkout.addOffer(new ProductOffer(50, "Switch"));
-            checkout.addOffer(new ProductOffer(20, "Brie"));
-            checkout.addOffer(new FlashOffer(30, produits));
-        } catch (fr.davidlegras.serviceMarketing.notInBoundsReduction notInBoundsReduction) {
-            notInBoundsReduction.printStackTrace();
+            checkout.addOffer(new ProductOffer(50, produits.get(0)));
+            //checkout.addOffer(new ProductOffer(20, produits.get(6)));
+            //checkout.addOffer(new FlashOffer(30, produits));
+        } catch (NotInBoundsReductionException NotInBoundsReductionException) {
+            NotInBoundsReductionException.printStackTrace();
+        } catch (NotAPromouvableProductException e) {
+            e.printStackTrace();
         }
     }
 
