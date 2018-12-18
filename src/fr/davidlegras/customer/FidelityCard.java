@@ -8,6 +8,7 @@ public class FidelityCard {
     public FidelityCard() {
         this(0);
     }
+
     public FidelityCard(int points) {
         super();
         fidelityPoints = points;
@@ -20,7 +21,7 @@ public class FidelityCard {
     public int discount() throws NotEnoughFidelityPointsException {
         if (!isUsable())
             throw new NotEnoughFidelityPointsException("Il n'y pas assez de points de fidelité sur votre carte...");
-        fidelityPoints =- POINTS_NEEDED_FOR_DISCOUNT;
+        fidelityPoints = -POINTS_NEEDED_FOR_DISCOUNT;
         return FLAT_DISCOUNT_VALUE;
     }
 

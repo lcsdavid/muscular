@@ -19,7 +19,8 @@ public class Customer {
         this();
         try {
             signIn(login, passwordHash);
-        } catch (AlreadySignedInException ignored) {} /* Never catch in this case. */
+        } catch (AlreadySignedInException ignored) {
+        } /* Never catch in this case. */
 
     }
 
@@ -54,7 +55,7 @@ public class Customer {
 
     public float rawPrice() {
         float cartPrice = 0;
-        for (Map.Entry<Product, Integer> entry: cart.entrySet())
+        for (Map.Entry<Product, Integer> entry : cart.entrySet())
             cartPrice += entry.getKey().getPrice() * entry.getValue();
         return cartPrice;
     }
@@ -70,9 +71,9 @@ public class Customer {
     }
 
     /* Affichage */
-    public String cartToString(){
+    public String cartToString() {
         String s = "";
-        for (Map.Entry<Product,Integer> entry:cart.entrySet())
+        for (Map.Entry<Product, Integer> entry : cart.entrySet())
             s += entry.getKey().toString() + " : " + entry.getValue().toString() + '\n';
         s += "\n\t";
         s += "Prix total = " + rawPrice() + "€.\n\t";

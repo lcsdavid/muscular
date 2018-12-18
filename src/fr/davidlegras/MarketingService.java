@@ -5,7 +5,10 @@ import fr.davidlegras.customer.CustomerListener;
 import fr.davidlegras.product.Hight_tech;
 import fr.davidlegras.product.Livres;
 import fr.davidlegras.product.Product;
-import fr.davidlegras.serviceMarketing.*;
+import fr.davidlegras.serviceMarketing.Checkout;
+import fr.davidlegras.serviceMarketing.NotAPromouvableProductException;
+import fr.davidlegras.serviceMarketing.NotInBoundsReductionException;
+import fr.davidlegras.serviceMarketing.ProductOffer;
 
 import javax.swing.event.EventListenerList;
 import java.util.ArrayList;
@@ -37,14 +40,14 @@ public class MarketingService {
         fidelityPointPerProduct = new HashMap<>();
     }
 
-    private void addProduct(Product produit){
+    private void addProduct(Product produit) {
         produits.add(produit);
         this.listeCate.put(produit.getCategorie(), produit);
     }
 
     /* initialmisations */
     //fonction de creation des produits
-    private void initProduct(ArrayList<Product> produits){
+    private void initProduct(ArrayList<Product> produits) {
         addProduct(new Product(294, new Hight_tech(), "Switch"));
         addProduct(new Product(150, new Hight_tech(), "Wii_U"));
         addProduct(new Product(70, new Hight_tech(), "Manette"));
@@ -54,7 +57,7 @@ public class MarketingService {
 
     }
 
-    private void initCheckoutV1(Checkout checkout){
+    private void initCheckoutV1(Checkout checkout) {
         try {
             checkout.addOffer(new ProductOffer(50, produits.get(0)));
             //checkout.addOffer(new ProductOffer(20, produits.get(6)));
@@ -70,25 +73,25 @@ public class MarketingService {
 
     /* test d'existance*/
 
-    public Product existingProduct(String name){
-        for (Product product:produits) {
-            if(product.getName().equals(name))
+    public Product existingProduct(String name) {
+        for (Product product : produits) {
+            if (product.getName().equals(name))
                 return product;
         }
         return null;
     }
 
     /*affichage */
-    public void afficheProducts(){
+    public void afficheProducts() {
         System.out.println("Liste des produits :\n");
-        for (Product product: produits) {
+        for (Product product : produits) {
             System.out.println(product.toString() + "\n");
         }
     }
 
-    public void printProductsByCate(){
+    public void printProductsByCate() {
         System.out.println("Liste des produits par catégorie :\n");
-        for (Map.Entry<String, Product> entry: listeCate.entrySet()) {
+        for (Map.Entry<String, Product> entry : listeCate.entrySet()) {
             System.out.println("-" + entry.getKey() + "\n");
             System.out.println("    " + entry.getValue().toString() + "\n");
         }
@@ -96,7 +99,7 @@ public class MarketingService {
 
 
     //fonction qui va gérer le client pendant son shopping
-    public void shopping(){
+    public void shopping() {
         boolean shopping = true;
         Checkout checkout = Checkout.getCheckout();
         initCheckoutV1(checkout);
@@ -104,7 +107,7 @@ public class MarketingService {
         String reponse = "0";
         Scanner sc = new Scanner(System.in);
         System.out.println("\nBienvenue cher client !\n");
-        while(shopping){
+        while (shopping) {
 
             //TODO gerer la connexion du client
 
@@ -113,29 +116,29 @@ public class MarketingService {
             System.out.println("4 pour afficher l'etat actuel de votre panier\n");
             System.out.println("Pour ajouter un ou plusieurs produits a votre panier entrer le nom du produit");
             reponse = sc.next();
-            switch(reponse){
-                case "0" :
+            switch (reponse) {
+                case "0":
                     shopping = false;
                     break;
-                case "1" :
+                case "1":
                     afficheProducts();
                     break;
-                case "2" :
+                case "2":
                     printProductsByCate();
                     break;
-                case "3" :
+                case "3":
                     System.out.println("Prix de base : " + customer.rawPrice() + " euros.\n" + "Prix a payer : " + checkout.getPrice(customer.getCart()) + " euros");
                     shopping = false;
                     break;
-                case "4" :
-                    System.out.println("Panier :\n\n" + customer.cartToString()+"\n\n");
+                case "4":
+                    System.out.println("Panier :\n\n" + customer.cartToString() + "\n\n");
                     break;
                 default:
                     Product res = existingProduct(reponse);
-                    if(res != null){
+                    if (res != null) {
                         System.out.println("Combien en voulez-vous ? (entre 1 et 9)\n");
                         reponse = sc.next();
-                        if(reponse.charAt(0) <= '9' && reponse.charAt(0) >='1' && reponse.length() == 1) {
+                        if (reponse.charAt(0) <= '9' && reponse.charAt(0) >= '1' && reponse.length() == 1) {
                             customer.addToCart(res, reponse.charAt(0) - '0');
                             continue;
                         }

@@ -8,6 +8,7 @@ import java.util.Map;
 public interface CustomerListener extends EventListener {
 
     void onStateChanged(CustomerState previousState, CustomerState newState);
+
     void onCartChanged(Map<Product, Integer> cart);
 
 }

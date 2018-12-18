@@ -6,26 +6,26 @@ public abstract class Categorie {
 
 
     /* initializer */
-    public Categorie(String name){
+    public Categorie(String name) {
         this.name = name;
         promouvable = true;
     }
 
-    public Categorie(String name, boolean promouvable){
+    public Categorie(String name, boolean promouvable) {
         this.name = name;
         this.promouvable = promouvable;
     }
 
     /* getters */
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public boolean isPromouvable(){
+    public boolean isPromouvable() {
         return promouvable;
     }
 
-    public String toString(){
+    public String toString() {
         return "Categorie  : " + name;
     }
 }
