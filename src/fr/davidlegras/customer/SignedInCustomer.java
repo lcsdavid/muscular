@@ -21,6 +21,6 @@ public abstract class SignedInCustomer implements CustomerState {
 
     @Override
     public final void signOut(final Customer context) {
-        context.customerState(new VisitorFactory().makeCustomerState());
+        context.customerState(Visitor.getVisitor());
     }
 }

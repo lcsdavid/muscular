@@ -1,9 +1,18 @@
 package fr.davidlegras.customer;
 
 
-public class Visitor extends NotSignedInCustomer {
+import fr.davidlegras.MarketingService;
 
-    public Visitor() {
+public class Visitor extends NotSignedInCustomer {
+    private static Visitor UNIQUE_VISITOR_INSTANCE = null;
+
+    public static Visitor getVisitor() {
+        if (UNIQUE_VISITOR_INSTANCE == null)
+            UNIQUE_VISITOR_INSTANCE = new Visitor();
+        return UNIQUE_VISITOR_INSTANCE;
+    }
+
+    private Visitor() {
         super();
     }
 
@@ -13,7 +22,12 @@ public class Visitor extends NotSignedInCustomer {
     }
 
     @Override
-    public void signIn(final Customer context, final String login, final String passwordHash) throws AlreadySignedInException {
-
+    public void signIn(final Customer context, final String login, final String passwordHash) throws WrongCredentials {
+        if (!MarketingService.getMarketingService().loginExist(login))
+            throw new WrongCredentials("User's login doesn't exist.");
+        CustomerState state = MarketingService.getMarketingService().connect(login, passwordHash);
+        if (state == null)
+            throw new WrongCredentials("Wrong password.");
+        context.customerState(state);
     }
 }

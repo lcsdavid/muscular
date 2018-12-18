@@ -2,7 +2,7 @@ package fr.davidlegras.customer;
 
 public class Staff extends SignedInCustomer {
 
-    Staff(final String name) {
+    public Staff(final String name) {
         super(name);
     }
 

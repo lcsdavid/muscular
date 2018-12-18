@@ -1,17 +1,16 @@
 package fr.davidlegras.product;
 
-public abstract class Category {
+public abstract class Category implements Comparable<Category> {
     private String name;
     private boolean discountable;
 
-
-    /* initializer */
+    /* Constructeurs */
     public Category(String name) {
-        this.name = name;
-        discountable = true;
+        this(name, true);
     }
 
     public Category(String name, boolean discountable) {
+        super();
         this.name = name;
         this.discountable = discountable;
     }
@@ -25,9 +24,14 @@ public abstract class Category {
         return discountable;
     }
 
-
     /* Affichage */
+    @Override
     public String toString() {
         return name;
+    }
+
+    @Override
+    public int compareTo(Category o) {
+        return name.compareTo(o.name);
     }
 }

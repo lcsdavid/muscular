@@ -11,17 +11,15 @@ public class Customer {
 
     public Customer() {
         super();
-        customerState = new VisitorFactory().makeCustomerState();
+        customerState = Visitor.getVisitor();
         cart = new HashMap<>();
     }
 
-    public Customer(String login, String passwordHash) {
+    public Customer(String login, String passwordHash) throws WrongCredentials {
         this();
         try {
             signIn(login, passwordHash);
-        } catch (AlreadySignedInException ignored) {
-        } /* Never catch in this case. */
-
+        } catch (AlreadySignedInException ignored) { /* Never catch in this case. */ }
     }
 
     /* Acesseurs & Mutateurs */
@@ -62,12 +60,16 @@ public class Customer {
 
     /* Connexion & Déconnexion */
 
-    public void signIn(final String login, final String passwordHash) throws AlreadySignedInException {
+    public void signIn(final String login, final String passwordHash) throws AlreadySignedInException, WrongCredentials {
         customerState.signIn(this, login, passwordHash);
     }
 
     public void signOut() throws NotSignedInException {
         customerState.signOut(this);
+    }
+
+    public boolean isSignedIn() {
+        return customerState != Visitor.getVisitor();
     }
 
     /* Affichage */
@@ -79,5 +81,10 @@ public class Customer {
         s += "Prix total = " + rawPrice() + "€.\n\t";
         s += "Prix: " + price() + "€.\n";
         return s;
+    }
+
+    @Override
+    public String toString() {
+        return customerState.name();
     }
 }
