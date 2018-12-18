@@ -28,6 +28,6 @@ public class Product {
     }
 
     public String toString() {
-        return "Catégorie : " + category + ", Produit : " + name + "   Prix : " + price + " euros";
+        return "[" + category.toString() + "]\t" + name + "\nPrix : " + price + "€.";
     }
 }

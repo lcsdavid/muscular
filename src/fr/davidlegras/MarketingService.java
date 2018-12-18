@@ -2,7 +2,7 @@ package fr.davidlegras;
 
 import fr.davidlegras.customer.Customer;
 import fr.davidlegras.customer.CustomerListener;
-import fr.davidlegras.product.Hight_tech;
+import fr.davidlegras.product.HighTech;
 import fr.davidlegras.product.Livres;
 import fr.davidlegras.product.Product;
 import fr.davidlegras.serviceMarketing.Checkout;
@@ -20,7 +20,7 @@ public class MarketingService {
     private final Map<Product, Integer> fidelityPointPerProduct;
 
     private ArrayList<Product> products;
-    private Map<String, Product> listeCate;
+    /* private Map<String, Product> listeCate; Plus besoin pour l'affichage par catégorie il ya plus simple. */
 
     public MarketingService() {
 
@@ -32,24 +32,22 @@ public class MarketingService {
         super();
         // TODO charger les exemples de membre du Staff, client inscrit sur le site, matrice des gains de points fidelités...
         products = new ArrayList<Product>();
-        listeCate = new HashMap<>();
+
         initProduct(products);
         fidelityPointPerProduct = new HashMap<>();
     }
 
     private void addProduct(Product produit) {
         products.add(produit);
-        this.listeCate.put(produit.getCategory(), produit);
     }
 
-    /* initialmisations */
-    //fonction de creation des products
+    /* Initialisation pour test */
     private void initProduct(ArrayList<Product> produits) {
-        addProduct(new Product(294, new Hight_tech(), "Switch"));
-        addProduct(new Product(150, new Hight_tech(), "Wii_U"));
-        addProduct(new Product(70, new Hight_tech(), "Manette"));
-        addProduct(new Product(30, new Hight_tech(), "Pad"));
+        addProduct(new Product(294, new HighTech(), "Switch"));
         addProduct(new Product(54, new Livres("Stéphane King", "01/07/1996"), "La ligne verte"));
+        addProduct(new Product(150, new HighTech(), "Wii_U"));
+        addProduct(new Product(70, new HighTech(), "Manette"));
+        addProduct(new Product(30, new HighTech(), "Pad"));
         addProduct(new Product(64, new Livres("Stéphane King", "01/02/1999"), "La tempête du siècle"));
 
     }
@@ -59,16 +57,14 @@ public class MarketingService {
             checkout.addOffer(new ProductOffer(50, products.get(0)));
             //checkout.addOffer(new ProductOffer(20, products.get(6)));
             //checkout.addOffer(new FlashOffer(30, products));
-        } catch (NotInBoundsReductionException NotInBoundsReductionException) {
-            NotInBoundsReductionException.printStackTrace();
-        } catch (NotAPromouvableProductException e) {
+        } catch (NotInBoundsReductionException | NotAPromouvableProductException e) {
             e.printStackTrace();
         }
     }
 
 
 
-    /* test d'existance*/
+    /* Test d'existance */
 
     public Product existingProduct(String name) {
         for (Product product : products) {
@@ -80,23 +76,23 @@ public class MarketingService {
 
     /* Affichage */
     public void printProducts() {
-
-        for (Product product : products) {
+        for (Product product : products)
             System.out.println(product.toString());
-        }
     }
 
     public void printProducts(Comparator<? super Product> c) {
-
         products.sort(c);
-        for (Map.Entry<String, Product> entry : listeCate.entrySet()) {
+        printProducts();
+        /* for (Map.Entry<String, Product> entry : listeCate.entrySet()) {
             System.out.println("-" + entry.getKey() + "\n");
             System.out.println("    " + entry.getValue().toString() + "\n");
-        }
+        } */
     }
 
 
-    /* Fonction qui va gérer le client pendant son shopping. */
+    /**
+     * Routine d'affichage et d'interaction via la console.
+     */
     public void shopping() {
         boolean shopping = true;
         Checkout checkout = Checkout.getCheckout();
@@ -109,13 +105,16 @@ public class MarketingService {
 
             //TODO gerer la connexion du client
 
+            /* Affichage des instructions. */
             System.out.println("Voulez-vous afficher la liste entière ou la liste par categories ?\n");
-            System.out.println("0: quitter le magasin (vos achats seront alors perdu).");
-            System.out.println("1: liste des products.");
-            System.out.println("2: liste par categorie.");
-            System.out.println("3: pour passer à la caisse.");
-            System.out.println("4: afficher l'état actuel de votre panier.");
-            System.out.println("Pour ajouter un ou plusieurs products à votre panier entrez le nom du produit.");
+            System.out.println("[0]: Quitter le magasin (vos achats seront alors perdu).");
+            System.out.println("[1]: Liste des produits.");
+            System.out.println("[2]: Liste des produits par categorie.");
+            System.out.println("[3]: Passer à la caisse.");
+            System.out.println("[4]: Afficher l'état actuel de votre panier.");
+            System.out.println("Pour ajouter un ou plusieurs produits à votre panier entrez le nom du produit.");
+
+            /* Réponse du programme. */
             reponse = sc.next();
             switch (reponse) {
                 case "0":
@@ -147,8 +146,8 @@ public class MarketingService {
                             continue;
                         }
                     }
-                    System.out.println("\nCette entrée n'est pas valide!!\n");
-                    continue;
+                    System.out.println("\nCette entrée n'est pas valide !!\n");
+                    break;
             }
 
         }

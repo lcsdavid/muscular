@@ -27,8 +27,7 @@ public abstract class Category {
 
 
     /* Affichage */
-
     public String toString() {
-        return "Category  : " + name;
+        return name;
     }
 }
