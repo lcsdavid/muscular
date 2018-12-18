@@ -14,7 +14,7 @@ public class ProductOffer extends CommercialOffer {
         if (reduction > 100 || reduction < 0) {
             throw new NotInBoundsReductionException("Reduction non comprise entre 0 et 100");
         }
-        if (!target.isPromouvable())
+        if (!target.isDiscountable())
             throw new NotAPromouvableProductException("Produit non promouvalbe");
         this.reduction = reduction;
         this.target = target;

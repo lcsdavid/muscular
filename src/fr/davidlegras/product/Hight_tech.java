@@ -1,6 +1,6 @@
 package fr.davidlegras.product;
 
-public class Hight_tech extends Categorie {
+public class Hight_tech extends Category {
 
     public Hight_tech() {
         super("Hight_tech", true);

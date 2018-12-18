@@ -1,6 +1,6 @@
 package fr.davidlegras.serviceMarketing;
 
-import fr.davidlegras.product.Categorie;
+import fr.davidlegras.product.Category;
 import fr.davidlegras.product.Product;
 
 import java.util.ArrayList;
@@ -8,14 +8,14 @@ import java.util.Map;
 
 public class CategorieOffer extends CommercialOffer {
 
-    private Categorie target; //le nom ou la catégorie du/des produits ciblés
+    private Category target; //le nom ou la catégorie du/des produits ciblés
 
 
-    public CategorieOffer(float reduction, Categorie target) throws NotInBoundsReductionException, NotAPromouvableProductException {
+    public CategorieOffer(float reduction, Category target) throws NotInBoundsReductionException, NotAPromouvableProductException {
         if (reduction > 100 || reduction < 0) {
             throw new NotInBoundsReductionException("Reduction non comprise entre 0 et 100");
         }
-        if (!target.isPromouvable())
+        if (!target.isDiscountable())
             throw new NotAPromouvableProductException("Produit non promouvalbe");
         this.reduction = reduction;
         this.target = target;
@@ -25,12 +25,12 @@ public class CategorieOffer extends CommercialOffer {
         return reduction;
     }
 
-    public Categorie getTarget() {
+    public Category getTarget() {
         return target;
     }
 
     public float getPrice(Product product) {//on renvoie la valeur du produit après réduction
-        if (product.getCategorie().equals(target.getName()))
+        if (product.getCategory().equals(target.getName()))
             return (product.getPrice() - (product.getPrice() * reduction / 100));
         return product.getPrice();//le prix du produit ne change pas avec cette réduction
     }
@@ -44,7 +44,7 @@ public class CategorieOffer extends CommercialOffer {
     }
 
     public float getReduction(Product product) {//on renvoie la valeur du produit après réduction
-        if (product.getCategorie().equals(target.getName()))
+        if (product.getCategory().equals(target.getName()))
             return (product.getPrice() * reduction / 100);
         return 0;//le prix du produit ne change pas avec cette réduction
     }

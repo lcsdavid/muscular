@@ -11,10 +11,7 @@ import fr.davidlegras.serviceMarketing.NotInBoundsReductionException;
 import fr.davidlegras.serviceMarketing.ProductOffer;
 
 import javax.swing.event.EventListenerList;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 
 public class MarketingService {
@@ -22,7 +19,7 @@ public class MarketingService {
     private final EventListenerList listeners = new EventListenerList();
     private final Map<Product, Integer> fidelityPointPerProduct;
 
-    private ArrayList<Product> produits;
+    private ArrayList<Product> products;
     private Map<String, Product> listeCate;
 
     public MarketingService() {
@@ -34,19 +31,19 @@ public class MarketingService {
     public MarketingService(String databasePath) {
         super();
         // TODO charger les exemples de membre du Staff, client inscrit sur le site, matrice des gains de points fidelités...
-        produits = new ArrayList<Product>();
+        products = new ArrayList<Product>();
         listeCate = new HashMap<>();
-        initProduct(produits);
+        initProduct(products);
         fidelityPointPerProduct = new HashMap<>();
     }
 
     private void addProduct(Product produit) {
-        produits.add(produit);
-        this.listeCate.put(produit.getCategorie(), produit);
+        products.add(produit);
+        this.listeCate.put(produit.getCategory(), produit);
     }
 
     /* initialmisations */
-    //fonction de creation des produits
+    //fonction de creation des products
     private void initProduct(ArrayList<Product> produits) {
         addProduct(new Product(294, new Hight_tech(), "Switch"));
         addProduct(new Product(150, new Hight_tech(), "Wii_U"));
@@ -59,9 +56,9 @@ public class MarketingService {
 
     private void initCheckoutV1(Checkout checkout) {
         try {
-            checkout.addOffer(new ProductOffer(50, produits.get(0)));
-            //checkout.addOffer(new ProductOffer(20, produits.get(6)));
-            //checkout.addOffer(new FlashOffer(30, produits));
+            checkout.addOffer(new ProductOffer(50, products.get(0)));
+            //checkout.addOffer(new ProductOffer(20, products.get(6)));
+            //checkout.addOffer(new FlashOffer(30, products));
         } catch (NotInBoundsReductionException NotInBoundsReductionException) {
             NotInBoundsReductionException.printStackTrace();
         } catch (NotAPromouvableProductException e) {
@@ -74,23 +71,24 @@ public class MarketingService {
     /* test d'existance*/
 
     public Product existingProduct(String name) {
-        for (Product product : produits) {
+        for (Product product : products) {
             if (product.getName().equals(name))
                 return product;
         }
         return null;
     }
 
-    /*affichage */
-    public void afficheProducts() {
-        System.out.println("Liste des produits :\n");
-        for (Product product : produits) {
-            System.out.println(product.toString() + "\n");
+    /* Affichage */
+    public void printProducts() {
+
+        for (Product product : products) {
+            System.out.println(product.toString());
         }
     }
 
-    public void printProductsByCate() {
-        System.out.println("Liste des produits par catégorie :\n");
+    public void printProducts(Comparator<? super Product> c) {
+
+        products.sort(c);
         for (Map.Entry<String, Product> entry : listeCate.entrySet()) {
             System.out.println("-" + entry.getKey() + "\n");
             System.out.println("    " + entry.getValue().toString() + "\n");
@@ -98,7 +96,7 @@ public class MarketingService {
     }
 
 
-    //fonction qui va gérer le client pendant son shopping
+    /* Fonction qui va gérer le client pendant son shopping. */
     public void shopping() {
         boolean shopping = true;
         Checkout checkout = Checkout.getCheckout();
@@ -112,22 +110,28 @@ public class MarketingService {
             //TODO gerer la connexion du client
 
             System.out.println("Voulez-vous afficher la liste entière ou la liste par categories ?\n");
-            System.out.println("0 pour quitter le magazin (vos achats seront alors perdu),1 pour la liste entière, 2 pour la liste par categories,  3 pour passer à la caisse\n");
-            System.out.println("4 pour afficher l'etat actuel de votre panier\n");
-            System.out.println("Pour ajouter un ou plusieurs produits a votre panier entrer le nom du produit");
+            System.out.println("0: quitter le magasin (vos achats seront alors perdu).");
+            System.out.println("1: liste des products.");
+            System.out.println("2: liste par categorie.");
+            System.out.println("3: pour passer à la caisse.");
+            System.out.println("4: afficher l'état actuel de votre panier.");
+            System.out.println("Pour ajouter un ou plusieurs products à votre panier entrez le nom du produit.");
             reponse = sc.next();
             switch (reponse) {
                 case "0":
                     shopping = false;
                     break;
                 case "1":
-                    afficheProducts();
+                    System.out.println("Liste des produits :");
+                    printProducts();
                     break;
                 case "2":
-                    printProductsByCate();
+                    System.out.println("Liste des produits par catégorie :");
+                    printProducts(Comparator.comparing(Product::getCategory));
                     break;
                 case "3":
-                    System.out.println("Prix de base : " + customer.rawPrice() + " euros.\n" + "Prix a payer : " + checkout.getPrice(customer.getCart()) + " euros");
+                    System.out.println("Prix de base : " + customer.rawPrice() + "€.");
+                    System.out.println("Prix à payer : " + checkout.getPrice(customer.getCart()) + "€.");
                     shopping = false;
                     break;
                 case "4":

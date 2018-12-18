@@ -14,7 +14,7 @@ public class FlashOffer extends CommercialOffer {
             throw new NotInBoundsReductionException("Reduction non comprise entre 0 et 100");
         }
         for (Product product : target) {
-            if (!product.isPromouvable())
+            if (!product.isDiscountable())
                 throw new NotAPromouvableProductException("Il est impossible de promouvoir ce produit");
         }
         this.reduction = reduction;

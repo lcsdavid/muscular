@@ -1,6 +1,6 @@
 package fr.davidlegras.product;
 
-public class Livres extends Categorie {
+public class Livres extends Category {
     private String auteur;
     private String dateDeParution;
 

@@ -1,34 +1,33 @@
 package fr.davidlegras.product;
 
 public class Product {
-    private float price;
-    private Categorie categorie;
     private String name;
+    private Category category;
+    private float price;
 
-    public Product(float price, Categorie categorie, String name) {
+    public Product(float price, Category category, String name) {
         this.price = price;
-        this.categorie = categorie;
+        this.category = category;
         this.name = name;
-    }
-
-    public String toString() {
-        return "Catégorie : " + categorie + ", Produit : " + name + "   Prix : " + price + " euros";
-    }
-
-    public final float getPrice() {
-        return price;
-    }
-
-    public final String getCategorie() {
-        return categorie.getName();
     }
 
     public final String getName() {
         return name;
     }
 
-    public final boolean isPromouvable() {
-        return categorie.isPromouvable();
+    public final String getCategory() {
+        return category.getName();
     }
 
+    public final float getPrice() {
+        return price;
+    }
+
+    public final boolean isDiscountable() {
+        return category.isDiscountable();
+    }
+
+    public String toString() {
+        return "Catégorie : " + category + ", Produit : " + name + "   Prix : " + price + " euros";
+    }
 }
