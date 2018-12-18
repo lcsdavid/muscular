@@ -48,15 +48,14 @@ public class Customer {
 
     /* Prix */
 
-    public int price() {
+    public float price() {
         return customerState.price(this);
     }
 
-    public int rawPrice() {
-        int cartPrice = 0;
-        for (Map.Entry<Product, Integer> entry: cart.entrySet()) {
+    public float rawPrice() {
+        float cartPrice = 0;
+        for (Map.Entry<Product, Integer> entry: cart.entrySet())
             cartPrice += entry.getKey().getPrice() * entry.getValue();
-        }
         return cartPrice;
     }
 
@@ -72,14 +71,12 @@ public class Customer {
 
     /* Affichage */
     public String cartToString(){
-        String res= "";
-
-        for (Map.Entry<Product,Integer> entry:cart.entrySet()) {
-            res += entry.getKey().toString() + " : " + entry.getValue() + "\n";
-        }
-
-        res += "Prix total = " + rawPrice() + " euros\n\n";
-
-        return res;
+        String s = "";
+        for (Map.Entry<Product,Integer> entry:cart.entrySet())
+            s += entry.getKey().toString() + " : " + entry.getValue().toString() + '\n';
+        s += "\n\t";
+        s += "Prix total = " + rawPrice() + "€.\n\t";
+        s += "Prix: " + price() + "€.\n";
+        return s;
     }
 }

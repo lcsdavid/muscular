@@ -13,10 +13,16 @@ public class FidelityCard {
         fidelityPoints = points;
     }
 
+    public boolean isUsable() {
+        return POINTS_NEEDED_FOR_DISCOUNT <= fidelityPoints;
+    }
+
     public int discount() throws NotEnoughFidelityPointsException {
-        if (fidelityPoints < POINTS_NEEDED_FOR_DISCOUNT)
+        if (!isUsable())
             throw new NotEnoughFidelityPointsException("Il n'y pas assez de points de fidelité sur votre carte...");
         fidelityPoints =- POINTS_NEEDED_FOR_DISCOUNT;
         return FLAT_DISCOUNT_VALUE;
     }
+
+
 }
