@@ -1,30 +1,41 @@
 package fr.davidlegras.product;
 
-public abstract class Category implements Comparable<Category> {
+
+import java.util.Objects;
+
+/**
+ *
+ */
+public class Category implements Comparable<Category> {
     private String name;
-    private boolean discountable;
 
-    /* Constructeurs */
     public Category(String name) {
-        this(name, true);
-    }
-
-    public Category(String name, boolean discountable) {
         super();
         this.name = name;
-        this.discountable = discountable;
     }
 
-    /* Accesseurs */
-    public String getName() {
+    public String name() {
         return name;
     }
 
-    public boolean isDiscountable() {
-        return discountable;
+    @Override
+    public int hashCode() {
+        return name.hashCode();
     }
 
-    /* Affichage */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (obj instanceof Category) {
+            Category cat = (Category)obj;
+            return name.equals(cat.name);
+        }
+        return false;
+    }
+
     @Override
     public String toString() {
         return name;

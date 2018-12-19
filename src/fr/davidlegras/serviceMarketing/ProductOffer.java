@@ -1,76 +1,59 @@
 package fr.davidlegras.serviceMarketing;
 
+import fr.davidlegras.product.Discountable;
 import fr.davidlegras.product.Product;
 
 import java.util.ArrayList;
 import java.util.Map;
 
-public class ProductOffer extends CommercialOffer {
+/**
+ * TODO abstract
+ * @param <T> le type du Product ciblé.
+ *
+ * @author Lucas David
+ * @author Théo Legras
+ * @see fr.davidlegras.serviceMarketing.CommercialOffer
+ * @see Discountable
+ * @see Product
+ */
+public class ProductOffer<T extends Product & Discountable> extends CommercialOffer<T> {
+    private T target; /* Target est la cible de l'offre. Par contrainte T hérite au moins de Product & Discountable. */
 
-    private Product target; //le nom ou la catégorie du/des produits ciblés
-
-
-    public ProductOffer(float reduction, Product target) throws NotInBoundsReductionException, NotAPromouvableProductException {
-        if (reduction > 100 || reduction < 0) {
-            throw new NotInBoundsReductionException("Reduction non comprise entre 0 et 100");
-        }
-        if (!target.isDiscountable())
-            throw new NotAPromouvableProductException("Produit non promouvalbe");
-        this.reduction = reduction;
+    /**
+     * TODO
+     * @param discount
+     * @param target
+     * @throws NotInBoundsDiscountException
+     */
+    public ProductOffer(float discount, T target) throws NotInBoundsDiscountException {
+        super(discount);
         this.target = target;
     }
 
-    public float getReduction() {
-        return reduction;
-    }
-
-    public Product getTarget() {
+    public T target() {
         return target;
     }
 
-    public float getPrice(Product product) {//on renvoie la valeur du produit après réduction
-        if (product.getName().equals(target.getName()))
-            return (product.getPrice() - (product.getPrice() * reduction / 100));
-        return product.getPrice();//le prix du produit ne change pas avec cette réduction
+    /**
+     * Renvoie le montant du Product après l'application du rabais par cette réduction du Product.
+     *
+     * @return le prix du Product rabais compris.
+     */
+    public float discountedPrice() {
+        return target.price() + effectiveDiscount();
     }
 
-    public float getPrice(ArrayList<Product> products) {
-        float res = 0;
-        for (Product p : products) {
-            res += getPrice(p);
-        }
-        return res;
-    }
-
-    public float getReduction(Product product) {//on renvoie la valeur du produit après réduction
-        if (product.getName().equals(target.getName()))
-            return (product.getPrice() * reduction / 100);
-        return 0;//le prix du produit ne change pas avec cette réduction
-    }
-
-    public float getReduction(ArrayList<Product> products) {
-        float res = 0;
-        for (Product p : products) {
-            res += getReduction(p);
-        }
-        return res;
-    }
-
-    @Override
-    public float getReduction(Map<Product, Integer> cart) {
-
-        float res = 0;
-
-        for (Map.Entry<Product, Integer> entry : cart.entrySet()) {
-            res += getReduction(entry.getKey()) * entry.getValue();
-        }
-
-        return res;
+    /**
+     * Renvoie le montant du rabais sur Product par cette réduction du Product.
+     *
+     * @return le montant du rabais.
+     */
+    public float effectiveDiscount() {
+        return target.price() * discount();
     }
 
     @Override
     public String toString() {
-        return "Cible : " + target.toString() + ", " + reduction + "%";
+        return "Réduction sur le produit " + target.toString() + " à " + discount() * 100 + "%.";
     }
-
 }

@@ -1,54 +1,72 @@
 package fr.davidlegras.serviceMarketing;
 
+import fr.davidlegras.product.Discountable;
 import fr.davidlegras.product.Product;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
-public class FlashOffer extends CommercialOffer {
-    private ArrayList<Product> target; /* La liste des artciles qui sont concernés */
+/**
+ * TODO
+ *
+ * @param <T>
+ *
+ * @author Lucas David
+ * @author Théo Legras
+ * @see fr.davidlegras.serviceMarketing.CommercialOffer
+ * @see Discountable
+ * @see Product
+ */
+public class FlashOffer<T extends Product & Discountable> extends CommercialOffer<T> {
+    /**
+     * Tableau dont les clées représentent les produits concernés et leurs valeurs respectives représente la quantité
+     * demandé pour appliquer l'offre.
+     */
+    private Map<T, Integer> targets = new HashMap<>();
 
-
-    public FlashOffer(float reduction, ArrayList<Product> target) throws NotInBoundsReductionException, NotAPromouvableProductException {
-        if (reduction > 100 || reduction < 0) {
-            throw new NotInBoundsReductionException("Reduction non comprise entre 0 et 100");
-        }
-        for (Product product : target) {
-            if (!product.isDiscountable())
-                throw new NotAPromouvableProductException("Il est impossible de promouvoir ce produit");
-        }
-        this.reduction = reduction;
-        this.target = target;
+    /**
+     *
+     * @param discount
+     * @param targets
+     * @throws NotInBoundsDiscountException
+     */
+    public FlashOffer(float discount, Map<? extends T, Integer> targets) throws NotInBoundsDiscountException {
+        super(discount);
+        this.targets.putAll(targets);
     }
 
-    public float getPrice(ArrayList<Product> products) {
-        float res = 0;
-        if (products.containsAll(target)) {//on fait la réduction
-            for (Product p : products) {//on parcours tous les produits que l'on nous a donné
-                if (target.contains(p))
-                    res += p.getPrice() - p.getPrice() * reduction / 100;
-            }
-        } else {
-            for (Product p : products) {//on parcours tous les produits que l'on nous a donné
-                res += p.getPrice();
-            }
-        }
-        return res;
+    public Map<T, Integer> targets() {
+        return targets;
     }
 
-    public float getReduc(ArrayList<Product> products) {
-        float res = 0;
-        if (products.containsAll(target)) {//on fait la réduction
-            for (Product p : products) {//on parcours tous les produits que l'on nous a donné
-                if (target.contains(p))
-                    res += p.getPrice() * reduction / 100;
-            }
-        }
-        return res;
+    /**
+     * Renvoie le montant du Product après l'application du rabais par cette réduction de Category de Product.
+     * Plus particulièrement, si le Product est concerné on retourne la valeur conséquente, sinon on retourne la
+     * du Product sans modification.
+     *
+     * @param product le Product dont on veut obtenir le prix réduit.
+     * @return le prix du Product rabais compris.
+     */
+    public float discountedPrice(T product) {
+        return product.price() + effectiveDiscount(product);
     }
 
+    /**
+     * Renvoie le montant du rabais sur Product par cette réduction de Category de Product.
+     * Plus particulièrement, si le Product est concerné on retourne la valeur conséquente, sinon on retourne 0.
+     *
+     * @param product le Product dont le lequel on voit obtenir le montant du rabais.
+     * @return le montant du rabais.
+     */
+    public float effectiveDiscount(T product) {
+        if (targets.containsKey(product))
+            return product.price() * discount();
+        return 0;
+    }
 
-    //est-ce que la Map passée en entré contient tous les produits nécessaires pour appliquer la réduction
+    // TODO convertir
+    /*
+    // est-ce que la Map passée en entré contient tous les produits nécessaires pour appliquer la réduction
     private boolean containsAll(Map<Product, Integer> cart) {
 
         for (int i = 0; i < target.size(); i++) {
@@ -81,15 +99,14 @@ public class FlashOffer extends CommercialOffer {
         return res;
     }
 
+    */
+
     @Override
     public String toString() {
-        String res = "Flash Offer : " + reduction + "%";
-
-        for (Product product : target) {
-            res += "\n" + product.toString();
-        }
-
-        return res;
+        String s = "Offre flash ! Réduction sur les produits suivant:\n";
+        for (Map.Entry<T, Integer> entry: targets.entrySet())
+            s += '\t' + entry.getKey().toString() + " x" + entry.getValue().toString();
+        s += "à hauteur de " + discount() * 100 + "%.";
+        return s;
     }
-
 }

@@ -54,7 +54,7 @@ public class Customer {
     public float rawPrice() {
         float cartPrice = 0;
         for (Map.Entry<Product, Integer> entry : cart.entrySet())
-            cartPrice += entry.getKey().getPrice() * entry.getValue();
+            cartPrice += entry.getKey().price() * entry.getValue();
         return cartPrice;
     }
 

@@ -1,5 +1,10 @@
 package fr.davidlegras.product;
 
+/**
+ * @see fr.davidlegras.serviceMarketing.CategoryOffer
+ * @see fr.davidlegras.serviceMarketing.ProductOffer
+ * @see fr.davidlegras.serviceMarketing.FlashOffer
+ */
 public class Product implements Comparable<Product> {
     private String name;
     private Category category;
@@ -13,20 +18,16 @@ public class Product implements Comparable<Product> {
     }
 
     /* Acesseurs */
-    public final String getName() {
+    public String name() {
         return name;
     }
 
-    public final String getCategory() {
-        return category.getName();
+    public Category category() {
+        return category;
     }
 
-    public final float getPrice() {
+    public final float price() {
         return price;
-    }
-
-    public final boolean isDiscountable() {
-        return category.isDiscountable();
     }
 
     /* Object Override */

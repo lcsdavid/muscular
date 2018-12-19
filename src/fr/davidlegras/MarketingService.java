@@ -5,8 +5,8 @@ import fr.davidlegras.product.HighTech;
 import fr.davidlegras.product.Livres;
 import fr.davidlegras.product.Product;
 import fr.davidlegras.serviceMarketing.Checkout;
-import fr.davidlegras.serviceMarketing.NotAPromouvableProductException;
-import fr.davidlegras.serviceMarketing.NotInBoundsReductionException;
+import fr.davidlegras.serviceMarketing.CommercialOffer;
+import fr.davidlegras.serviceMarketing.NotInBoundsDiscountException;
 import fr.davidlegras.serviceMarketing.ProductOffer;
 import javafx.util.Pair;
 
@@ -81,7 +81,7 @@ public class MarketingService {
             checkout.addOffer(new ProductOffer(50, products.get(0).getKey()));
             //checkout.addOffer(new ProductOffer(20, products.get(6)));
             //checkout.addOffer(new FlashOffer(30, products));
-        } catch (NotInBoundsReductionException | NotAPromouvableProductException e) {
+        } catch (NotInBoundsDiscountException | NotAPromouvableProductException e) {
             e.printStackTrace();
         }
     }
@@ -89,7 +89,7 @@ public class MarketingService {
     /* Accesseurs */
     public Product existingProduct(String name) {
         for (Pair<Product, Integer> product : products) {
-            if (product.getKey().getName().equals(name))
+            if (product.getKey().name().equals(name))
                 return product.getKey();
         }
         return null;
@@ -170,7 +170,7 @@ public class MarketingService {
                     break;
                 case "2":
                     System.out.println("Liste des produits par catégorie :");
-                    printProducts(Comparator.comparing(Product::getCategory));
+                    printProducts(Comparator.comparing(Product::category));
                     break;
                 case "3":
                     System.out.println("Prix de base : " + customer.rawPrice() + "€.");
@@ -235,4 +235,55 @@ public class MarketingService {
         listeners.remove(CustomerListener.class, listener);
     }
 
+    /**
+     * Classe de passage à la caisse.
+     */
+    private static class Checkout {
+        private static Checkout UNIQUE_CHECKOUT_INSTANCE = new Checkout();
+        private ArrayList<CommercialOffer> offers;
+
+        private Checkout() {
+            offers = new ArrayList<>();
+        }
+        /* fin de la déclaration du singleton */
+
+        public static Checkout getCheckout() {
+            return instance;
+        }
+
+        public float checkout(Map<Product, Integer> cart) {
+            float res = 0;
+
+            return res;
+        }
+
+        public void addOffer(CommercialOffer offer) {
+            offers.add(offer);
+        }
+
+        private float getReduction(Map<Product, Integer> cart) {
+            float res = 0;
+            for (CommercialOffer offer : offers) {
+                res += offer.getReduction(cart);
+            }
+            return res;
+        }
+
+        public float getPrice(Map<Product, Integer> cart) {
+            float res = 0;
+            for (Map.Entry<Product, Integer> entry : cart.entrySet()) {
+                res += entry.getKey().price() * entry.getValue();
+            }
+            //TODO ajouter exception pour le cas ou la prix est 0
+
+            res -= getReduction(cart);
+
+            //si les réductions sont plus grandes que le prix on remène le prix à 0
+            //ce cas n'est pas concidéré comme une erreure car on accepte le cumul des réductions.
+            if (res <= 0)
+                res = 0;
+
+            return res;
+        }
+    }
 }
