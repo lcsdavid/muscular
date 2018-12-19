@@ -20,16 +20,8 @@ import java.util.*;
 public class MarketingService {
     /* Static */
     private static MarketingService UNIQUE_MARKETING_SERVICE_INSTANCE = null;
-
-    public static MarketingService getMarketingService() {
-        if (UNIQUE_MARKETING_SERVICE_INSTANCE == null)
-            UNIQUE_MARKETING_SERVICE_INSTANCE = new MarketingService();
-        return UNIQUE_MARKETING_SERVICE_INSTANCE;
-    }
-
     /* Attributs */
     private final EventListenerList listeners = new EventListenerList();
-
     /**
      * Tableau associatif dont la clé est le login d'un utilisateur inscrit sur le site,
      * la valeur associée une paire d'information: le hash du mot de passe correspondant et la classe du client (Member ou Staff).
@@ -37,7 +29,6 @@ public class MarketingService {
      * de donnée tout en restant simple pour l'exemple.
      */
     private final Map<String, Pair<String, SignedInCustomer>> users = new HashMap<>();
-
     /**
      * Liste des produits disponibles en magasin.
      * Chaque clé est un produit et sa valeur associé est le nombre de point de fidelité correspondant accordé à l'achat.
@@ -45,7 +36,6 @@ public class MarketingService {
      */
     private final List<Pair<Product, Integer>> products = new ArrayList<>();
 
-    /* Constructeur(s) */
     /**
      * Constructeur par défaut.
      */
@@ -55,17 +45,25 @@ public class MarketingService {
         initUsers();
     }
 
+    /* Constructeur(s) */
+
+    public static MarketingService getMarketingService() {
+        if (UNIQUE_MARKETING_SERVICE_INSTANCE == null)
+            UNIQUE_MARKETING_SERVICE_INSTANCE = new MarketingService();
+        return UNIQUE_MARKETING_SERVICE_INSTANCE;
+    }
+
     /* Initialisation pour test */
 
     /**
      * Initialisation d'exemples de produit proposés sur notre plateforme.
      */
     private void initProducts() {
-        addProduct(new Product(294, new HighTech(), "Switch"), (int)(Math.random() * 5));
-        addProduct(new Product(54, new Livres("Stéphane King", "01/07/1996"), "La ligne verte"), (int)(Math.random() * 5));
+        addProduct(new Product(294, new HighTech(), "Switch"), (int) (Math.random() * 5));
+        addProduct(new Product(54, new Livres("Stéphane King", "01/07/1996"), "La ligne verte"), (int) (Math.random() * 5));
         addProduct(new Product(150, new HighTech(), "Wii_U"));
-        addProduct(new Product(70, new HighTech(), "Manette"), (int)(Math.random() * 5));
-        addProduct(new Product(30, new HighTech(), "Pad"), (int)(Math.random() * 5));
+        addProduct(new Product(70, new HighTech(), "Manette"), (int) (Math.random() * 5));
+        addProduct(new Product(30, new HighTech(), "Pad"), (int) (Math.random() * 5));
         addProduct(new Product(64, new Livres("Stéphane King", "01/02/1999"), "La tempête du siècle"));
     }
 
@@ -129,6 +127,7 @@ public class MarketingService {
     }
 
     /* Interaction */
+
     /**
      * Routine d'affichage et d'interaction via la console.
      */

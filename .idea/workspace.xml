@@ -2,27 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="807b764d-bfa5-443e-8747-90ab2412eca4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/fr/davidlegras/customer/WrongCredentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/MarketingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/MarketingService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/Visitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/Visitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/product/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/product/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/product/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/product/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerStateFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/MemberFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/SignedInCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/customer/SignedInCustomer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/customer/Staff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/StaffFactory.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/Visitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/customer/Visitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/VisitorFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/Product.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,7 +50,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="153">
               <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -76,23 +59,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MarketingService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MarketingService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="189" column="20" selection-start-line="189" selection-start-column="20" selection-end-line="189" selection-end-column="20" />
+            <state relative-caret-position="561">
+              <caret line="178" column="26" selection-start-line="178" selection-start-column="26" selection-end-line="178" selection-end-column="26" />
               <folding>
-                <element signature="method#getMarketingService#0;class#MarketingService#0" />
                 <element signature="docComment;field#users#0;class#MarketingService#0" />
                 <element signature="docComment;field#products#0;class#MarketingService#0" />
                 <element signature="docComment;method#MarketingService#0;class#MarketingService#0" />
                 <element signature="method#MarketingService#0;class#MarketingService#0" />
+                <element signature="method#getMarketingService#0;class#MarketingService#0" />
                 <element signature="docComment;method#initProducts#0;class#MarketingService#0" />
-                <element signature="method#initProduct#0;class#MarketingService#0" />
                 <element signature="docComment;method#initUsers#0;class#MarketingService#0" />
+                <element signature="method#initUsers#0;class#MarketingService#0" />
                 <element signature="method#initCheckoutV1#0;class#MarketingService#0" />
-                <element signature="e#2755#2814#0" />
                 <element signature="method#existingProduct#0;class#MarketingService#0" />
+                <element signature="method#connect#0;class#MarketingService#0" />
                 <element signature="method#printProducts#0;class#MarketingService#0" />
                 <element signature="method#printProducts#1;class#MarketingService#0" />
                 <element signature="docComment;method#shopping#0;class#MarketingService#0" />
@@ -103,14 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Checkout.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/Checkout.java">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="442">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
@@ -118,11 +98,11 @@
       <file leaf-file-name="WrongCredentials.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/WrongCredentials.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="119">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#173#174#0" expanded="true" />
-                <element signature="e#249#250#0" expanded="true" />
+                <element signature="e#248#249#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -140,7 +120,7 @@
       <file leaf-file-name="CustomerListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="136">
               <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -179,10 +159,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-              <folding>
-                <element signature="e#110#111#0" expanded="true" />
-                <element signature="e#137#138#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -191,7 +167,7 @@
         <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
-              <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
               <folding>
                 <element signature="method#Customer#0;class#Customer#0" />
                 <element signature="method#Customer#1;class#Customer#0" />
@@ -228,7 +204,6 @@
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/Basket.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerListener.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/NotSignedInCustomer.java" />
-        <option value="$PROJECT_DIR$/.gitignore/.gitignore" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerState.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/state/SignedInCustomer.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/state/Member.java" />
@@ -267,6 +242,7 @@
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/WrongCredentials.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/Staff.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java" />
+        <option value="$PROJECT_DIR$/.gitignore/.gitignore" />
       </list>
     </option>
   </component>
@@ -279,9 +255,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1451" />
-    <option name="y" value="112" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1102" />
+    <option name="y" value="15" />
     <option name="width" value="1110" />
     <option name="height" value="1407" />
   </component>
@@ -290,15 +266,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="muscular-tp" type="b2602c69:ProjectViewProjectNode" />
               <item name="muscular-tp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="muscular-tp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="muscular-tp" type="462c0819:PsiDirectoryNode" />
+              <item name=".gitignore" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="muscular-tp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="muscular-tp" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="muscular-tp" type="b2602c69:ProjectViewProjectNode" />
@@ -336,6 +319,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -379,19 +365,20 @@
       <workItem from="1542901039951" duration="2409000" />
       <workItem from="1544722314368" duration="7198000" />
       <workItem from="1545158673862" duration="1921000" />
-      <workItem from="1545160702466" duration="13755000" />
+      <workItem from="1545160702466" duration="14054000" />
+      <workItem from="1545243941807" duration="172000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31431000" />
+    <option name="totallyTimeSpent" value="31902000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="1102" y="15" width="1110" height="1407" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3286385" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -399,11 +386,11 @@
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29029733" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29029733" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09618442" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23238096" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32942098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -418,37 +405,38 @@
       <window_info id="simpleUML" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3286385" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13593005" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="simpleUML" order="7" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="simpleUML" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.329718" />
       <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13593005" />
+      <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,13 +451,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/AlreadySignedInException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/SigningException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -487,20 +468,8 @@
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/Target.java" />
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/CategorieOffer.java" />
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Livres.java" />
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/StaffFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerStateFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/StaffFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerStateFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/FidelityCard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -547,11 +516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-          <folding>
-            <element signature="method#Program#1;class#Program#0" />
-            <element signature="method#clone#0;class#Program#0" />
-            <element signature="method#toString#0;class#Program#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -587,53 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="306" selection-start-line="306" selection-end-line="306" />
-          <folding>
-            <element signature="docComment;class#TV#0" />
-            <element signature="docComment;method#TV#0;class#TV#0" />
-            <element signature="method#TV#0;class#TV#0" />
-            <element signature="docComment;method#load#0;class#TV#0" />
-            <element signature="method#load#0;class#TV#0" />
-            <element signature="e#2057#2353#0" />
-            <element signature="e#2413#2727#0" />
-            <element signature="docComment;method#bind#0;class#TV#0" />
-            <element signature="method#bind#0;class#TV#0" />
-            <element signature="docComment;method#getChannels#0;class#TV#0" />
-            <element signature="method#getChannels#0;class#TV#0" />
-            <element signature="docComment;method#getProgrammation#0;class#TV#0" />
-            <element signature="method#getProgrammation#0;class#TV#0" />
-            <element signature="docComment;method#clear#0;class#TV#0" />
-            <element signature="method#clear#0;class#TV#0" />
-            <element signature="docComment;method#daysProgrammed#0;class#TV#0" />
-            <element signature="method#daysProgrammed#0;class#TV#0" />
-            <element signature="docComment;method#programmationOfnAt#0;class#TV#0" />
-            <element signature="method#programmationOfnAt#0;class#TV#0" />
-            <element signature="e#5841#6335#0" />
-            <element signature="docComment;method#programsWhile#0;class#TV#0" />
-            <element signature="method#programsWhile#0;class#TV#0" />
-            <element signature="e#6920#7221#0" />
-            <element signature="docComment;method#programsWith#0;class#TV#0" />
-            <element signature="method#programsWith#0;class#TV#0" />
-            <element signature="docComment;method#palmares#0;class#TV#0" />
-            <element signature="method#palmares#0;class#TV#0" />
-            <element signature="docComment;method#categoryOccurrences#0;class#TV#0" />
-            <element signature="method#categoryOccurrences#0;class#TV#0" />
-            <element signature="docComment;method#CSAOccurrences#0;class#TV#0" />
-            <element signature="method#CSAOccurrences#0;class#TV#0" />
-            <element signature="docComment;method#keyWordSearch#0;class#TV#0" />
-            <element signature="method#keyWordSearch#0;class#TV#0" />
-            <element signature="e#11223#11424#0" />
-            <element signature="docComment;method#queryChannels#0;class#TV#0" />
-            <element signature="method#queryChannels#0;class#TV#0" />
-            <element signature="docComment;method#queryPrograms#0;class#TV#0" />
-            <element signature="method#queryPrograms#0;class#TV#0" />
-            <element signature="docComment;method#channelsOrderedBy#0;class#TV#0" />
-            <element signature="docComment;method#programsOrderedBy#0;class#TV#0" />
-            <element signature="method#programsOrderedBy#0;class#TV#0" />
-            <element signature="docComment;class#NotLoadedException#0;class#TV#0" />
-            <element signature="class#NotLoadedException#0;class#TV#0" />
-            <element signature="docComment;method#NotLoadedException#0;class#NotLoadedException#0;class#TV#0" />
-            <element signature="docComment;method#NotLoadedException#1;class#NotLoadedException#0;class#TV#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -646,49 +563,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../Downloads/src/lucasdavid/tv/programs/Program.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <folding>
-            <element signature="docComment;class#Program#0" />
-            <element signature="docComment;field#lenght#0;class#Program#0" />
-            <element signature="docComment;method#Program#0;class#Program#0" />
-            <element signature="method#Program#0;class#Program#0" />
-            <element signature="docComment;method#getTitle#0;class#Program#0" />
-            <element signature="docComment;method#getSubtitle#0;class#Program#0" />
-            <element signature="docComment;method#getDescription#0;class#Program#0" />
-            <element signature="docComment;method#getCredits#0;class#Program#0" />
-            <element signature="docComment;method#getRelease#0;class#Program#0" />
-            <element signature="docComment;method#getLenght#0;class#Program#0" />
-            <element signature="docComment;method#getCountry#0;class#Program#0" />
-            <element signature="docComment;method#getStarRating#0;class#Program#0" />
-            <element signature="docComment;method#getRating#0;class#Program#0" />
-            <element signature="docComment;method#set#0;class#Program#0" />
-            <element signature="method#set#0;class#Program#0" />
-            <element signature="docComment;method#newInstance#0;class#Program#0" />
-            <element signature="method#newInstance#0;class#Program#0" />
-            <element signature="method#equals#0;class#Program#0" />
-            <element signature="docComment;method#brief#0;class#Program#0" />
-            <element signature="method#brief#0;class#Program#0" />
-            <element signature="docComment;method#toString#0;class#Program#0" />
-            <element signature="method#toString#0;class#Program#0" />
-          </folding>
-        </state>
+        <state relative-caret-position="-102" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../Downloads/src/lucasdavid/tv/programs/BroadcastedProgram.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="104" selection-start-line="104" selection-end-line="104" />
-          <folding>
-            <element signature="docComment;class#BroadcastedProgram#0" />
-            <element signature="docComment;method#BroadcastedProgram#0;class#BroadcastedProgram#0" />
-            <element signature="method#BroadcastedProgram#0;class#BroadcastedProgram#0" />
-            <element signature="docComment;method#getProgram#0;class#BroadcastedProgram#0" />
-            <element signature="docComment;method#getChannel#0;class#BroadcastedProgram#0" />
-            <element signature="docComment;method#setChannel#0;class#BroadcastedProgram#0" />
-            <element signature="docComment;method#getProgramming#0;class#BroadcastedProgram#0" />
-            <element signature="docComment;method#toString#0;class#BroadcastedProgram#0" />
-            <element signature="method#toString#0;class#BroadcastedProgram#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -810,10 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
           <caret line="165" column="11" selection-start-line="165" selection-start-column="11" selection-end-line="165" selection-end-column="11" />
-          <folding>
-            <element signature="e#6326#6327#0" expanded="true" />
-            <element signature="e#6394#6395#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -828,10 +705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="86" column="26" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
-          <folding>
-            <element signature="e#2567#2568#0" expanded="true" />
-            <element signature="e#2606#2607#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -845,16 +718,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/VisitorFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/VisitorFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/Checkout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="374">
           <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -864,7 +731,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="136">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -874,11 +741,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/WrongCredentials.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="119">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#173#174#0" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -904,7 +771,7 @@
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
-          <caret line="49" column="9" lean-forward="true" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
           <folding>
             <element signature="method#Customer#0;class#Customer#0" />
             <element signature="method#Customer#1;class#Customer#0" />
@@ -919,7 +786,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="153">
           <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -931,10 +798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-          <folding>
-            <element signature="e#110#111#0" expanded="true" />
-            <element signature="e#137#138#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -950,26 +813,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="189" column="20" selection-start-line="189" selection-start-column="20" selection-end-line="189" selection-end-column="20" />
+        <state relative-caret-position="561">
+          <caret line="178" column="26" selection-start-line="178" selection-start-column="26" selection-end-line="178" selection-end-column="26" />
           <folding>
-            <element signature="method#getMarketingService#0;class#MarketingService#0" />
             <element signature="docComment;field#users#0;class#MarketingService#0" />
             <element signature="docComment;field#products#0;class#MarketingService#0" />
             <element signature="docComment;method#MarketingService#0;class#MarketingService#0" />
             <element signature="method#MarketingService#0;class#MarketingService#0" />
+            <element signature="method#getMarketingService#0;class#MarketingService#0" />
             <element signature="docComment;method#initProducts#0;class#MarketingService#0" />
-            <element signature="method#initProduct#0;class#MarketingService#0" />
             <element signature="docComment;method#initUsers#0;class#MarketingService#0" />
+            <element signature="method#initUsers#0;class#MarketingService#0" />
             <element signature="method#initCheckoutV1#0;class#MarketingService#0" />
-            <element signature="e#2755#2814#0" />
             <element signature="method#existingProduct#0;class#MarketingService#0" />
+            <element signature="method#connect#0;class#MarketingService#0" />
             <element signature="method#printProducts#0;class#MarketingService#0" />
             <element signature="method#printProducts#1;class#MarketingService#0" />
             <element signature="docComment;method#shopping#0;class#MarketingService#0" />
             <element signature="method#addCustomerListener#0;class#MarketingService#0" />
             <element signature="method#removeCustomerListener#0;class#MarketingService#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
