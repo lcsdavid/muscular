@@ -1,10 +1,11 @@
 package fr.davidlegras.product;
 
 
-import java.util.Objects;
-
 /**
  *
+ *
+ * @author Lucas David
+ * @author Théo Legras
  */
 public class Category implements Comparable<Category> {
     private String name;

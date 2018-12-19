@@ -1,10 +1,10 @@
 package fr.davidlegras;
 
 import fr.davidlegras.customer.*;
+import fr.davidlegras.product.Discountable;
 import fr.davidlegras.product.HighTech;
-import fr.davidlegras.product.Livres;
+import fr.davidlegras.product.Book;
 import fr.davidlegras.product.Product;
-import fr.davidlegras.serviceMarketing.Checkout;
 import fr.davidlegras.serviceMarketing.CommercialOffer;
 import fr.davidlegras.serviceMarketing.NotInBoundsDiscountException;
 import fr.davidlegras.serviceMarketing.ProductOffer;
@@ -18,10 +18,8 @@ import java.util.*;
 
 
 public class MarketingService {
-    /* Static */
     private static MarketingService UNIQUE_MARKETING_SERVICE_INSTANCE = null;
-    /* Attributs */
-    private final EventListenerList listeners = new EventListenerList();
+
     /**
      * Tableau associatif dont la clé est le login d'un utilisateur inscrit sur le site,
      * la valeur associée une paire d'information: le hash du mot de passe correspondant et la classe du client (Member ou Staff).
@@ -36,16 +34,17 @@ public class MarketingService {
      */
     private final List<Pair<Product, Integer>> products = new ArrayList<>();
 
+    private List<CommercialOffer<Discountable>> offers = new ArrayList<>();
+
     /**
-     * Constructeur par défaut.
+     * Construceur par défaut et privée pour contrôle l'unicité de l'instanciation de la classe.
      */
     private MarketingService() {
         super();
         initProducts();
         initUsers();
+        initOffers();
     }
-
-    /* Constructeur(s) */
 
     public static MarketingService getMarketingService() {
         if (UNIQUE_MARKETING_SERVICE_INSTANCE == null)
@@ -53,18 +52,20 @@ public class MarketingService {
         return UNIQUE_MARKETING_SERVICE_INSTANCE;
     }
 
-    /* Initialisation pour test */
+    public List<CommercialOffer<Discountable>> offers() {
+        return offers;
+    }
 
     /**
      * Initialisation d'exemples de produit proposés sur notre plateforme.
      */
     private void initProducts() {
         addProduct(new Product(294, new HighTech(), "Switch"), (int) (Math.random() * 5));
-        addProduct(new Product(54, new Livres("Stéphane King", "01/07/1996"), "La ligne verte"), (int) (Math.random() * 5));
+        addProduct(new Product(54, new Book("Stéphane King", new Date(1996, 7, 1)), "La ligne verte"), (int) (Math.random() * 5));
         addProduct(new Product(150, new HighTech(), "Wii_U"));
         addProduct(new Product(70, new HighTech(), "Manette"), (int) (Math.random() * 5));
         addProduct(new Product(30, new HighTech(), "Pad"), (int) (Math.random() * 5));
-        addProduct(new Product(64, new Livres("Stéphane King", "01/02/1999"), "La tempête du siècle"));
+        addProduct(new Product(64, new Book("Stéphane King", new Date(1999, 2, 1)), "La tempête du siècle"));
     }
 
     /**
@@ -74,6 +75,10 @@ public class MarketingService {
         users.put("lcsdavid", new Pair<>("967520ae23e8ee14888bae72809031b98398ae4a636773e18fff917d77679334", new Staff("Lucas")));      /* Le mot de passe c'est: motdepasse */
         users.put("GRUUUUUUU", new Pair<>("938d4bd2706c2a997ccdd47664edc9c31220788096ef35754ab4c517ceeeba52", new Staff("Théo")));      /* Le mot de passe c'est: iltapefort! */
         users.put("fv", new Pair<>("ee05aaa41f8af44fa40db1c523f6efbf6e6baba11ac6b84fb7150ddd486897ae", new Member("Frédéric")));        /* Le mot de passe c'est: alorsçacompile? */
+    }
+
+    private void initOffers() {
+
     }
 
     private void initCheckoutV1(Checkout checkout) {
@@ -227,10 +232,10 @@ public class MarketingService {
         System.out.println("Nous espérons vous revoir bientôt.");
     }
 
+    private final EventListenerList listeners = new EventListenerList();
     public synchronized void addCustomerListener(CustomerListener listener) {
         listeners.add(CustomerListener.class, listener);
     }
-
     public synchronized void removeCustomerListener(CustomerListener listener) {
         listeners.remove(CustomerListener.class, listener);
     }
@@ -248,7 +253,7 @@ public class MarketingService {
         /* fin de la déclaration du singleton */
 
         public static Checkout getCheckout() {
-            return instance;
+            return UNIQUE_CHECKOUT_INSTANCE;
         }
 
         public float checkout(Map<Product, Integer> cart) {
@@ -264,7 +269,7 @@ public class MarketingService {
         private float getReduction(Map<Product, Integer> cart) {
             float res = 0;
             for (CommercialOffer offer : offers) {
-                res += offer.getReduction(cart);
+                res += offer.discount();
             }
             return res;
         }

@@ -35,6 +35,22 @@ public class CategoryOffer<T extends Category & Discountable> extends Commercial
         return target;
     }
 
+
+    @Override
+    public <S extends Product & Discountable> boolean isTarget(S product) {
+        return target.equals(product);
+    }
+
+    @Override
+    public float apply(Map<? super Product, Integer> cart) {
+        if (!cart.keySet().))
+            return 0;
+        float price = 0;
+
+
+        return price + (containsTargets(cart) ? apply(cart) : 0);
+    }
+
     /**
      * Renvoie le montant du Product après l'application du rabais par cette réduction de Category de Product.
      * Plus particulièrement, si le Product est concerné on retourne la valeur conséquente, sinon on retourne la
@@ -44,7 +60,7 @@ public class CategoryOffer<T extends Category & Discountable> extends Commercial
      * @param <S> TODO
      * @return le prix du Product rabais compris.
      */
-    public <S extends Product> float discountedPrice(S product) {
+    public <S extends Product & Discountable> float discountedPrice(S product) {
         return product.price() + effectiveDiscount(product);
     }
 
@@ -56,7 +72,7 @@ public class CategoryOffer<T extends Category & Discountable> extends Commercial
      * @param <S> TODO
      * @return le montant du rabais.
      */
-    public <S extends Product> float effectiveDiscount(S product) {
+    public <S extends Product & Discountable> float effectiveDiscount(S product) {
         if (product.category().equals(target))
             return product.price() * discount();
         return 0;

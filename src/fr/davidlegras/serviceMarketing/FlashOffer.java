@@ -39,6 +39,59 @@ public class FlashOffer<T extends Product & Discountable> extends CommercialOffe
         return targets;
     }
 
+    private boolean containsTargets(Map<? super Product, Integer> cart) {
+        for (Map.Entry<T, Integer> entry: targets.entrySet()) {
+            if (!cart.containsKey(entry.getKey()))
+                return false;
+            if (Integer.compare(cart.get(entry.getKey()), entry.getValue()) < 0)
+                return false;
+        }
+        return true;
+
+        /* Ancienne version
+        for (int i = 0; i < targets.size(); i++) {
+            if (!cart.containsKey(target.get(i))) //l'un des produit n'est pas dans le panier
+                return false;
+            if (cart.containsKey(target.get(i))) {
+                if (cart.get(target.get(i)) == 0) //un produit est enregistré mais la quantité est à 0
+                    return false;
+            }
+        }
+        return true; */
+    }
+
+    @Override
+    public <S extends Product & Discountable> boolean isTarget(S product) {
+        return targets.containsKey(product);
+    }
+
+    @Override
+    public float apply(Map<? super Product, Integer> cart) {
+        if (!containsTargets(cart))
+            return 0;
+        float price = 0;
+        for (Map.Entry<T, Integer> entry: targets.entrySet()) {
+            price += discountedPrice(entry.getKey());
+            int remaining = cart.get(entry.getKey()) - entry.getValue();
+            if (remaining > 0) /* N'est jamais en dessous de 0 (cf. containsTargets). */
+                cart.replace(entry.getKey(), remaining);
+            else
+                cart.remove(entry.getKey());
+        }
+        return price + (containsTargets(cart) ? apply(cart) : 0);
+
+        /* Ancienne version
+        float res = 0;
+        if (!containsAll(cart))//dans ce cas la réduction ne s'applique pas
+            return 0;
+        //on va appliquer la réduction sur tous les produits
+        for (Product entry : target) {
+            res += cart.get(entry) * (reduction / 100);
+        }
+        return res;
+        */
+    }
+
     /**
      * Renvoie le montant du Product après l'application du rabais par cette réduction de Category de Product.
      * Plus particulièrement, si le Product est concerné on retourne la valeur conséquente, sinon on retourne la
@@ -47,7 +100,8 @@ public class FlashOffer<T extends Product & Discountable> extends CommercialOffe
      * @param product le Product dont on veut obtenir le prix réduit.
      * @return le prix du Product rabais compris.
      */
-    public float discountedPrice(T product) {
+    @Override
+    public <S extends Product & Discountable> float discountedPrice(S product) {
         return product.price() + effectiveDiscount(product);
     }
 
@@ -58,48 +112,12 @@ public class FlashOffer<T extends Product & Discountable> extends CommercialOffe
      * @param product le Product dont le lequel on voit obtenir le montant du rabais.
      * @return le montant du rabais.
      */
-    public float effectiveDiscount(T product) {
-        if (targets.containsKey(product))
+    @Override
+    public <S extends Product & Discountable> float effectiveDiscount(S product) {
+        if (isTarget(product))
             return product.price() * discount();
         return 0;
     }
-
-    // TODO convertir
-    /*
-    // est-ce que la Map passée en entré contient tous les produits nécessaires pour appliquer la réduction
-    private boolean containsAll(Map<Product, Integer> cart) {
-
-        for (int i = 0; i < target.size(); i++) {
-            if (!cart.containsKey(target.get(i)))//l'un des produit n'est pas dans le panier
-                return false;
-            if (cart.containsKey(target.get(i))) {
-                if (cart.get(target.get(i)) == 0)//un produit est enregistré mais la quantité est à 0
-                    return false;
-            }
-        }
-
-        return true;
-    }
-
-    @Override
-    public float getReduction(Map<Product, Integer> cart) {
-
-        float res = 0;
-
-
-        if (!containsAll(cart))//dans ce cas la réduction ne s'applique pas
-            return 0;
-
-
-        //on va appliquer la réduction sur tous les produits
-        for (Product entry : target) {
-            res += cart.get(entry) * (reduction / 100);
-        }
-
-        return res;
-    }
-
-    */
 
     @Override
     public String toString() {

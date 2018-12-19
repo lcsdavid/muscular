@@ -1,9 +1,12 @@
 package fr.davidlegras.product;
 
-public class HighTech extends Category {
+import fr.davidlegras.serviceMarketing.CategoryOffer;
+import fr.davidlegras.serviceMarketing.CommercialOffer;
+
+public class HighTech extends Category implements Discountable {
 
     public HighTech() {
-        super("HighTech", true);
+        super("HighTech");
     }
 
     @Override

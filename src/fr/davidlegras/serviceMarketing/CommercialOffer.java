@@ -1,6 +1,9 @@
 package fr.davidlegras.serviceMarketing;
 
 import fr.davidlegras.product.Discountable;
+import fr.davidlegras.product.Product;
+
+import java.util.Map;
 
 /**
  * TODO
@@ -26,4 +29,12 @@ public abstract class CommercialOffer<T extends Discountable> {
     public float discount() {
         return discount;
     }
+
+    public abstract <S extends Product & Discountable> boolean isTarget(S product);
+
+    public abstract float apply(Map<? super Product, Integer> cart);
+
+    public abstract <S extends Product & Discountable> float discountedPrice(S product);
+
+    public abstract <S extends Product & Discountable> float effectiveDiscount(S product);
 }

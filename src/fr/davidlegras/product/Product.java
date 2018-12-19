@@ -1,9 +1,12 @@
 package fr.davidlegras.product;
 
+import java.util.Objects;
+
 /**
- * @see fr.davidlegras.serviceMarketing.CategoryOffer
- * @see fr.davidlegras.serviceMarketing.ProductOffer
- * @see fr.davidlegras.serviceMarketing.FlashOffer
+ *
+ * @author Lucas David
+ * @author Théo Legras
+ * @see Category
  */
 public class Product implements Comparable<Product> {
     private String name;
@@ -30,13 +33,36 @@ public class Product implements Comparable<Product> {
         return price;
     }
 
-    /* Object Override */
+
     @Override
-    public String toString() {
-        return "[" + category.toString() + "]\t" + name + "\nPrix : " + price + "€.";
+    public int hashCode() {
+        return Objects.hash(name, category, price);
     }
 
-    /* Comparable Override */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (obj instanceof Product) {
+            Product pro = (Product)obj;
+            if (!name.equals(pro.name))
+                return false;
+            if (!category.equals(pro.category))
+                return false;
+            if (Float.compare(price, pro.price) != 0)
+                return false;
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return name + " EUR " + price;
+    }
+
     @Override
     public int compareTo(Product o) {
         int compare = name.compareTo(o.name);

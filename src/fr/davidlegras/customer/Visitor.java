@@ -2,6 +2,8 @@ package fr.davidlegras.customer;
 
 
 import fr.davidlegras.MarketingService;
+import fr.davidlegras.product.Discountable;
+import fr.davidlegras.serviceMarketing.CommercialOffer;
 
 public class Visitor extends NotSignedInCustomer {
     private static Visitor UNIQUE_VISITOR_INSTANCE = null;
@@ -18,6 +20,10 @@ public class Visitor extends NotSignedInCustomer {
 
     @Override
     public int price(Customer customer) {
+        for (CommercialOffer<Discountable> offer: MarketingService.getMarketingService().offers()) {
+            offer.
+        }
+
         return 0;
     }
 
