@@ -1,14 +1,21 @@
 package fr.davidlegras.customer;
 
-public abstract class NotSignedInCustomer implements CustomerState {
+import javafx.application.Platform;
+
+public interface NotSignedInCustomer extends CustomerState {
 
     @Override
-    public String name() {
-        return "Guest";
+    default void signIn(final Platform platform, final Customer context, String login, String passwordHash) {
+        /*if (!MarketingService.getMarketingService().loginExist(login))
+            throw new WrongCredentials("User's login doesn't exist.");
+        CustomerState state = MarketingService.getMarketingService().connect(login, passwordHash);
+        if (state == null)
+            throw new WrongCredentials("Wrong password.");
+        context.customerState(state);*/
     }
 
     @Override
-    public final void signOut(final Customer context) throws NotSignedInException {
+    default void signOut(final Platform unusedPlatform, final Customer unusedCustomer) throws NotSignedInException {
         throw new NotSignedInException();
     }
 }

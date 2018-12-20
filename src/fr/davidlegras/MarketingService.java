@@ -179,7 +179,7 @@ public class MarketingService {
                     break;
                 case "3":
                     System.out.println("Prix de base : " + customer.rawPrice() + "€.");
-                    System.out.println("Prix à payer : " + checkout.getPrice(customer.getCart()) + "€.");
+                    System.out.println("Prix à payer : " + checkout.getPrice(customer.cart()) + "€.");
                     shopping = false;
                     break;
                 case "4":
@@ -233,12 +233,7 @@ public class MarketingService {
     }
 
     private final EventListenerList listeners = new EventListenerList();
-    public synchronized void addCustomerListener(CustomerListener listener) {
-        listeners.add(CustomerListener.class, listener);
-    }
-    public synchronized void removeCustomerListener(CustomerListener listener) {
-        listeners.remove(CustomerListener.class, listener);
-    }
+
 
     /**
      * Classe de passage à la caisse.

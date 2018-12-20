@@ -1,10 +1,17 @@
 package fr.davidlegras.customer;
 
 import fr.davidlegras.product.Product;
+import javafx.application.Platform;
 
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Un Customer est un objet qui représente le client.
+ *
+ * @author Lucas David
+ * @author Théo Legras
+ */
 public class Customer {
     private CustomerState customerState;
     private Map<Product, Integer> cart;
@@ -28,6 +35,9 @@ public class Customer {
         customerState = state;
     }
 
+    public Map<Product, Integer> cart() {
+        return cart;
+    }
     public void addToCart(Product product, int count) {
         if (product == null)
             throw new NullPointerException();
@@ -36,21 +46,15 @@ public class Customer {
         else
             cart.put(product, count);
     }
-
     public void addToCart(Product product) {
         addToCart(product, 1);
     }
 
-    public Map<Product, Integer> getCart() {
-        return cart;
-    }
-
     /* Prix */
 
-    public float price() {
-        return customerState.price(this);
+    public float price(final Platform platform) {
+        return customerState.price(platform, this);
     }
-
     public float rawPrice() {
         float cartPrice = 0;
         for (Map.Entry<Product, Integer> entry : cart.entrySet())
@@ -60,12 +64,12 @@ public class Customer {
 
     /* Connexion & Déconnexion */
 
-    public void signIn(final String login, final String passwordHash) throws AlreadySignedInException, WrongCredentials {
-        customerState.signIn(this, login, passwordHash);
+    public void signIn(final Platform platform, String login, String passwordHash) throws AlreadySignedInException, WrongCredentials {
+        customerState.signIn(platform, this, login, passwordHash);
     }
 
-    public void signOut() throws NotSignedInException {
-        customerState.signOut(this);
+    public void signOut(final Platform platform) throws NotSignedInException {
+        customerState.signOut(platform, this);
     }
 
     public boolean isSignedIn() {
@@ -79,12 +83,6 @@ public class Customer {
             s += entry.getKey().toString() + " : " + entry.getValue().toString() + '\n';
         s += "\n\t";
         s += "Prix total = " + rawPrice() + "€.\n\t";
-        s += "Prix: " + price() + "€.\n";
         return s;
-    }
-
-    @Override
-    public String toString() {
-        return customerState.name();
     }
 }

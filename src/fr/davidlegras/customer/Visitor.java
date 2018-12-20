@@ -29,11 +29,6 @@ public class Visitor extends NotSignedInCustomer {
 
     @Override
     public void signIn(final Customer context, final String login, final String passwordHash) throws WrongCredentials {
-        if (!MarketingService.getMarketingService().loginExist(login))
-            throw new WrongCredentials("User's login doesn't exist.");
-        CustomerState state = MarketingService.getMarketingService().connect(login, passwordHash);
-        if (state == null)
-            throw new WrongCredentials("Wrong password.");
-        context.customerState(state);
+
     }
 }

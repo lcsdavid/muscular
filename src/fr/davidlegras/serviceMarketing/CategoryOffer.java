@@ -4,7 +4,7 @@ import fr.davidlegras.product.Category;
 import fr.davidlegras.product.Discountable;
 import fr.davidlegras.product.Product;
 
-import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Map;
 
 /**
@@ -46,7 +46,7 @@ public class CategoryOffer<T extends Category & Discountable> extends Commercial
         if (!cart.keySet().))
             return 0;
         float price = 0;
-
+        Comparator
 
         return price + (containsTargets(cart) ? apply(cart) : 0);
     }
