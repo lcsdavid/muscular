@@ -146,7 +146,7 @@ public class MarketingService {
             System.out.println(customer.toString() + ", voulez-vous afficher la liste entière ou la liste par categories ?\n");
             System.out.println("[0]: Quitter le magasin (vos achats seront alors perdu).");
             System.out.println("[1]: Liste des produits.");
-            System.out.println("[2]: Liste des produits par categorie.");
+            //System.out.println("[2]: Liste des produits par categorie.");
             System.out.println("[3]: Passer à la caisse.");
             System.out.println("[4]: Afficher l'état actuel de votre panier.");
             System.out.println();
@@ -168,10 +168,10 @@ public class MarketingService {
                     System.out.println("Liste des produits :");
                     printProducts();
                     break;
-                case "2":
+                /*case "2":
                     System.out.println("Liste des produits par catégorie :");
                     printProducts(Comparator.comparing(Product::getCategory));
-                    break;
+                    break;*/
                 case "3":
                     System.out.println("Prix de base : " + customer.rawPrice() + "€.");
                     System.out.println("Prix à payer : " + checkout.getPrice(customer.getCart()) + "€.");

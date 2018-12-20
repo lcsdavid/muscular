@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class CategorieOffer extends CommercialOffer {
 
-    private Category target; //le nom ou la catégorie du/des produits ciblés
+    private Category target; //la catégorie du/des produits ciblés
 
 
     public CategorieOffer(float reduction, Category target) throws NotInBoundsReductionException, NotAPromouvableProductException {
