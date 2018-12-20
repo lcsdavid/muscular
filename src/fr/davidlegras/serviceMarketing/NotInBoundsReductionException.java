@@ -1,6 +1,6 @@
 package fr.davidlegras.serviceMarketing;
 
-public class NotInBoundsReductionException extends Exception {
+public class NotInBoundsReductionException extends ReductionCreationException {
 
     public NotInBoundsReductionException() {
         super();

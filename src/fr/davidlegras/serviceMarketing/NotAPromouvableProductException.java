@@ -1,6 +1,6 @@
 package fr.davidlegras.serviceMarketing;
 
-public class NotAPromouvableProductException extends Exception {
+public class NotAPromouvableProductException extends ReductionCreationException {
     public NotAPromouvableProductException() {
         super();
     }
