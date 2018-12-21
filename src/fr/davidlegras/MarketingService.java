@@ -5,9 +5,9 @@ import fr.davidlegras.product.Discountable;
 import fr.davidlegras.product.HighTech;
 import fr.davidlegras.product.Book;
 import fr.davidlegras.product.Product;
-import fr.davidlegras.serviceMarketing.CommercialOffer;
+import fr.davidlegras.product.CommercialOffer;
 import fr.davidlegras.serviceMarketing.NotInBoundsDiscountException;
-import fr.davidlegras.serviceMarketing.ProductOffer;
+import fr.davidlegras.product.ProductOffer;
 import javafx.util.Pair;
 
 import javax.swing.event.EventListenerList;
@@ -26,7 +26,7 @@ public class MarketingService {
      * Cette representation est fait de sorte à représenter au mieux une base de donnée externe sans une base de
      * de donnée tout en restant simple pour l'exemple.
      */
-    private final Map<String, Pair<String, SignedInCustomer>> users = new HashMap<>();
+    private final Map<String, Pair<String, ConnectedCustomer>> users = new HashMap<>();
     /**
      * Liste des produits disponibles en magasin.
      * Chaque clé est un produit et sa valeur associé est le nombre de point de fidelité correspondant accordé à l'achat.
@@ -84,8 +84,8 @@ public class MarketingService {
     private void initCheckoutV1(Checkout checkout) {
         try {
             checkout.addOffer(new ProductOffer(50, products.get(0).getKey()));
-            //checkout.addOffer(new ProductOffer(20, products.get(6)));
-            //checkout.addOffer(new FlashOffer(30, products));
+            //checkout.attachOffer(new ProductOffer(20, products.get(6)));
+            //checkout.attachOffer(new FlashOffer(30, products));
         } catch (NotInBoundsDiscountException | NotAPromouvableProductException e) {
             e.printStackTrace();
         }
@@ -104,7 +104,7 @@ public class MarketingService {
         return users.containsKey(login);
     }
 
-    public SignedInCustomer connect(String login, String passwordHash) {
+    public ConnectedCustomer connect(String login, String passwordHash) {
         System.out.println(users.get(login).getKey() + '\n' + passwordHash);
         if (users.get(login).getKey().equals(passwordHash))
             return users.get(login).getValue();
@@ -155,7 +155,7 @@ public class MarketingService {
             System.out.println("[3]: Passer à la caisse.");
             System.out.println("[4]: Afficher l'état actuel de votre panier.");
             System.out.println();
-            if (!customer.isSignedIn())
+            if (!customer.isConnected())
                 System.out.println("[SignIn]: Se connecter son profil personnel.");
             else
                 System.out.println("[SignOut]: Se déconnecter de son profil personnel.");
@@ -200,8 +200,8 @@ public class MarketingService {
                     }
                     /* Connexion */
                     try {
-                        customer.signIn(login, passwordHash);
-                    } catch (AlreadySignedInException e) {
+                        customer.connect(null ,login, passwordHash);
+                    } catch (AlreadyConnectedException e) {
                         System.out.println("Vous êtes déjà connecté... Déconnectez vous avant de pouvoir vous reconnecter.");
                     } catch (WrongCredentials wrongCredentials) {
                         System.out.println(wrongCredentials.getMessage());
@@ -209,8 +209,8 @@ public class MarketingService {
                     break;
                 case "SignOut":
                     try {
-                        customer.signOut();
-                    } catch (NotSignedInException e) {
+                        customer.disconnect(null);
+                    } catch (NotConnectedException e) {
                         System.out.println("Vous ne pouvez pas vous déconnecter, vous n'êtes pas connecter...");
                     }
                     break;

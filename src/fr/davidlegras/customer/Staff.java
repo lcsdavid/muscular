@@ -1,6 +1,6 @@
 package fr.davidlegras.customer;
 
-public class Staff extends SignedInCustomer {
+public class Staff extends ConnectedCustomer {
 
     public Staff(final String name) {
         super(name);

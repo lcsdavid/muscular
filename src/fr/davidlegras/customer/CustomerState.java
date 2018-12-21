@@ -6,7 +6,7 @@ public interface CustomerState {
 
     int price(final Platform platform, final Customer context);
 
-    void signIn(final Platform platform, final Customer context, String login, String passwordHash) throws AlreadySignedInException, WrongCredentials;
+    void connect(final Platform platform, final Customer context, String login, String passwordHash) throws AlreadyConnectedException, WrongCredentials;
 
-    void signOut(final Platform platform, final Customer context) throws NotSignedInException;
+    void disconnect(final Platform platform, final Customer context) throws NotConnectedException;
 }

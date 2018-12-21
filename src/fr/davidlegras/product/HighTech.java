@@ -1,8 +1,5 @@
 package fr.davidlegras.product;
 
-import fr.davidlegras.serviceMarketing.CategoryOffer;
-import fr.davidlegras.serviceMarketing.CommercialOffer;
-
 public class HighTech extends Category implements Discountable {
 
     public HighTech() {

@@ -14,7 +14,7 @@ public class Product implements Comparable<Product> {
     private float price;
 
     /* Constructeurs */
-    public Product(float price, Category category, String name) {
+    public Product(String name, Category category, float price) {
         this.name = name;
         this.category = category;
         this.price = price;
@@ -33,7 +33,6 @@ public class Product implements Comparable<Product> {
         return price;
     }
 
-
     @Override
     public int hashCode() {
         return Objects.hash(name, category, price);
@@ -51,9 +50,7 @@ public class Product implements Comparable<Product> {
                 return false;
             if (!category.equals(pro.category))
                 return false;
-            if (Float.compare(price, pro.price) != 0)
-                return false;
-            return true;
+            return Float.compare(price, pro.price) == 0;
         }
         return false;
     }

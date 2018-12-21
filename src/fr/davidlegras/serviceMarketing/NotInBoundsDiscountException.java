@@ -1,5 +1,7 @@
 package fr.davidlegras.serviceMarketing;
 
+import fr.davidlegras.product.CommercialOffer;
+
 /**
  * TODO
  *

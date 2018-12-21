@@ -1,3 +1,5 @@
+package fr.davidlegras;
+
 import java.util.ArrayList;
 
 public class laFacServer implements Plateform.Server {

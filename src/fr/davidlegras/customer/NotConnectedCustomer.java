@@ -2,10 +2,10 @@ package fr.davidlegras.customer;
 
 import javafx.application.Platform;
 
-public interface NotSignedInCustomer extends CustomerState {
+public interface NotConnectedCustomer extends CustomerState {
 
     @Override
-    default void signIn(final Platform platform, final Customer context, String login, String passwordHash) {
+    default void connect(final Platform platform, final Customer context, String login, String passwordHash) {
         /*if (!MarketingService.getMarketingService().loginExist(login))
             throw new WrongCredentials("User's login doesn't exist.");
         CustomerState state = MarketingService.getMarketingService().connect(login, passwordHash);
@@ -15,7 +15,7 @@ public interface NotSignedInCustomer extends CustomerState {
     }
 
     @Override
-    default void signOut(final Platform unusedPlatform, final Customer unusedCustomer) throws NotSignedInException {
-        throw new NotSignedInException();
+    default void disconnect(final Platform unusedPlatform, final Customer unusedCustomer) throws NotConnectedException {
+        throw new NotConnectedException();
     }
 }

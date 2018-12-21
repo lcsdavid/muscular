@@ -1,10 +1,10 @@
 package fr.davidlegras.serviceMarketing;
 
 import fr.davidlegras.product.Category;
+import fr.davidlegras.product.CommercialOffer;
 import fr.davidlegras.product.Discountable;
 import fr.davidlegras.product.Product;
 
-import java.util.Comparator;
 import java.util.Map;
 
 /**
@@ -13,7 +13,7 @@ import java.util.Map;
  *
  * @author Lucas David
  * @author Théo Legras
- * @see fr.davidlegras.serviceMarketing.CommercialOffer
+ * @see CommercialOffer
  * @see Discountable
  * @see Category
  */

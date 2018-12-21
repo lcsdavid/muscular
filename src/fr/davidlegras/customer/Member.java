@@ -1,6 +1,6 @@
 package fr.davidlegras.customer;
 
-public class Member extends SignedInCustomer {
+public class Member extends ConnectedCustomer {
 
     public Member(String name) {
         super(name);
