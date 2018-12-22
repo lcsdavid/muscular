@@ -1,5 +1,7 @@
 package fr.davidlegras.serviceMarketing;
 
+import fr.davidlegras.customer.Customer;
+import fr.davidlegras.customer.CustomerState;
 import fr.davidlegras.product.Product;
 
 import java.util.ArrayList;
@@ -10,10 +12,8 @@ public class ProductOffer extends CommercialOffer {
     private Product target; //le nom du produit ciblé
 
 
-    public ProductOffer(float reduction, Product target) throws NotInBoundsReductionException, NotAPromouvableProductException {
-        if (reduction > 100 || reduction < 0) {
-            throw new NotInBoundsReductionException("Reduction non comprise entre 0 et 100");
-        }
+    public ProductOffer(float reduction, Product target, ArrayList<? extends CustomerState> customerTarget) throws NotInBoundsReductionException, NotAPromouvableProductException {
+        super(reduction, customerTarget);
         if (!target.isDiscountable())
             throw new NotAPromouvableProductException("Produit non promouvalbe");
         this.reduction = reduction;
@@ -57,11 +57,12 @@ public class ProductOffer extends CommercialOffer {
     }
 
     @Override
-    public float getReduction(Map<Product, Integer> cart) {
-
+    public float getReduction(Customer customer) {
+        if(!customerAccepted(customer))
+            return 0;
         float res = 0;
 
-        for (Map.Entry<Product, Integer> entry : cart.entrySet()) {
+        for (Map.Entry<Product, Integer> entry : customer.getCart().entrySet()) {
             res += getReduction(entry.getKey()) * entry.getValue();
         }
 

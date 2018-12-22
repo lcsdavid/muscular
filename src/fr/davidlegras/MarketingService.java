@@ -60,11 +60,11 @@ public class MarketingService {
      */
     private void initProducts() {
         addProduct(new Product(294, new HighTech(), "Switch"), (int) (Math.random() * 5));
-        addProduct(new Product(54, new Livres("Stéphane King", "01/07/1996"), "La ligne verte"), (int) (Math.random() * 5));
+        addProduct(new Product(54, new Livres("Stéphane King", "01/07/1996"), "La_ligne_verte"), (int) (Math.random() * 5));
         addProduct(new Product(150, new HighTech(), "Wii_U"));
         addProduct(new Product(70, new HighTech(), "Manette"), (int) (Math.random() * 5));
         addProduct(new Product(30, new HighTech(), "Pad"), (int) (Math.random() * 5));
-        addProduct(new Product(64, new Livres("Stéphane King", "01/02/1999"), "La tempête du siècle"));
+        addProduct(new Product(64, new Livres("Stéphane King", "01/02/1999"), "La_tempête_du_siècle"));
     }
 
     /**
@@ -78,7 +78,7 @@ public class MarketingService {
 
     private void initCheckoutV1(Checkout checkout) {
         try {
-            checkout.addOffer(new ProductOffer(50, products.get(0).getKey()));
+            checkout.addOffer(new ProductOffer(50, products.get(0).getKey(), null));
             //checkout.addOffer(new ProductOffer(20, products.get(6)));
             //checkout.addOffer(new FlashOffer(30, products));
         } catch (NotInBoundsReductionException | NotAPromouvableProductException e) {
@@ -174,7 +174,7 @@ public class MarketingService {
                     break;*/
                 case "3":
                     System.out.println("Prix de base : " + customer.rawPrice() + "€.");
-                    System.out.println("Prix à payer : " + checkout.getPrice(customer.getCart()) + "€.");
+                    System.out.println("Prix à payer : " + checkout.getPrice(customer) + "€.");
                     shopping = false;
                     break;
                 case "4":

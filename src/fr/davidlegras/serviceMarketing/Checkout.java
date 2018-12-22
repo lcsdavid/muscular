@@ -1,5 +1,6 @@
 package fr.davidlegras.serviceMarketing;
 
+import fr.davidlegras.customer.Customer;
 import fr.davidlegras.product.Product;
 
 import java.util.ArrayList;
@@ -31,22 +32,22 @@ public final class Checkout {
         offers.add(offer);
     }
 
-    private float getReduction(Map<Product, Integer> cart) {
+    private float getReduction(Customer customer) {
         float res = 0;
         for (CommercialOffer offer : offers) {
-            res += offer.getReduction(cart);
+            res += offer.getReduction(customer);
         }
         return res;
     }
 
-    public float getPrice(Map<Product, Integer> cart) {
+    public float getPrice(Customer customer) {
         float res = 0;
-        for (Map.Entry<Product, Integer> entry : cart.entrySet()) {
+        for (Map.Entry<Product, Integer> entry : customer.getCart().entrySet()) {
             res += entry.getKey().getPrice() * entry.getValue();
         }
         //TODO ajouter exception pour le cas ou la prix est 0
 
-        res -= getReduction(cart);
+        res -= getReduction(customer);
 
         //si les réductions sont plus grandes que le prix on remène le prix à 0
         //ce cas n'est pas concidéré comme une erreure car on accepte le cumul des réductions.
