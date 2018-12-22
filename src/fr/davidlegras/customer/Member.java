@@ -1,13 +1,18 @@
 package fr.davidlegras.customer;
 
-public class Member extends ConnectedCustomer {
+import fr.davidlegras.Platform;
 
-    public Member(String name) {
-        super(name);
+public class Member implements ConnectedCustomer {
+    private String firstName;
+    private FidelityCard fidelityCard = new FidelityCard();
+
+    public Member(String firstName) {
+        super();
+        this.firstName = firstName;
     }
 
     @Override
-    public int price(Customer customer) {
+    public int price(final Platform platform, final Customer context) {
         return 0;
     }
 }

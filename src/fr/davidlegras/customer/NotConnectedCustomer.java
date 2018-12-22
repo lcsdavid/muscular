@@ -1,8 +1,14 @@
 package fr.davidlegras.customer;
 
-import javafx.application.Platform;
+import fr.davidlegras.Platform;
 
 public interface NotConnectedCustomer extends CustomerState {
+
+    @Override
+    default int price(final Platform platform, final Customer context) {
+
+        return 0;
+    }
 
     @Override
     default void connect(final Platform platform, final Customer context, String login, String passwordHash) {

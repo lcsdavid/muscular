@@ -1,7 +1,7 @@
 package fr.davidlegras.customer;
 
+import fr.davidlegras.Platform;
 import fr.davidlegras.product.Product;
-import javafx.application.Platform;
 
 import java.util.HashMap;
 import java.util.Map;

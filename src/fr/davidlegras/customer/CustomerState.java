@@ -1,6 +1,6 @@
 package fr.davidlegras.customer;
 
-import javafx.application.Platform;
+import fr.davidlegras.Platform;
 
 public interface CustomerState {
 

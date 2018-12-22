@@ -1,13 +1,15 @@
 package fr.davidlegras.customer;
 
-public class Staff extends ConnectedCustomer {
+import fr.davidlegras.Platform;
 
-    public Staff(final String name) {
-        super(name);
+public class Staff extends AbstractConnectedCustomer {
+
+    public Staff(String name, String lastName) {
+        super(name, lastName);
     }
 
     @Override
-    public int price(Customer customer) {
+    public int price(final Platform platform, final Customer context) {
         return 0;
     }
 }

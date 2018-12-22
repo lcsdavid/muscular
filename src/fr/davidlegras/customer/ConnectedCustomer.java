@@ -1,26 +1,16 @@
 package fr.davidlegras.customer;
 
-import javafx.application.Platform;
+import fr.davidlegras.Platform;
 
-public abstract class ConnectedCustomer implements CustomerState {
-    private String name;
-
-    public ConnectedCustomer(String name) {
-        super();
-        this.name = name;
-    }
-
-    public String name() {
-        return name;
-    }
+public interface ConnectedCustomer extends CustomerState {
 
     @Override
-    public final void connect(Platform platform, Customer context, String login, String passwordHash) throws AlreadyConnectedException {
+    default void connect(final Platform platform, final Customer context, String login, String passwordHash) throws AlreadyConnectedException {
         throw new AlreadyConnectedException();
     }
 
     @Override
-    public final void disconnect(Platform unused, Customer context) {
+    default void disconnect(final Platform unused, final Customer context) {
         context.customerState(Visitor.getVisitor());
     }
 }
