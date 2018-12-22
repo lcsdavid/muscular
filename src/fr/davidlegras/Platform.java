@@ -2,7 +2,7 @@ package fr.davidlegras;
 
 import fr.davidlegras.customer.CustomerListener;
 
-public interface Plateform {
+public interface Platform {
 
 
 
