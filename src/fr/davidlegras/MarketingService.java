@@ -65,6 +65,8 @@ public class MarketingService {
         addProduct(new Product(70, new HighTech(), "Manette"), (int) (Math.random() * 5));
         addProduct(new Product(30, new HighTech(), "Pad"), (int) (Math.random() * 5));
         addProduct(new Product(64, new Livres("Stéphane King", "01/02/1999"), "La_tempête_du_siècle"));
+        addProduct(new Product(64, new Livres("Stéphane King", "01/02/1999"), "La_tempête_du_siècle"));
+        addProduct(new Product(-64, new Livres("Stéphane King", "01/02/1999"), "La_tempête_du_siècle"));
     }
 
     /**
@@ -108,10 +110,14 @@ public class MarketingService {
 
     /* Mutateurs */
     private void addProduct(Product product) {
+        if(product.getPrice()<0)
+            return;
         addProduct(product, 0);
     }
 
     private void addProduct(Product product, int fidelityPoints) {
+        if(product.getPrice()<0)
+            return;
         products.add(new Pair<>(product, fidelityPoints));
     }
 

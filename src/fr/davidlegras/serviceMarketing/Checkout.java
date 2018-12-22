@@ -45,7 +45,6 @@ public final class Checkout {
         for (Map.Entry<Product, Integer> entry : customer.getCart().entrySet()) {
             res += entry.getKey().getPrice() * entry.getValue();
         }
-        //TODO ajouter exception pour le cas ou la prix est 0
 
         res -= getReduction(customer);
 
