@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="807b764d-bfa5-443e-8747-90ab2412eca4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/Platform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/laFac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/laFac.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/AbstractProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/AbstractProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aled/MarketingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,12 +24,12 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="java" value="60" />
+          <entry key="java" value="62" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="60" />
+          <entry key="JAVA" value="62" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -54,7 +52,7 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/aled/MarketingService.java">
+            <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="442">
                   <caret line="234" column="4" lean-forward="true" selection-start-line="234" selection-start-column="4" selection-end-line="234" selection-end-column="72" />
@@ -63,10 +61,27 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Cart.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="119">
+                  <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+                  <folding>
+                    <element signature="method#count#0;class#Cart#0" />
+                    <element signature="method#contains#1;class#Cart#0" />
+                    <element signature="method#add#1;class#Cart#0" />
+                    <element signature="method#addAll#0;class#Cart#0" />
+                    <element signature="method#remove#1;class#Cart#0" />
+                    <element signature="method#removeAll#0;class#Cart#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/Platform.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+                <state relative-caret-position="68">
+                  <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -89,8 +104,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Customer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="423">
-                  <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+                <state relative-caret-position="-19">
+                  <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" selection-end-column="35" />
                   <folding>
                     <element signature="docComment;class#Customer#0" />
                     <element signature="method#Customer#0;class#Customer#0" />
@@ -102,20 +117,6 @@
                     <element signature="e#2087#2088#0" expanded="true" />
                     <element signature="e#2147#2148#0" expanded="true" />
                     <element signature="method#cartToString#0;class#Customer#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Member.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="29" />
-                  <folding>
-                    <element signature="method#Member#0;class#Member#0" />
-                    <element signature="e#400#401#0" expanded="true" />
-                    <element signature="e#424#425#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -155,11 +156,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Book.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" column="94" selection-start-line="10" selection-start-column="94" selection-end-line="10" selection-end-column="94" />
+                <state relative-caret-position="306">
+                  <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="method#Book#0;class#Book#0" />
@@ -188,7 +189,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/AbstractProduct.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="425">
@@ -216,17 +217,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Offer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Discountator.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="197">
-                  <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+                <state relative-caret-position="102">
+                  <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
@@ -249,7 +241,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Staff.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="153">
@@ -281,6 +273,19 @@
                   <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
                   <folding>
                     <element signature="docComment;class#Product#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/CommercialOffer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="85">
+                  <caret line="14" column="80" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
+                  <folding>
+                    <element signature="docComment;class#CommercialOffer#0" />
+                    <element signature="method#CommercialOffer#0;class#CommercialOffer#0" />
                   </folding>
                 </state>
               </provider>
@@ -399,11 +404,6 @@
             <path>
               <item name="muscular-tp" type="b2602c69:ProjectViewProjectNode" />
               <item name="muscular-tp" type="462c0819:PsiDirectoryNode" />
-              <item name="aled" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="muscular-tp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="muscular-tp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -444,7 +444,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545499633032" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545500326990" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -453,6 +453,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ldavid\Documents\GitHub\muscular-tp\src\fr\davidlegras" />
       <recent name="C:\Users\ldavid\Documents\GitHub\muscular-tp\aled" />
     </key>
   </component>
@@ -493,18 +494,18 @@
       <workItem from="1545160702466" duration="14054000" />
       <workItem from="1545243941807" duration="12091000" />
       <workItem from="1545321145131" duration="23592000" />
-      <workItem from="1545491796397" duration="7826000" />
+      <workItem from="1545491796397" duration="8466000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75239000" />
+    <option name="totallyTimeSpent" value="75879000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11567164" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11567164" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -514,7 +515,7 @@
       <window_info id="simpleUML" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.28958786" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28958786" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3998435" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -619,39 +620,6 @@
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/IllegalArgumentException.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/Map.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/Collection.java" />
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Cart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding>
-            <element signature="method#count#0;class#Cart#0" />
-            <element signature="method#contains#1;class#Cart#0" />
-            <element signature="method#add#1;class#Cart#0" />
-            <element signature="method#addAll#0;class#Cart#0" />
-            <element signature="method#remove#1;class#Cart#0" />
-            <element signature="method#removeAll#0;class#Cart#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/CommercialOffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" column="80" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
-          <folding>
-            <element signature="docComment;class#CommercialOffer#0" />
-            <element signature="method#CommercialOffer#0;class#CommercialOffer#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Offer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Discountator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -754,17 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Staff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-          <folding>
-            <element signature="e#369#370#0" expanded="true" />
-            <element signature="e#393#394#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/ConnectedCustomer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -800,17 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Discountable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding>
-            <element signature="e#352#353#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -821,7 +767,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aled/MarketingService.java">
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="234" column="4" lean-forward="true" selection-start-line="234" selection-start-column="4" selection-end-line="234" selection-end-column="72" />
@@ -841,38 +787,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/Platform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Product.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
           <folding>
             <element signature="docComment;class#Product#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
-          <folding>
-            <element signature="docComment;class#Customer#0" />
-            <element signature="method#Customer#0;class#Customer#0" />
-            <element signature="method#Customer#1;class#Customer#0" />
-            <element signature="method#addToCart#0;class#Customer#0" />
-            <element signature="method#rawPrice#0;class#Customer#0" />
-            <element signature="method#connect#0;class#Customer#0" />
-            <element signature="method#disconnect#0;class#Customer#0" />
-            <element signature="e#2087#2088#0" expanded="true" />
-            <element signature="e#2147#2148#0" expanded="true" />
-            <element signature="method#cartToString#0;class#Customer#0" />
           </folding>
         </state>
       </provider>
@@ -892,8 +812,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="94" selection-start-line="10" selection-start-column="94" selection-end-line="10" selection-end-column="94" />
+        <state relative-caret-position="306">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#Book#0;class#Book#0" />
@@ -909,6 +829,87 @@
           <folding>
             <element signature="method#AbstractProduct#0;class#AbstractProduct#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" selection-end-column="35" />
+          <folding>
+            <element signature="docComment;class#Customer#0" />
+            <element signature="method#Customer#0;class#Customer#0" />
+            <element signature="method#Customer#1;class#Customer#0" />
+            <element signature="method#addToCart#0;class#Customer#0" />
+            <element signature="method#rawPrice#0;class#Customer#0" />
+            <element signature="method#connect#0;class#Customer#0" />
+            <element signature="method#disconnect#0;class#Customer#0" />
+            <element signature="e#2087#2088#0" expanded="true" />
+            <element signature="e#2147#2148#0" expanded="true" />
+            <element signature="method#cartToString#0;class#Customer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Discountable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding>
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#379#380#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Cart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+          <folding>
+            <element signature="method#count#0;class#Cart#0" />
+            <element signature="method#contains#1;class#Cart#0" />
+            <element signature="method#add#1;class#Cart#0" />
+            <element signature="method#addAll#0;class#Cart#0" />
+            <element signature="method#remove#1;class#Cart#0" />
+            <element signature="method#removeAll#0;class#Cart#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/CommercialOffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="14" column="80" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
+          <folding>
+            <element signature="docComment;class#CommercialOffer#0" />
+            <element signature="method#CommercialOffer#0;class#CommercialOffer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Offer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Staff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <folding>
+            <element signature="e#369#370#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/Platform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
