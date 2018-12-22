@@ -2,7 +2,7 @@ package fr.davidlegras;
 
 import fr.davidlegras.customer.CustomerListener;
 
-public interface Platform {
+public interface Platform im{
 
 
 
@@ -26,5 +26,4 @@ public interface Platform {
     void addCustomerListener(CustomerListener listener);
 
     void removeCustomerListener(CustomerListener listener);
-
 }

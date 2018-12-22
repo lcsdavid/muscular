@@ -2,31 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="807b764d-bfa5-443e-8747-90ab2412eca4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/CustomerListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/CustomerListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/CustomerState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/CustomerState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/FidelityCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/FidelityCard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/Member.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/NotEnoughFidelityPointsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/NotEnoughFidelityPointsException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/SigningException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/SigningException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/Staff.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/Staff.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/WrongCredentials.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/customer/WrongCredentials.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/serviceMarketing/Alert.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/muscular-tp/fr/davidlegras/serviceMarketing/Alert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/Plateform.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/laFacServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/laFacServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/Discountable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/Discountable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/DiscountableProduct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/FlashOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/FlashOffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/HighTech.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/HighTech.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/ProductOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/ProductOffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/CategoryOffer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/Platform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/laFacServer.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,24 +24,24 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gitignore" value="1" />
-          <entry key="java" value="57" />
+          <entry key="java" value="59" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="57" />
+          <entry key="JAVA" value="59" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="19" />
-          <entry key="java" value="1999" />
+          <entry key="java" value="2174" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1999" />
+          <entry key="JAVA" value="2174" />
           <entry key="PLAIN_TEXT" value="19" />
         </counts>
       </usages-collector>
@@ -75,21 +52,33 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/Platform.java">
+            <entry file="file://$PROJECT_DIR$/aled/MarketingService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" column="12" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="12" />
+                <state relative-caret-position="442">
+                  <caret line="234" column="4" lean-forward="true" selection-start-line="234" selection-start-column="4" selection-end-line="234" selection-end-column="72" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Customer.java">
+            <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/Platform.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+                <state relative-caret-position="459">
+                  <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/laFac.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="method#removeCustomerListener#0;class#laFac#0" />
+                    <element signature="method#onConnect#0;class#laFacServer#0;class#laFac#0" />
+                    <element signature="method#onDisconnect#0;class#laFacServer#0;class#laFac#0" />
                   </folding>
                 </state>
               </provider>
@@ -147,18 +136,6 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Visitor.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" selection-start-line="1" selection-end-line="1" />
-                  <folding>
-                    <element signature="method#getVisitor#0;class#Visitor#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/Main.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="323">
@@ -170,7 +147,7 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Book.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="170">
@@ -328,8 +305,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/fr/davidlegras/product/CategoriePromouvable.java" />
-        <option value="$PROJECT_DIR$/src/fr/davidlegras/product/CategorieNonProumouvable.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/CategorieNonPromouvable.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/PromouvableProduct.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/NotAPromouvableProduct.java" />
@@ -379,6 +354,8 @@
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/HighTech.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/Product.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/Discountable.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/Platform.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/laFac.java" />
       </list>
     </option>
   </component>
@@ -410,6 +387,11 @@
               <item name="muscular-tp" type="b2602c69:ProjectViewProjectNode" />
               <item name="muscular-tp" type="462c0819:PsiDirectoryNode" />
               <item name=".gitignore" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="muscular-tp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="muscular-tp" type="462c0819:PsiDirectoryNode" />
+              <item name="aled" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="muscular-tp" type="b2602c69:ProjectViewProjectNode" />
@@ -454,7 +436,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545497513577" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545498443611" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -503,12 +485,12 @@
       <workItem from="1545160702466" duration="14054000" />
       <workItem from="1545243941807" duration="12091000" />
       <workItem from="1545321145131" duration="23592000" />
-      <workItem from="1545491796397" duration="6185000" />
+      <workItem from="1545491796397" duration="6638000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73598000" />
+    <option name="totallyTimeSpent" value="74051000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -584,16 +566,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/NotInBoundsDiscountException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="docComment;class#NotInBoundsDiscountException#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/Date.java" />
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Category.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -693,13 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aled/MarketingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="74" column="8" lean-forward="true" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -820,23 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/Platform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/AbstractConnectedCustomer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -856,18 +804,6 @@
             <element signature="e#257#258#0" expanded="true" />
             <element signature="e#315#316#0" expanded="true" />
             <element signature="e#365#366#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="94" selection-start-line="10" selection-start-column="94" selection-end-line="10" selection-end-column="94" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Book#0;class#Book#0" />
-            <element signature="method#equals#0;class#Book#0" />
           </folding>
         </state>
       </provider>
@@ -906,6 +842,55 @@
           <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
             <element signature="method#AbstractProduct#0;class#AbstractProduct#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="94" selection-start-line="10" selection-start-column="94" selection-end-line="10" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Book#0;class#Book#0" />
+            <element signature="method#equals#0;class#Book#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aled/MarketingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="234" column="4" lean-forward="true" selection-start-line="234" selection-start-column="4" selection-end-line="234" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/Platform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="59" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/laFac.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#removeCustomerListener#0;class#laFac#0" />
+            <element signature="method#onConnect#0;class#laFacServer#0;class#laFac#0" />
+            <element signature="method#onDisconnect#0;class#laFacServer#0;class#laFac#0" />
           </folding>
         </state>
       </provider>
