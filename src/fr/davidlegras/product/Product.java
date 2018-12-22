@@ -19,5 +19,5 @@ public interface Product {
         return getClass().isAssignableFrom(Discountable.class);
     }
 
-    boolean isDiscountable();
+    //boolean isDiscountable();
 }

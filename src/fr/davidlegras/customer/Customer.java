@@ -1,10 +1,12 @@
 package fr.davidlegras.customer;
 
 import fr.davidlegras.Platform;
+import fr.davidlegras.product.Cart;
 import fr.davidlegras.product.Product;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Un Customer est un objet qui représente le client.
@@ -14,12 +16,12 @@ import java.util.Map;
  */
 public class Customer {
     private CustomerState customerState;
-    private Map<Product, Integer> cart;
+    private Cart cart;
 
     public Customer() {
         super();
         customerState = Visitor.getVisitor();
-        cart = new HashMap<>();
+        cart = new Cart();
     }
 
     public Customer(final Platform platform, String login, String passwordHash) throws WrongCredentials {
@@ -33,16 +35,14 @@ public class Customer {
         customerState = state;
     }
 
-    public Map<Product, Integer> cart() {
+    public Cart cart() {
         return cart;
     }
+
     public void addToCart(Product product, int count) {
         if (product == null)
             throw new NullPointerException();
-        if (cart.containsKey(product))
-            cart.replace(product, cart.get(product) + count);
-        else
-            cart.put(product, count);
+        cart.add(product, count);
     }
     public void addToCart(Product product) {
         addToCart(product, 1);
@@ -55,7 +55,7 @@ public class Customer {
     }
     public float rawPrice() {
         float cartPrice = 0;
-        for (Map.Entry<Product, Integer> entry : cart.entrySet())
+        for (Map.Entry<Product, Integer> entry : (Set<Map.Entry<Product, Integer>>) cart.entrySet())//les contraintes sur le type T de Cart nous assure que ce Cast est bon
             cartPrice += entry.getKey().price() * entry.getValue();
         return cartPrice;
     }
@@ -75,7 +75,7 @@ public class Customer {
     /* Affichage */
     public String cartToString() {
         String s = "";
-        for (Map.Entry<Product, Integer> entry : cart.entrySet())
+        for (Map.Entry<Product, Integer> entry : (Set<Map.Entry<Product, Integer>>) cart.entrySet())
             s += entry.getKey().toString() + " : " + entry.getValue().toString() + '\n';
         s += "\n\t";
         s += "Prix total = " + rawPrice() + "€.\n\t";

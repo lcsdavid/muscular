@@ -1,6 +1,9 @@
 package fr.davidlegras.product;
 
+import fr.davidlegras.customer.CustomerState;
 import fr.davidlegras.serviceMarketing.NotInBoundsDiscountException;
+
+import java.util.ArrayList;
 
 /**
  * TODO
@@ -25,8 +28,8 @@ public class FlashOffer<T extends Discountable> extends CommercialOffer<T> {
      * @param targets
      * @throws NotInBoundsDiscountException
      */
-    FlashOffer(double discount, Cart<? extends T> targetCart) throws NotInBoundsDiscountException {
-        super(discount);
+    FlashOffer(double discount, Cart<? extends T> targetCart, ArrayList<? extends CustomerState> targets) throws NotInBoundsDiscountException {
+        super(discount, targets);
         cart.addAll(targetCart);
     }
 
