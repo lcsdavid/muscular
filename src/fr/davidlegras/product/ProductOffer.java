@@ -32,7 +32,8 @@ public class ProductOffer<T extends AbstractProduct & Discountable > extends Com
     public boolean applicable(Cart<? extends T> cart) {
         boolean res = false;
         for (int i = 0; i<targetProduct.size(); i++) {
-            if(cart.contains(targetProduct.get(i)))
+            if(cart.contains((AbstractProduct)targetProduct.get(i)))
+                return true;
         }
         return res;
     }

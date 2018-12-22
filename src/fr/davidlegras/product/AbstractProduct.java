@@ -29,8 +29,8 @@ public abstract class AbstractProduct implements Product {
         return price;
     }
 
-    @Override
+    /*@Override
     public boolean isDiscountable() {
         return discountable;
-    }
+    }*/
 }

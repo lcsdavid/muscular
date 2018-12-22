@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class Cart<T extends Product> {
-    private Map<T, Integer> cart = new HashMap<>();
+public class Cart{
+    private Map<? extends AbstractProduct, Integer> cart = new HashMap<>();
 
     public Cart() {
         super();
@@ -13,7 +13,7 @@ public class Cart<T extends Product> {
 
     /* Query methods */
 
-    public Set<Map.Entry<T, Integer>> entrySet() {
+    public Set<Map.Entry<? extends AbstractProduct, Integer>> entrySet() {
         return cart.entrySet();
     }
 
@@ -24,7 +24,7 @@ public class Cart<T extends Product> {
         return count;
     }
 
-    public boolean contains(T product) {
+    public boolean contains(AbstractProduct product) {
         return cart.containsKey(product);
     }
 
