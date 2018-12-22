@@ -2,7 +2,7 @@ package fr.davidlegras;
 
 import java.util.ArrayList;
 
-public class laFacServer implements Plateform.Server {
+public class laFacServer implements Platform.Server {
 
     /* login | passwordHash | type | fidelityPoints */
     private ArrayList<String[]> usersTable = new ArrayList<>();

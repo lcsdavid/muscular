@@ -11,9 +11,14 @@ import fr.davidlegras.serviceMarketing.NotInBoundsDiscountException;
  * @see Discountable
  * @see Product
  */
-public class ProductOffer<T extends Product & Discountable> extends CommercialOffer<T> {
+public class ProductOffer<T extends Discountable> extends CommercialOffer<T> {
     ProductOffer(float discount) throws NotInBoundsDiscountException {
         super(discount);
+    }
+
+    @Override
+    public boolean applicable(Cart<? extends T> cart) {
+        return false;
     }
 
     @Override

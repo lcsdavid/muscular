@@ -2,8 +2,6 @@ package fr.davidlegras.product;
 
 import fr.davidlegras.serviceMarketing.NotInBoundsDiscountException;
 
-import java.util.Map;
-
 /**
  * TODO
  *
@@ -14,7 +12,7 @@ import java.util.Map;
  * @see Discountable
  * @see Product
  */
-public class FlashOffer<T extends Product & Discountable> extends CommercialOffer<T> {
+public class FlashOffer<T extends Discountable> extends CommercialOffer<T> {
     /**
      * Tableau dont les clées représentent les produits concernés et leurs valeurs respectives représente la quantité
      * demandé pour appliquer l'offre.

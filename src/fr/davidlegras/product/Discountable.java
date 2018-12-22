@@ -10,10 +10,17 @@ import java.util.Collection;
  * @see ProductOffer
  * @see FlashOffer
  */
-public interface Discountable<T> {
+public interface Discountable {
+
+    default boolean isDiscountable() {
+        return true;
+    }
+
+    /*
     void attachOffer(Offer<T> offer);
 
     void attachOffers(Collection<? extends Offer<T>> offers);
 
     double applyDiscount();
+    */
 }
