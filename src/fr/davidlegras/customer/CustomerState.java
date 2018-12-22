@@ -4,6 +4,8 @@ public interface CustomerState {
 
     String name();
 
+    public String getState();
+
     int price(final Customer context);
 
     void signIn(final Customer context, final String login, final String passwordHash) throws AlreadySignedInException, WrongCredentials;

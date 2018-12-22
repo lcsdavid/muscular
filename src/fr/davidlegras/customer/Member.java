@@ -7,6 +7,11 @@ public class Member extends SignedInCustomer {
     }
 
     @Override
+    public String getState() {
+        return "Member";
+    }
+
+    @Override
     public int price(Customer customer) {
         return 0;
     }

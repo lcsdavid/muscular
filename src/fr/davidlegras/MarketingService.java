@@ -4,10 +4,7 @@ import fr.davidlegras.customer.*;
 import fr.davidlegras.product.HighTech;
 import fr.davidlegras.product.Livres;
 import fr.davidlegras.product.Product;
-import fr.davidlegras.serviceMarketing.Checkout;
-import fr.davidlegras.serviceMarketing.NotAPromouvableProductException;
-import fr.davidlegras.serviceMarketing.NotInBoundsReductionException;
-import fr.davidlegras.serviceMarketing.ProductOffer;
+import fr.davidlegras.serviceMarketing.*;
 import javafx.util.Pair;
 
 import javax.swing.event.EventListenerList;
@@ -65,8 +62,7 @@ public class MarketingService {
         addProduct(new Product(70, new HighTech(), "Manette"), (int) (Math.random() * 5));
         addProduct(new Product(30, new HighTech(), "Pad"), (int) (Math.random() * 5));
         addProduct(new Product(64, new Livres("Stéphane King", "01/02/1999"), "La_tempête_du_siècle"));
-        addProduct(new Product(64, new Livres("Stéphane King", "01/02/1999"), "La_tempête_du_siècle"));
-        addProduct(new Product(-64, new Livres("Stéphane King", "01/02/1999"), "La_tempête_du_siècle"));
+        addProduct(new Product(-64, new Livres("Stéphane King", "01/02/1999"), "La_tempête_du_siècle"));//ce produit ne sera pas ajouté car son prix est négatif
     }
 
     /**
@@ -79,10 +75,18 @@ public class MarketingService {
     }
 
     private void initCheckoutV1(Checkout checkout) {
+        ArrayList<CustomerState> res = new ArrayList<>();
+        res.add(new Staff("test1"));
+        ArrayList<Product> produits = new ArrayList<>();
+
+        produits.add(products.get(0).getKey());
+        produits.add(products.get(4).getKey());
+        produits.add(products.get(1).getKey());
+
         try {
             checkout.addOffer(new ProductOffer(50, products.get(0).getKey(), null));
-            //checkout.addOffer(new ProductOffer(20, products.get(6)));
-            //checkout.addOffer(new FlashOffer(30, products));
+            checkout.addOffer(new ProductOffer(20, products.get(4).getKey(), res));
+            checkout.addOffer(new FlashOffer(30, produits, null));//on est pas censé avoir de création étatn donné qu'on essaie d'ajouter des livres dans la liste des réductions
         } catch (NotInBoundsReductionException | NotAPromouvableProductException e) {
             e.printStackTrace();
         }
@@ -132,6 +136,13 @@ public class MarketingService {
         printProducts();
     }
 
+
+    /* fonction de test */
+
+    private void test(){
+
+    }
+
     /* Interaction */
 
     /**
@@ -155,6 +166,7 @@ public class MarketingService {
             //System.out.println("[2]: Liste des produits par categorie.");
             System.out.println("[3]: Passer à la caisse.");
             System.out.println("[4]: Afficher l'état actuel de votre panier.");
+            System.out.println("[5]: Lancer la fonction de test du programme.");
             System.out.println();
             if (!customer.isSignedIn())
                 System.out.println("[SignIn]: Se connecter son profil personnel.");
@@ -185,6 +197,9 @@ public class MarketingService {
                     break;
                 case "4":
                     System.out.println("Panier :\n\n" + customer.cartToString() + "\n\n");
+                    break;
+                case "5":
+                    test();
                     break;
                 case "SignIn":
                     String login, passwordHash = "";

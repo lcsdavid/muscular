@@ -33,8 +33,10 @@ public abstract class CommercialOffer {
     public boolean customerAccepted(Customer customer){
         if(customerTarget == null)
             return true;
-        if(customerTarget.contains(customer.getCustomerState()))
-            return true;
+        for(int i = 0; i < customerTarget.size(); i++){
+            if(((CustomerState)customerTarget.get(i)).getState().equals(customer.getCustomerState().getState()))
+                return true;
+        }
         return false;
     }
 }

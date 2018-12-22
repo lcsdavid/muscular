@@ -7,6 +7,11 @@ public class Staff extends SignedInCustomer {
     }
 
     @Override
+    public String getState() {
+        return "Staff";
+    }
+
+    @Override
     public int price(Customer customer) {
         return 0;
     }

@@ -17,6 +17,11 @@ public class Visitor extends NotSignedInCustomer {
     }
 
     @Override
+    public String getState() {
+        return "Visitor";
+    }
+
+    @Override
     public int price(Customer customer) {
         return 0;
     }
