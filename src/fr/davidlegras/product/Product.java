@@ -11,6 +11,10 @@ public interface Product {
 
     double price();
 
+    default int fidelityPoints() {
+        return 0;
+    }
+
     default boolean isClassDiscountable() {
         return getClass().isAssignableFrom(Discountable.class);
     }

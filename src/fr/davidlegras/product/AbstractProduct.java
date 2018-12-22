@@ -10,6 +10,7 @@ package fr.davidlegras.product;
 public abstract class AbstractProduct implements Product {
     private String productTitle;
     private double price;
+    private int fidelityPoints;
 
     private boolean discountable;
 
@@ -29,7 +30,7 @@ public abstract class AbstractProduct implements Product {
     }
 
     @Override
-    public final boolean isDiscountable() {
+    public boolean isDiscountable() {
         return discountable;
     }
 }
