@@ -1,5 +1,6 @@
 package fr.davidlegras.product;
 
+import fr.davidlegras.customer.CustomerState;
 import fr.davidlegras.serviceMarketing.NotInBoundsDiscountException;
 
 /**
@@ -12,7 +13,7 @@ import fr.davidlegras.serviceMarketing.NotInBoundsDiscountException;
  * @see Discountable
  * @see Product
  */
-public class FlashOffer<T, C> extends AbstractOffer<T, C> {
+public class FlashOffer<P extends Product, C extends CustomerState> extends AbstractOffer<P, C> {
     /**
      * Tableau dont les clées représentent les produits concernés et leurs valeurs respectives représente la quantité
      * demandé pour appliquer l'offre.
@@ -29,14 +30,5 @@ public class FlashOffer<T, C> extends AbstractOffer<T, C> {
         super(discount);
         cart.addAll(targetCart);
     }
-
-    @Override
-    public boolean applicable(Cart cart) {
-        return false;
-    }
-
-    @Override
-    public double applyOffer(double price) {
-        return 0;
-    }
+    
 }
