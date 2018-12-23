@@ -18,7 +18,7 @@ public class FlashOffer<P extends Product, C extends CustomerState> extends Abst
      * Tableau dont les clées représentent les produits concernés et leurs valeurs respectives représente la quantité
      * demandé pour appliquer l'offre.
      */
-    private Cart cart = new Cart<>();
+    private Cart cart = new Cart();
 
     /**
      *
