@@ -1,6 +1,6 @@
 package fr.davidlegras.customer;
 
-public class NotConnectedException extends SigningException {
+public class NotConnectedException extends ConnectionException {
 
     public NotConnectedException() {
         super();

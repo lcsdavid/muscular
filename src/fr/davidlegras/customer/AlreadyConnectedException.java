@@ -1,6 +1,6 @@
 package fr.davidlegras.customer;
 
-public class AlreadyConnectedException extends SigningException {
+public class AlreadyConnectedException extends ConnectionException {
 
     public AlreadyConnectedException() {
         super();
