@@ -1,18 +1,26 @@
 package fr.davidlegras.customer;
 
-public class Staff extends SignedInCustomer {
+import fr.davidlegras.Platform;
 
-    public Staff(final String name) {
-        super(name);
+public class Staff extends AbstractConnectedCustomer {
+
+    public Staff(String name, String lastName) {
+        super(name, lastName);
     }
 
     @Override
-    public String getState() {
-        return "Staff";
-    }
-
-    @Override
-    public int price(Customer customer) {
+    public int price(final Platform platform, final Customer context) {
         return 0;
+    }
+
+    @Override
+    public boolean equals(Object object){
+        if(object == null)
+            return false;
+        if(object == this)
+            return true;
+        if(object.getClass().equals(this.getClass()))
+            return true;
+        return false;
     }
 }

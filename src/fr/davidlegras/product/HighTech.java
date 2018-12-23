@@ -1,9 +1,9 @@
 package fr.davidlegras.product;
 
-public class HighTech extends Category {
+public class HighTech extends AbstractProduct implements Discountable {
 
-    public HighTech() {
-        super("HighTech", true);
+    public HighTech(String productTitle, double price, int fidelityPoints) {
+        super(productTitle, price, fidelityPoints);
     }
 
     @Override

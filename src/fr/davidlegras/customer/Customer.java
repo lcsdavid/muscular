@@ -1,94 +1,103 @@
 package fr.davidlegras.customer;
 
+import fr.davidlegras.Platform;
+import fr.davidlegras.product.Cart;
 import fr.davidlegras.product.Product;
 
+import javax.swing.event.EventListenerList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
+/**
+ * Un Customer est un objet qui représente le client.
+ *
+ * @author Lucas David
+ * @author Théo Legras
+ */
 public class Customer {
+    private EventListenerList listeners = new EventListenerList();
+
     private CustomerState customerState;
-    private Map<Product, Integer> cart;
+    private Cart cart;
 
     public Customer() {
         super();
         customerState = Visitor.getVisitor();
-        cart = new HashMap<>();
+        cart = new Cart();
     }
 
-    public Customer(String login, String passwordHash) throws WrongCredentials {
-        this();
-        try {
-            signIn(login, passwordHash);
-        } catch (AlreadySignedInException ignored) { /* Never catch in this case. */ }
+    public <T extends CustomerListener> void addCustomerListener(Class<T> type, T listener) {
+        listeners.add(type, listener);
     }
 
     /* Acesseurs & Mutateurs */
-
-    public CustomerState getCustomerState(){
+    public CustomerState customerState() {
         return customerState;
     }
-
-    void customerState(CustomerState state) {
+    public void customerState(CustomerState state) {
         customerState = state;
+    }
+
+    public CustomerState getCustomerState(){
+        return this.customerState;
+    }
+
+    public Cart cart() {
+        return cart;
     }
 
     public void addToCart(Product product, int count) {
         if (product == null)
             throw new NullPointerException();
-        if (cart.containsKey(product))
-            cart.replace(product, cart.get(product) + count);
-        else
-            cart.put(product, count);
+        cart.add(product, count);
     }
-
     public void addToCart(Product product) {
         addToCart(product, 1);
     }
 
-    public Map<Product, Integer> getCart() {
-        return cart;
-    }
-
     /* Prix */
 
-    public float price() {
-        return customerState.price(this);
+    public float price(final Platform platform) {
+        return customerState.price(platform, this);
     }
-
     public float rawPrice() {
         float cartPrice = 0;
-        for (Map.Entry<Product, Integer> entry : cart.entrySet())
-            cartPrice += entry.getKey().getPrice() * entry.getValue();
+        for (Map.Entry<Product, Integer> entry : cart)
+            cartPrice += entry.getKey().price() * entry.getValue();
         return cartPrice;
     }
 
     /* Connexion & Déconnexion */
 
-    public void signIn(final String login, final String passwordHash) throws AlreadySignedInException, WrongCredentials {
-        customerState.signIn(this, login, passwordHash);
+    public void connect(final Platform platform, String login, String passwordHash) throws ConnectionException {
+        customerState.connect(platform, this, login, passwordHash);
     }
-
-    public void signOut() throws NotSignedInException {
-        customerState.signOut(this);
+    public void disconnect(final Platform platform) throws NotConnectedException {
+        customerState.disconnect(platform, this);
     }
-
-    public boolean isSignedIn() {
-        return customerState != Visitor.getVisitor();
+    public boolean isConnected() {
+        return customerState.getClass().isAssignableFrom(ConnectedCustomer.class);
     }
 
     /* Affichage */
     public String cartToString() {
         String s = "";
-        for (Map.Entry<Product, Integer> entry : cart.entrySet())
+        for (Map.Entry<Product, Integer> entry : cart)
             s += entry.getKey().toString() + " : " + entry.getValue().toString() + '\n';
         s += "\n\t";
         s += "Prix total = " + rawPrice() + "€.\n\t";
-        s += "Prix: " + price() + "€.\n";
         return s;
     }
 
     @Override
-    public String toString() {
-        return customerState.name();
+    public boolean equals(Object object){
+        if(object == null)
+            return false;
+        if(object == this)
+            return true;
+        if(object.getClass().equals(this.getClass()))
+            return true;
+        return false;
     }
 }

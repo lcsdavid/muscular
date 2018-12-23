@@ -1,49 +1,23 @@
 package fr.davidlegras.product;
 
-public class Product implements Comparable<Product> {
-    private String name;
-    private Category category;
-    private float price;
+/**
+ * @author Lucas David
+ * @author Théo Legras
+ * @see AbstractProduct
+ */
+public interface Product {
 
-    /* Constructeurs */
-    public Product(float price, Category category, String name) {
-        this.name = name;
-        this.category = category;
-        this.price = price;
+    String productTitle();
+
+    double price();
+
+    default int gainInLoyaltyPoints() {
+        return 0;
     }
 
-    /* Acesseurs */
-    public final String getName() {
-        return name;
-    }
+    boolean isDiscountable();
 
-    public final String getCategory() {
-        return category.getName();
-    }
-
-    public final float getPrice() {
-        return price;
-    }
-
-    public final boolean isDiscountable() {
-        return category.isDiscountable();
-    }
-
-    /* Object Override */
-    @Override
-    public String toString() {
-        return "[" + category.toString() + "]\t" + name + "\nPrix : " + price + "€.";
-    }
-
-    /* Comparable Override */
-    @Override
-    public int compareTo(Product o) {
-        int compare = name.compareTo(o.name);
-        if (compare != 0)
-            return compare;
-        compare = category.compareTo(o.category);
-        if (compare != 0)
-            return compare;
-        return Float.compare(price, o.price);
+    static boolean isProductDiscountable(Class<? extends Product> productClass) {
+        return productClass.isAssignableFrom(Discountable.class);
     }
 }

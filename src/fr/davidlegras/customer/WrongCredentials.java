@@ -1,6 +1,6 @@
 package fr.davidlegras.customer;
 
-public class WrongCredentials extends SigningException {
+public class WrongCredentials extends ConnectionException {
     public static boolean NO_HINTS = false;
 
     WrongCredentials(String message) {
