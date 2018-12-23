@@ -6,4 +6,6 @@ import fr.davidlegras.customer.CustomerState;
 public interface Offer<P extends Product, C extends CustomerState> {
 
     boolean applicable(Customer customer, Product product);
+
+    double discount();
 }

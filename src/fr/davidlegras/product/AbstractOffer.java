@@ -28,6 +28,7 @@ public abstract class AbstractOffer<P extends Product, C extends CustomerState> 
         this.discount = discount;
     }
 
+    @Override
     public double discount() {
         return discount;
     }

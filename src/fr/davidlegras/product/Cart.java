@@ -3,6 +3,7 @@ package fr.davidlegras.product;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 public class Cart implements Iterable<Map.Entry<Product, Integer>> {
     private Map<Product, Integer> cart = new HashMap<>();

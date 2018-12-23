@@ -17,15 +17,14 @@ public class laFac implements Platform {
     private Collection<Offer> offers = new ArrayList<>();
 
 
-
     @Override
-    public void addCustomerListener(CustomerListener listener) {
-        listeners.add(CustomerListener.class, listener);
+    public Collection<Product> products() {
+        return products;
     }
 
     @Override
-    public void removeCustomerListener(CustomerListener listener) {
-        listeners.remove(CustomerListener.class, listener);
+    public Collection<Offer> offers() {
+        return offers;
     }
 
     @Override

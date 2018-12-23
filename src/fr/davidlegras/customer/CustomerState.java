@@ -1,14 +1,23 @@
 package fr.davidlegras.customer;
 
 import fr.davidlegras.Platform;
+import fr.davidlegras.product.Offer;
+import fr.davidlegras.product.Product;
+
+import java.util.Map;
 
 public interface CustomerState {
 
     default int price(final Platform platform, final Customer context){
         int res = 0;
-
-
-
+        for (Map.Entry<Product, Integer> entry: context.cart()) {
+            float productDiscount = 1;
+            for (Offer<Product, CustomerState> offer : platform.offers()) {
+                if (offer.applicable(context, entry.getKey()))
+                    productDiscount *= (1 - offer.discount());
+            }
+            res += entry.getKey().price() * productDiscount;
+        }
         return res;
     }
 
