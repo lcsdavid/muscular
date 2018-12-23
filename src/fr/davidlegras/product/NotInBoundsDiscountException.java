@@ -1,15 +1,14 @@
-package fr.davidlegras.serviceMarketing;
-
-import fr.davidlegras.product.CommercialOffer;
+package fr.davidlegras.product;
 
 /**
  * TODO
  *
  * @author Lucas David
  * @author Théo Legras
- * @see CommercialOffer
+ * @see DiscountException
+ * @see Offer
  */
-public class NotInBoundsDiscountException extends Exception {
+public class NotInBoundsDiscountException extends DiscountException {
 
     public NotInBoundsDiscountException() {
         super("La réduction indiquée n'est pas comprise entre -100% et 0%.");

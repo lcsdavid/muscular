@@ -1,6 +1,6 @@
 package fr.davidlegras.product;
 
-public class NotDiscountableException extends Exception {
+public class NotDiscountableException extends DiscountException {
     public NotDiscountableException() {
         super();
     }

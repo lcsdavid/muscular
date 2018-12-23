@@ -1,13 +1,20 @@
 package fr.davidlegras.product;
 
 import fr.davidlegras.customer.Customer;
-import fr.davidlegras.serviceMarketing.NotInBoundsDiscountException;
+import fr.davidlegras.customer.CustomerState;
 
 public class CategoryOffer extends AbstractOffer {
     private Class<? extends Product> productClass;
 
-    public CategoryOffer(Class<? extends Product> productClass, double discount) throws NotInBoundsDiscountException, NotDiscountableException {
+    public CategoryOffer(double discount, Class<? extends Product> productClass) throws DiscountException {
         super(discount);
+        if (!Product.isProductDiscountable(productClass))
+            throw new NotDiscountableException();
+        this.productClass = productClass;
+    }
+
+    public CategoryOffer(double discount, Class<? extends CustomerState> customerStateClass, Class<? extends Product> productClass) throws DiscountException {
+        super(discount, customerStateClass);
         if (!Product.isProductDiscountable(productClass))
             throw new NotDiscountableException();
         this.productClass = productClass;

@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-public class Cart implements Iterable<Map.Entry<Product, Integer>> {
+public class Cart implements Iterable<Map.Entry<Product, Integer>>, Cloneable {
     private Map<Product, Integer> cart = new HashMap<>();
 
     public Cart() {
@@ -85,5 +85,12 @@ public class Cart implements Iterable<Map.Entry<Product, Integer>> {
     @Override
     public Iterator<Map.Entry<Product, Integer>> iterator() {
         return cart.entrySet().iterator();
+    }
+
+    @Override
+    public Cart clone() throws CloneNotSupportedException {
+        Cart clone = (Cart) super.clone();
+        clone.addAll(this);
+        return clone;
     }
 }

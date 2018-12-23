@@ -18,7 +18,6 @@ public abstract class AbstractProduct implements Product {
         this.productTitle = productTitle;
         this.price = price;
         this.fidelityPoints = fidelityPoints;
-        this.discountable = isClassDiscountable();
     }
 
     protected AbstractProduct(String productTitle, double price, int fidelityPoints, boolean discountable) {
@@ -41,11 +40,6 @@ public abstract class AbstractProduct implements Product {
     @Override
     public final int fidelityPoints() {
         return fidelityPoints;
-    }
-
-    @Override
-    public final boolean isClassDiscountable() {
-        return getClass().isAssignableFrom(Discountable.class);
     }
 
     @Override

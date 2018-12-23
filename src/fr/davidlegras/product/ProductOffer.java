@@ -1,8 +1,5 @@
 package fr.davidlegras.product;
 
-import fr.davidlegras.customer.CustomerState;
-import fr.davidlegras.serviceMarketing.NotInBoundsDiscountException;
-
 /**
  * TODO abstract
  *

@@ -1,4 +1,4 @@
-package fr.davidlegras.serviceMarketing;
+package fr.davidlegras.product;
 
 import java.io.PrintStream;
 
