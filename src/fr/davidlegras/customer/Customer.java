@@ -61,7 +61,7 @@ public class Customer {
     }
     public float rawPrice() {
         float cartPrice = 0;
-        for (Map.Entry<Product, Integer> entry : (Set<Map.Entry<Product, Integer>>) cart.entrySet())
+        for (Map.Entry<Product, Integer> entry : cart)
             cartPrice += entry.getKey().price() * entry.getValue();
         return cartPrice;
     }
@@ -81,7 +81,7 @@ public class Customer {
     /* Affichage */
     public String cartToString() {
         String s = "";
-        for (Map.Entry<Product, Integer> entry : (Set<Map.Entry<Product, Integer>>) cart.entrySet())
+        for (Map.Entry<Product, Integer> entry : cart)
             s += entry.getKey().toString() + " : " + entry.getValue().toString() + '\n';
         s += "\n\t";
         s += "Prix total = " + rawPrice() + "€.\n\t";
