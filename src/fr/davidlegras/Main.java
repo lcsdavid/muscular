@@ -1,17 +1,17 @@
 package fr.davidlegras;
 
+
+import fr.davidlegras.customer.Customer;
+
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
         String response;
         Scanner sc = new Scanner(System.in);
         Customer customer = new Customer();
-        Checkout checkout = Checkout.getCheckout();
-        initCheckoutV1(checkout);
-        Customer customer = new Customer();
-        String reponse = "0";
-        Scanner sc = new Scanner(System.in);
-        System.out.println("\nBienvenue cher client !\n");
+        System.out.println("Bienvenue cher client !\n");
         while (shopping) {
 
             //TODO gerer la connexion du client

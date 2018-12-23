@@ -22,11 +22,6 @@ public interface Platform {
      */
     Collection<Offer> offers();
 
-    /**
-     * Renvoie le {@code Customer} actuel qui utilise la plateforme.
-     * @return
-     */
-    Customer customer();
 
 
     /**
@@ -44,7 +39,6 @@ public interface Platform {
      * Déconnecte le client et effectue des opérations si nécessaire.
      */
     void disconnect();
-
 
     /**
      * Renvoie le serveur relié à l'instance actuel de la plateforme.

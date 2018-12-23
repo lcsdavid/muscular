@@ -14,7 +14,7 @@ import fr.davidlegras.customer.Customer;
 public class ProductOffer extends AbstractOffer {
     private Product target;
 
-    public ProductOffer(Product target, float discount) throws NotInBoundsDiscountException, NotDiscountableException {
+    public ProductOffer(double discount, Product target) throws NotInBoundsDiscountException, NotDiscountableException {
         super(discount);
         if (!Products.isProductDiscountable(target.getClass()))
             throw new NotDiscountableException();
