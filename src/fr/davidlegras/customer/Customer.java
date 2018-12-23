@@ -4,6 +4,7 @@ import fr.davidlegras.Platform;
 import fr.davidlegras.product.Cart;
 import fr.davidlegras.product.Product;
 
+import javax.swing.event.EventListenerList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -15,6 +16,8 @@ import java.util.Set;
  * @author Théo Legras
  */
 public class Customer {
+    private EventListenerList listeners = new EventListenerList();
+
     private CustomerState customerState;
     private Cart cart;
 
@@ -23,10 +26,9 @@ public class Customer {
         customerState = Visitor.getVisitor();
         cart = new Cart();
     }
-
-    public Customer(final Platform platform, String login, String passwordHash) throws WrongCredentials {
-        this();
-        try { connect(platform, login, passwordHash); } catch (AlreadyConnectedException ignored) { /* Never catch in this case. */ }
+    
+    public <T extends CustomerListener> void addCustomerListener(Class<T> type, T listener) {
+        listeners.add(type, listener);
     }
 
     /* Acesseurs & Mutateurs */
@@ -68,14 +70,14 @@ public class Customer {
 
     /* Connexion & Déconnexion */
 
-    public void connect(final Platform platform, String login, String passwordHash) throws AlreadyConnectedException, WrongCredentials {
+    public void connect(final Platform platform, String login, String passwordHash) throws ConnectionException {
         customerState.connect(platform, this, login, passwordHash);
     }
     public void disconnect(final Platform platform) throws NotConnectedException {
         customerState.disconnect(platform, this);
     }
     public boolean isConnected() {
-        return customerState != Visitor.getVisitor();
+        return customerState.getClass().isAssignableFrom(ConnectedCustomer.class);
     }
 
     /* Affichage */

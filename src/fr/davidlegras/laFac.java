@@ -12,7 +12,7 @@ import java.util.Collection;
 public class laFac implements Platform {
     private static laFacServer SERVER = new laFacServer();
 
-    private EventListenerList listeners = new EventListenerList();
+
 
     private Collection<Product> products = new ArrayList<>();
     private Collection<Offer> offers = new ArrayList<>();
