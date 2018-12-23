@@ -51,6 +51,8 @@ public class FlashOffer<T extends Product &  Discountable> extends CommercialOff
 
     public double getReduction(Customer customer){
         double res =0.0;
+        if(!isTargeted(customer))
+            return res;
 
         if(applicable(customer.cart())){
             //Dans ce cas la client a tout ce qu'il faut pour que la réduction s'applique

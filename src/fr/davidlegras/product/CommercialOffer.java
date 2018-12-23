@@ -1,5 +1,6 @@
 package fr.davidlegras.product;
 
+import fr.davidlegras.customer.Customer;
 import fr.davidlegras.customer.CustomerState;
 import fr.davidlegras.serviceMarketing.NotInBoundsDiscountException;
 
@@ -36,9 +37,14 @@ public abstract class CommercialOffer<T extends Discountable> implements Offer<T
     }
 
     public ArrayList<? extends CustomerState> getTargetCustomer(){
-        ArrayList<? extends CustomerState> res = new ArrayList<>();
-        res = (ArrayList<? extends CustomerState>) targetCustomer.clone();
+        ArrayList<? extends CustomerState> res = (ArrayList<? extends CustomerState>) targetCustomer.clone();
         return res;
+    }
+
+    public boolean isTargeted(Customer customer){
+        /* cas où tout le monde est accepté */
+        if(targetCustomer == null)
+            return true;
     }
 
     @Override

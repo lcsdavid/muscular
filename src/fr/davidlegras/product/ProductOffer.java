@@ -50,6 +50,8 @@ public class ProductOffer<T extends Product & Discountable > extends CommercialO
     /* fonction qui nous permet d'avoir la réduction pour un client */
     public double getReduction(Customer customer){
         double res =0.0;
+        if(!isTargeted(customer))
+            return res;
 
         for (Map.Entry<Product, Integer> entry : (Set<Map.Entry<Product, Integer>>) customer.cart().entrySet()) {
             if(applicable(entry.getKey()))
