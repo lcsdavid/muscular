@@ -1,6 +1,7 @@
 package fr.davidlegras;
 
 import fr.davidlegras.customer.CustomerListener;
+import fr.davidlegras.customer.CustomerState;
 import fr.davidlegras.product.Offer;
 import fr.davidlegras.product.Product;
 
@@ -14,7 +15,7 @@ public class laFac implements Platform {
     private EventListenerList listeners = new EventListenerList();
 
     private Collection<Product> products = new ArrayList<>();
-    private Collection<Offer> offers = new ArrayList<>();
+    private Collection<Offer<Product, CustomerState>> offers = new ArrayList<>();
 
 
     @Override
@@ -23,7 +24,7 @@ public class laFac implements Platform {
     }
 
     @Override
-    public Collection<Offer> offers() {
+    public Collection<Offer<Product, CustomerState>> offers() {
         return offers;
     }
 

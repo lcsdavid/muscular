@@ -36,7 +36,7 @@ public abstract class AbstractOffer<P extends Product, C extends CustomerState> 
     @Override
     public boolean applicable(Customer customer, Product product) {
         Type parameterType = getClass().getGenericInterfaces()[0];
-        parameterType = ((ParameterizedType) parameterType).getActualTypeArguments()[0];
+        parameterType = ((ParameterizedType) parameterType).getActualTypeArguments()[1]; /* Get C type parameter. */
         return customer.getCustomerState().getClass().isAssignableFrom((Class) parameterType);
     }
 

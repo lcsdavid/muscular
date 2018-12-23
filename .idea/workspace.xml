@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="807b764d-bfa5-443e-8747-90ab2412eca4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/Platform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/laFac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/laFac.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/AbstractOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/AbstractOffer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/Offer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/Offer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,26 +25,26 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="93" />
+          <entry key="java" value="94" />
           <entry key="mdj" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="93" />
+          <entry key="JAVA" value="94" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="19" />
-          <entry key="java" value="2916" />
+          <entry key="java" value="3061" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2916" />
+          <entry key="JAVA" value="3061" />
           <entry key="PLAIN_TEXT" value="19" />
         </counts>
       </usages-collector>
@@ -174,11 +170,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/laFac.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+            <state relative-caret-position="408">
+              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
               <folding>
                 <element signature="class#laFacServer#0;class#laFac#0" />
                 <element signature="method#laFacServer#0;class#laFacServer#0;class#laFac#0" />
@@ -189,13 +185,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+            <state relative-caret-position="187">
+              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/CategoryOffer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+              <folding>
+                <element signature="method#CategoryOffer#0;class#CategoryOffer#0" />
+                <element signature="method#applicable#0;class#CategoryOffer#0" />
               </folding>
             </state>
           </provider>
@@ -229,24 +238,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/AbstractOffer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+            <state relative-caret-position="306">
+              <caret line="39" column="93" lean-forward="true" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="93" />
               <folding>
                 <element signature="docComment;class#AbstractOffer#0" />
                 <element signature="method#AbstractOffer#0;class#AbstractOffer#0" />
-                <element signature="method#applicable#0;class#AbstractOffer#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1436#1437#0" expanded="true" />
+                <element signature="e#1496#1497#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -453,7 +451,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/NotAPromouvableProduct.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/Target.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/Categorie.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/FidelityCard.java" />
@@ -498,12 +495,13 @@
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/ConnectedCustomer.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/FlashOffer.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/Customer.java" />
-        <option value="$PROJECT_DIR$/src/fr/davidlegras/laFac.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/Cart.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/Offer.java" />
-        <option value="$PROJECT_DIR$/src/fr/davidlegras/product/AbstractOffer.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/Platform.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerState.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/product/AbstractOffer.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/product/CategoryOffer.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/laFac.java" />
       </list>
     </option>
   </component>
@@ -574,7 +572,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545564309239" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545564602472" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -628,7 +626,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79184000" />
+    <option name="totallyTimeSpent" value="79477000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="502" y="0" width="1936" height="1056" extended-state="0" />
@@ -705,7 +703,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://E:/Users/lucasdavid/Documents/Travail/ET4/S7/Compléments objet/TP Concepts Objets/src/hanoi3/Hanoi.java" />
     <entry file="file://E:/Users/lucasdavid/Documents/Travail/ET4/S7/Compléments objet/TP Concepts Objets/src/hanoi3/Tour.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Object.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/util/Comparator.java" />
@@ -1320,19 +1317,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/laFac.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-          <folding>
-            <element signature="class#laFacServer#0;class#laFac#0" />
-            <element signature="method#laFacServer#0;class#laFacServer#0;class#laFac#0" />
-            <element signature="method#onConnect#0;class#laFacServer#0;class#laFac#0" />
-            <element signature="method#onDisconnect#0;class#laFacServer#0;class#laFac#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/AbstractProduct.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1340,18 +1324,6 @@
           <folding>
             <element signature="docComment;class#AbstractProduct#0" />
             <element signature="method#AbstractProduct#0;class#AbstractProduct#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/AbstractOffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding>
-            <element signature="docComment;class#AbstractOffer#0" />
-            <element signature="method#AbstractOffer#0;class#AbstractOffer#0" />
-            <element signature="method#applicable#0;class#AbstractOffer#0" />
           </folding>
         </state>
       </provider>
@@ -1378,10 +1350,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+        <state relative-caret-position="187">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/AbstractOffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="39" column="93" lean-forward="true" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="93" />
+          <folding>
+            <element signature="docComment;class#AbstractOffer#0" />
+            <element signature="method#AbstractOffer#0;class#AbstractOffer#0" />
+            <element signature="e#1436#1437#0" expanded="true" />
+            <element signature="e#1496#1497#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/CategoryOffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="method#CategoryOffer#0;class#CategoryOffer#0" />
+            <element signature="method#applicable#0;class#CategoryOffer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/laFac.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="class#laFacServer#0;class#laFac#0" />
+            <element signature="method#laFacServer#0;class#laFacServer#0;class#laFac#0" />
+            <element signature="method#onConnect#0;class#laFacServer#0;class#laFac#0" />
+            <element signature="method#onDisconnect#0;class#laFacServer#0;class#laFac#0" />
           </folding>
         </state>
       </provider>
