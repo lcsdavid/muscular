@@ -19,7 +19,7 @@ public abstract class AbstractOffer implements Offer {
      */
     private Class<? extends CustomerState> customerStateClass;
     /**
-     *  Pourcentage de réduction (e.g. -0.1 ou -0.5 respectivements -10% et -50%).
+     * Pourcentage de réduction (e.g. -0.1 ou -0.5 respectivements -10% et -50%).
      */
     private double discount;
 

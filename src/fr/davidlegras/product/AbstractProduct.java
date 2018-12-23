@@ -1,7 +1,6 @@
 package fr.davidlegras.product;
 
 /**
- *
  * @author Lucas David
  * @author Théo Legras
  * @see Product

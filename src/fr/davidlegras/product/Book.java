@@ -27,7 +27,7 @@ public class Book extends AbstractProduct {
         if (obj == null)
             return false;
         if (obj instanceof Book) {
-            Book book = (Book)obj;
+            Book book = (Book) obj;
             if (!productTitle().equals(book.productTitle()))
                 return false;
             if (Double.compare(price(), book.price()) != 0)

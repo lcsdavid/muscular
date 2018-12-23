@@ -7,6 +7,10 @@ package fr.davidlegras.product;
  */
 public interface Product {
 
+    static boolean isProductDiscountable(Class<? extends Product> productClass) {
+        return productClass.isAssignableFrom(Discountable.class);
+    }
+
     String productTitle();
 
     double price();
@@ -16,8 +20,4 @@ public interface Product {
     }
 
     boolean isDiscountable();
-
-    static boolean isProductDiscountable(Class<? extends Product> productClass) {
-        return productClass.isAssignableFrom(Discountable.class);
-    }
 }

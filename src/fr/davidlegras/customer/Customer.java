@@ -5,9 +5,7 @@ import fr.davidlegras.product.Cart;
 import fr.davidlegras.product.Product;
 
 import javax.swing.event.EventListenerList;
-import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * Un Customer est un objet qui représente le client.
@@ -35,11 +33,12 @@ public class Customer {
     public CustomerState customerState() {
         return customerState;
     }
+
     public void customerState(CustomerState state) {
         customerState = state;
     }
 
-    public CustomerState getCustomerState(){
+    public CustomerState getCustomerState() {
         return this.customerState;
     }
 
@@ -52,6 +51,7 @@ public class Customer {
             throw new NullPointerException();
         cart.add(product, count);
     }
+
     public void addToCart(Product product) {
         addToCart(product, 1);
     }
@@ -61,6 +61,7 @@ public class Customer {
     public float price(final Platform platform) {
         return customerState.price(platform, this);
     }
+
     public float rawPrice() {
         float cartPrice = 0;
         for (Map.Entry<Product, Integer> entry : cart)
@@ -73,9 +74,11 @@ public class Customer {
     public void connect(final Platform platform, String login, String passwordHash) throws ConnectionException {
         customerState.connect(platform, this, login, passwordHash);
     }
+
     public void disconnect(final Platform platform) throws NotConnectedException {
         customerState.disconnect(platform, this);
     }
+
     public boolean isConnected() {
         return customerState.getClass().isAssignableFrom(ConnectedCustomer.class);
     }
@@ -91,12 +94,12 @@ public class Customer {
     }
 
     @Override
-    public boolean equals(Object object){
-        if(object == null)
+    public boolean equals(Object object) {
+        if (object == null)
             return false;
-        if(object == this)
+        if (object == this)
             return true;
-        if(object.getClass().equals(this.getClass()))
+        if (object.getClass().equals(this.getClass()))
             return true;
         return false;
     }

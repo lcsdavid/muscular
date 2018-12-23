@@ -1,11 +1,8 @@
 package fr.davidlegras;
 
-import fr.davidlegras.customer.CustomerListener;
-import fr.davidlegras.customer.CustomerState;
 import fr.davidlegras.product.Offer;
 import fr.davidlegras.product.Product;
 
-import javax.swing.event.EventListenerList;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -50,7 +47,7 @@ public class laFac implements Platform {
         private ArrayList<String[]> offers = new ArrayList<>();
 
         public laFacServer() {
-            customers.add(new String[] { ""});
+            customers.add(new String[]{""});
 
         }
 
