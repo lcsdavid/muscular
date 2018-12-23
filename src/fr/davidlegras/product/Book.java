@@ -38,4 +38,9 @@ public class Book extends AbstractProduct {
         }
         return false;
     }
+
+    @Override
+    public final boolean isDiscountable() {
+        return false;
+    }
 }

@@ -85,4 +85,15 @@ public class Customer {
         s += "Prix total = " + rawPrice() + "€.\n\t";
         return s;
     }
+
+    @Override
+    public boolean equals(Object object){
+        if(object == null)
+            return false;
+        if(object == this)
+            return true;
+        if(object.getClass().equals(this.getClass()))
+            return true;
+        return false;
+    }
 }

@@ -12,9 +12,9 @@ import java.util.Collection;
  */
 public interface Discountable {
 
-    default boolean isDiscountable() {
+    /*default boolean isDiscountable() {
         return true;
-    }
+    }*/
 
     /*
     void attachOffer(Offer<T> offer);
