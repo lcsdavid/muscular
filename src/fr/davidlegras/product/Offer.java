@@ -1,6 +1,6 @@
 package fr.davidlegras.product;
 
-public interface Offer {
+public interface Offer<T> {
 
     boolean applicable(Cart cart);
 

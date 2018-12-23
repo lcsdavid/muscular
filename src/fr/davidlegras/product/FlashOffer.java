@@ -23,7 +23,7 @@ public class FlashOffer<T extends Product &  Discountable> extends CommercialOff
      * Tableau dont les clées représentent les produits concernés et leurs valeurs respectives représente la quantité
      * demandé pour appliquer l'offre.
      */
-    private Cart<T> cart = new Cart<>();
+    private Cart cart = new Cart();
 
     /**
      *
@@ -31,14 +31,14 @@ public class FlashOffer<T extends Product &  Discountable> extends CommercialOff
      * @param targets
      * @throws NotInBoundsDiscountException
      */
-    FlashOffer(double discount, Cart<? extends T> targetCart, ArrayList<? extends CustomerState> targets) throws NotInBoundsDiscountException {
+    FlashOffer(double discount, Cart targetCart, ArrayList<? extends CustomerState> targets) throws NotInBoundsDiscountException {
         super(discount, targets);
         cart.addAll(targetCart);
     }
 
     @Override
-    public boolean applicable(Cart<? extends T> cart) {
-        Cart<Product> nouv = (Cart<Product>)cart;// a cette endroit du code, nos contraintes sur les types nous garantisses que ce cast est legal
+    public boolean applicable(Cart cart) {
+        Cart nouv = cart;// a cette endroit du code, nos contraintes sur les types nous garantisses que ce cast est legal
         return nouv.contains(this.cart);
     }
 
@@ -57,7 +57,7 @@ public class FlashOffer<T extends Product &  Discountable> extends CommercialOff
         if(applicable(customer.cart())){
             //Dans ce cas la client a tout ce qu'il faut pour que la réduction s'applique
             for (Map.Entry<Product, Integer> entry : (Set<Map.Entry<Product, Integer>>) customer.cart().entrySet()) {
-                if(((Cart<Product>)this.cart).contains(entry.getKey()))//si l'entrée sur laquelle on est correspond a un produit sur lequel l'offre s'applique
+                if((this.cart).contains(entry.getKey()))//si l'entrée sur laquelle on est correspond a un produit sur lequel l'offre s'applique
                     res += applyOffer(entry.getKey().price()) * entry.getValue();
             }
         }

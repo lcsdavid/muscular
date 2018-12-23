@@ -4,7 +4,13 @@ import fr.davidlegras.Platform;
 
 public interface CustomerState {
 
-    int price(final Platform platform, final Customer context);
+    default int price(final Platform platform, final Customer context){
+        int res = 0;
+
+
+
+        return res;
+    }
 
     void connect(final Platform platform, final Customer context, String login, String passwordHash) throws AlreadyConnectedException, WrongCredentials;
 
