@@ -4,20 +4,18 @@ import java.util.Date;
 import java.util.Objects;
 
 public final class Book extends AbstractProduct {
-    private String title;
     private String author;
     private Date release;
 
-    public Book(String productTitle, double price, int fidelityPoints, String title, String author, Date release) {
+    public Book(String productTitle, double price, int fidelityPoints, String author, Date release) throws NegativePriceException {
         super(productTitle, price, fidelityPoints);
-        this.title = title;
         this.author = author;
         this.release = release;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(productTitle(), price(), title, author, release);
+        return Objects.hash(productTitle(), price(), author, release);
     }
 
     @Override

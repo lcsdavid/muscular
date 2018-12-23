@@ -4,12 +4,15 @@ import fr.davidlegras.customer.Customer;
 import fr.davidlegras.customer.CustomerState;
 import fr.davidlegras.customer.LoyaltyCard;
 import fr.davidlegras.customer.WrongCredentials;
+import fr.davidlegras.product.Book;
+import fr.davidlegras.product.HighTech;
 import fr.davidlegras.product.Offer;
 import fr.davidlegras.product.Product;
 
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 
 public class laFac implements Platform {
     private static laFacServer SERVER = new laFacServer();
@@ -31,6 +34,18 @@ public class laFac implements Platform {
     public Customer customer() {
         return null;
     }
+
+
+
+    public void initProductTest1(){
+        products.add(new Book("La_tempête_du_siècle", 20, 2, "Stéphen_King", new Date(1999, 01, 01)));
+        products.add(new Book("La_ligne_verte", 20, 2, "Stéphen_King", new Date(1996, 01, 01)));
+        products.add(new HighTech("Switch", 294, 30));
+        products.add(new HighTech("Pad", 100, 15));
+        products.add(new HighTech("Mannette", 70, 10));
+        products.add(new HighTech("Mannette", -70, 10));
+    }
+
 
     @Override
     public CustomerState connect(String login, String passwordHash) throws WrongCredentials {
