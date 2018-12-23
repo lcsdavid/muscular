@@ -8,5 +8,4 @@ package fr.davidlegras.product;
  * @see ProductOffer
  * @see FlashOffer
  */
-public interface Discountable {
-}
+public interface Discountable {}

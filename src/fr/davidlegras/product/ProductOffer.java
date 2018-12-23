@@ -14,7 +14,7 @@ public class ProductOffer extends AbstractOffer {
 
     public ProductOffer(Product target, float discount) throws NotInBoundsDiscountException, NotDiscountableException {
         super(discount);
-        if (!target.isDiscountable())
+        if (!Products.isProductDiscountable(target.getClass()))
             throw new NotDiscountableException();
         this.target = target;
     }

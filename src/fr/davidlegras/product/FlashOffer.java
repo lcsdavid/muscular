@@ -23,7 +23,7 @@ public class FlashOffer extends AbstractOffer {
     public FlashOffer(double discount, Cart target) throws DiscountException {
         super(discount);
         for (Map.Entry<Product, Integer> entry : target)
-            if (!entry.getKey().isDiscountable())
+            if (!Products.isProductDiscountable(entry.getKey().getClass()))
                 throw new NotDiscountableException();
         this.target = (Cart) target.clone();
     }
@@ -36,7 +36,7 @@ public class FlashOffer extends AbstractOffer {
     public FlashOffer(double discount, Class<? extends CustomerState> customerStateClass, Cart target) throws DiscountException {
         super(discount, customerStateClass);
         for (Map.Entry<Product, Integer> entry : target)
-            if (!entry.getKey().isDiscountable())
+            if (!Products.isProductDiscountable(entry.getKey().getClass()))
                 throw new NotDiscountableException();
         this.target = (Cart) target.clone();
     }

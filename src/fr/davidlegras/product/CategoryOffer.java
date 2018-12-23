@@ -8,14 +8,14 @@ public class CategoryOffer extends AbstractOffer {
 
     public CategoryOffer(double discount, Class<? extends Product> productClass) throws DiscountException {
         super(discount);
-        if (!Product.isProductDiscountable(productClass))
+        if (!Products.isProductDiscountable(productClass))
             throw new NotDiscountableException();
         this.productClass = productClass;
     }
 
     public CategoryOffer(double discount, Class<? extends CustomerState> customerStateClass, Class<? extends Product> productClass) throws DiscountException {
         super(discount, customerStateClass);
-        if (!Product.isProductDiscountable(productClass))
+        if (!Products.isProductDiscountable(productClass))
             throw new NotDiscountableException();
         this.productClass = productClass;
     }

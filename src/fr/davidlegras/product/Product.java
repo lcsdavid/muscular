@@ -7,10 +7,6 @@ package fr.davidlegras.product;
  */
 public interface Product {
 
-    static boolean isProductDiscountable(Class<? extends Product> productClass) {
-        return productClass.isAssignableFrom(Discountable.class);
-    }
-
     String productTitle();
 
     double price();
@@ -18,6 +14,4 @@ public interface Product {
     default int gainInLoyaltyPoints() {
         return 0;
     }
-
-    boolean isDiscountable();
 }

@@ -11,18 +11,11 @@ public abstract class AbstractProduct implements Product {
     private double price;
     private int gainInLoyaltyPoints;
 
-    private boolean discountable;
-
     protected AbstractProduct(String productTitle, double price, int gainInLoyaltyPoints) {
-        this(productTitle, price, gainInLoyaltyPoints, false);
-    }
-
-    protected AbstractProduct(String productTitle, double price, int gainInLoyaltyPoints, boolean discountable) {
         super();
         this.productTitle = productTitle;
         this.price = price;
         this.gainInLoyaltyPoints = gainInLoyaltyPoints;
-        this.discountable = discountable;
     }
 
     @Override
@@ -38,10 +31,5 @@ public abstract class AbstractProduct implements Product {
     @Override
     public final int gainInLoyaltyPoints() {
         return gainInLoyaltyPoints;
-    }
-
-    @Override
-    public final boolean isDiscountable() {
-        return discountable;
     }
 }
