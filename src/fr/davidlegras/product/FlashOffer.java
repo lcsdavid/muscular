@@ -30,5 +30,5 @@ public class FlashOffer<P extends Product, C extends CustomerState> extends Abst
         super(discount);
         cart.addAll(targetCart);
     }
-    
+
 }

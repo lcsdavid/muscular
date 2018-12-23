@@ -61,7 +61,7 @@ public class Customer {
     }
     public float rawPrice() {
         float cartPrice = 0;
-        for (Map.Entry<Product, Integer> entry : (Set<Map.Entry<Product, Integer>>) cart.entrySet())//les contraintes sur le type T de Cart nous assure que ce Cast est bon
+        for (Map.Entry<Product, Integer> entry : (Set<Map.Entry<Product, Integer>>) cart.entrySet())
             cartPrice += entry.getKey().price() * entry.getValue();
         return cartPrice;
     }

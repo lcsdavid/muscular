@@ -3,8 +3,8 @@ package fr.davidlegras.product;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Cart<T> {
-    private Map<T, Integer> cart = new HashMap<>();
+public class Cart {
+    private Map<Product, Integer> cart = new HashMap<>();
 
     public Cart() {
         super();
@@ -19,12 +19,12 @@ public class Cart<T> {
         return count;
     }
 
-    public boolean contains(T product) {
+    public boolean contains(Product product) {
         return cart.containsKey(product);
     }
 
-    public boolean contains(Cart<? extends T> other) {
-        for (Map.Entry<? extends T, Integer> entry: other.cart.entrySet())
+    public boolean contains(Cart other) {
+        for (Map.Entry<Product, Integer> entry: other.cart.entrySet())
             if (!contains(entry.getKey()) || !(cart.get(entry.getKey()) < entry.getValue()))
                 return false;
         return true;
@@ -32,11 +32,11 @@ public class Cart<T> {
 
     /* Modification methods */
 
-    public int add(T product) {
+    public int add(Product product) {
         return add(product, 1);
     }
 
-    public int add(T product, int count) {
+    public int add(Product product, int count) {
         if (count < 1)
             throw new IllegalArgumentException();
         if (cart.containsKey(product)) {
@@ -47,18 +47,18 @@ public class Cart<T> {
         return count;
     }
 
-    public int addAll(Cart<? extends T> other) {
+    public int addAll(Cart other) {
         int productsAdded = 0;
-        for (Map.Entry<? extends T, Integer> entry: other.cart.entrySet())
+        for (Map.Entry<Product, Integer> entry: other.cart.entrySet())
             productsAdded += add(entry.getKey(), entry.getValue());
         return productsAdded;
     }
 
-    public int remove(T product) {
+    public int remove(Product product) {
         return remove(product, 1);
     }
 
-    public int remove(T product, int count) {
+    public int remove(Product product, int count) {
         if (count < 1)
             throw new IllegalArgumentException();
         if (cart.containsKey(product)) {
@@ -73,9 +73,9 @@ public class Cart<T> {
         return 0;
     }
 
-    public int removeAll(Cart<? extends T> other) {
+    public int removeAll(Cart other) {
         int productsRemoved = 0;
-        for(Map.Entry<? extends T, Integer> entry: other.cart.entrySet())
+        for(Map.Entry<Product, Integer> entry: other.cart.entrySet())
             productsRemoved += remove(entry.getKey(), entry.getValue());
         return productsRemoved;
     }
