@@ -7,11 +7,11 @@ import fr.davidlegras.serviceMarketing.NotInBoundsDiscountException;
  *
  * @author Lucas David
  * @author Théo Legras
- * @see CommercialOffer
+ * @see AbstractOffer
  * @see Discountable
  * @see Product
  */
-public class ProductOffer<T extends Discountable> extends CommercialOffer<T> {
+public class ProductOffer<T extends Discountable> extends AbstractOffer<T> {
     ProductOffer(float discount) throws NotInBoundsDiscountException {
         super(discount);
     }

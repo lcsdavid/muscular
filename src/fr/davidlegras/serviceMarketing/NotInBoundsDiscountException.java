@@ -1,13 +1,13 @@
 package fr.davidlegras.serviceMarketing;
 
-import fr.davidlegras.product.CommercialOffer;
+import fr.davidlegras.product.AbstractOffer;
 
 /**
  * TODO
  *
  * @author Lucas David
  * @author Théo Legras
- * @see CommercialOffer
+ * @see AbstractOffer
  */
 public class NotInBoundsDiscountException extends Exception {
 

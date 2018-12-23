@@ -1,8 +1,10 @@
 package fr.davidlegras.product;
 
-public interface Offer<T> {
+import fr.davidlegras.customer.CustomerState;
 
-    boolean applicable(Cart<? extends T> cart);
+public interface Offer<P extends Product, C extends CustomerState> {
+
+    boolean applicable(C customerState, Cart cart, P product);
 
     double applyOffer(double price);
 }

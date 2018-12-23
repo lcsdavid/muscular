@@ -5,7 +5,7 @@ import fr.davidlegras.product.Discountable;
 import fr.davidlegras.product.HighTech;
 import fr.davidlegras.product.Book;
 import fr.davidlegras.product.Product;
-import fr.davidlegras.product.CommercialOffer;
+import fr.davidlegras.product.AbstractOffer;
 import fr.davidlegras.serviceMarketing.NotInBoundsDiscountException;
 import fr.davidlegras.product.ProductOffer;
 import javafx.util.Pair;
@@ -34,7 +34,7 @@ public class MarketingService {
      */
     private final List<Pair<Product, Integer>> products = new ArrayList<>();
 
-    private List<CommercialOffer<Discountable>> offers = new ArrayList<>();
+    private List<AbstractOffer<Discountable>> offers = new ArrayList<>();
 
     /**
      * Construceur par défaut et privée pour contrôle l'unicité de l'instanciation de la classe.
@@ -52,7 +52,7 @@ public class MarketingService {
         return UNIQUE_MARKETING_SERVICE_INSTANCE;
     }
 
-    public List<CommercialOffer<Discountable>> offers() {
+    public List<AbstractOffer<Discountable>> offers() {
         return offers;
     }
 
@@ -240,7 +240,7 @@ public class MarketingService {
      */
     private static class Checkout {
         private static Checkout UNIQUE_CHECKOUT_INSTANCE = new Checkout();
-        private ArrayList<CommercialOffer> offers;
+        private ArrayList<AbstractOffer> offers;
 
         private Checkout() {
             offers = new ArrayList<>();
@@ -257,13 +257,13 @@ public class MarketingService {
             return res;
         }
 
-        public void addOffer(CommercialOffer offer) {
+        public void addOffer(AbstractOffer offer) {
             offers.add(offer);
         }
 
         private float getReduction(Map<Product, Integer> cart) {
             float res = 0;
-            for (CommercialOffer offer : offers) {
+            for (AbstractOffer offer : offers) {
                 res += offer.discount();
             }
             return res;

@@ -28,7 +28,9 @@ public class Customer {
     }
 
     /* Acesseurs & Mutateurs */
-
+    CustomerState customerState() {
+        return customerState;
+    }
     void customerState(CustomerState state) {
         customerState = state;
     }
@@ -69,7 +71,7 @@ public class Customer {
         customerState.disconnect(platform, this);
     }
     public boolean isConnected() {
-        return customerState != Visitor.getVisitor();
+        return customerState.getClass().isAssignableFrom(ConnectedCustomer.class);
     }
 
     /* Affichage */

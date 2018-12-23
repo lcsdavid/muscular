@@ -8,30 +8,30 @@ import fr.davidlegras.serviceMarketing.NotInBoundsDiscountException;
  *
  * @author Lucas David
  * @author Théo Legras
- * @see CommercialOffer
+ * @see AbstractOffer
  * @see Discountable
  * @see Product
  */
-public class FlashOffer<T extends Discountable> extends CommercialOffer<T> {
+public class FlashOffer<T, C> extends AbstractOffer<T, C> {
     /**
      * Tableau dont les clées représentent les produits concernés et leurs valeurs respectives représente la quantité
      * demandé pour appliquer l'offre.
      */
-    private Cart<T> cart = new Cart<>();
+    private Cart cart = new Cart<>();
 
     /**
      *
-     * @param discount
-     * @param targets
+     * @param discount pourcentage de réduction sur la panier.
+     * @param targetCart panier sensible à la réduction.
      * @throws NotInBoundsDiscountException
      */
-    FlashOffer(double discount, Cart<? extends T> targetCart) throws NotInBoundsDiscountException {
+    public FlashOffer(double discount, Cart targetCart) throws NotInBoundsDiscountException {
         super(discount);
         cart.addAll(targetCart);
     }
 
     @Override
-    public boolean applicable(Cart<? extends T> cart) {
+    public boolean applicable(Cart cart) {
         return false;
     }
 
