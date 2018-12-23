@@ -7,7 +7,7 @@ public class Member extends AbstractConnectedCustomer {
     private LoyaltyCard loyaltyCard = new LoyaltyCard();
 
     public Member(String name, String lastName, LoyaltyCard... loyaltyCards) {
-        super();
+        super(name, lastName);
         this.firstName = firstName;
     }
 

@@ -24,4 +24,10 @@ public class CategoryOffer extends AbstractOffer {
     public boolean applicable(Customer customer, Product product) {
         return super.applicable(customer, product) && product.getClass().isAssignableFrom(productClass);
     }
+
+    public double getReduction(Product product){
+        if(product.getClass().equals(productClass))
+            return discount();
+        return 0;
+    }
 }

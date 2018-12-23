@@ -1,5 +1,7 @@
 package fr.davidlegras.product;
 
+import fr.davidlegras.customer.Customer;
+
 /**
  * TODO abstract
  *
@@ -17,5 +19,10 @@ public class ProductOffer extends AbstractOffer {
         if (!Products.isProductDiscountable(target.getClass()))
             throw new NotDiscountableException();
         this.target = target;
+    }
+
+    @Override
+    public boolean applicable(Customer customer, Product product) {
+        return super.applicable(customer, product) && product.equals(target);
     }
 }

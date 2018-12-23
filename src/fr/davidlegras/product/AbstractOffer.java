@@ -49,4 +49,6 @@ public abstract class AbstractOffer implements Offer {
     public String toString() {
         return Double.toString(discount * 100) + '%';
     }
+
+
 }
