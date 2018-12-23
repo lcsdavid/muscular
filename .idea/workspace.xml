@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="807b764d-bfa5-443e-8747-90ab2412eca4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/laFac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/laFac.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/AbstractOffer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/AbstractOffer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/AbstractProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/AbstractProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/Discountable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/Discountable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/HighTech.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/HighTech.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fr/davidlegras/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fr/davidlegras/product/Product.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,26 +28,26 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="94" />
+          <entry key="java" value="102" />
           <entry key="mdj" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="94" />
+          <entry key="JAVA" value="102" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gitignore" value="19" />
-          <entry key="java" value="3061" />
+          <entry key="java" value="3258" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3061" />
+          <entry key="JAVA" value="3258" />
           <entry key="PLAIN_TEXT" value="19" />
         </counts>
       </usages-collector>
@@ -53,128 +56,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Cart.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-              <folding>
-                <element signature="method#count#0;class#Cart#0" />
-                <element signature="method#contains#1;class#Cart#0" />
-                <element signature="method#add#1;class#Cart#0" />
-                <element signature="method#addAll#0;class#Cart#0" />
-                <element signature="method#remove#1;class#Cart#0" />
-                <element signature="method#removeAll#0;class#Cart#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/Map.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="390" column="25" selection-start-line="390" selection-start-column="25" selection-end-line="390" selection-end-column="25" />
-              <folding>
-                <element signature="docComment;class#Map#0" />
-                <element signature="e#7610#7865#0" />
-                <element signature="e#7887#8048#0" />
-                <element signature="e#8077#8972#0" />
-                <element signature="e#9015#10028#0" />
-                <element signature="e#10075#11501#0" />
-                <element signature="e#11562#12985#0" />
-                <element signature="e#13018#14622#0" />
-                <element signature="e#14679#15793#0" />
-                <element signature="e#15849#16112#0" />
-                <element signature="e#16151#16916#0" />
-                <element signature="e#16943#17760#0" />
-                <element signature="e#17794#18655#0" />
-                <element signature="e#18698#19349#0" />
-                <element signature="e#18698#26435#0" />
-                <element signature="e#19386#19721#0" />
-                <element signature="e#19751#20252#0" />
-                <element signature="e#20284#21489#0" />
-                <element signature="e#21528#22442#0" />
-                <element signature="e#22486#23203#0" />
-                <element signature="e#23237#23765#0" />
-                <element signature="e#23237#24009#0" />
-                <element signature="e#24019#24549#0" />
-                <element signature="e#24019#24799#0" />
-                <element signature="e#24809#25325#0" />
-                <element signature="e#24809#25608#0" />
-                <element signature="e#25618#26140#0" />
-                <element signature="e#25618#26429#0" />
-                <element signature="e#26472#27087#0" />
-                <element signature="e#27123#27686#0" />
-                <element signature="e#27740#28862#0" />
-                <element signature="e#27740#29044#0" />
-                <element signature="e#29050#30201#0" />
-                <element signature="e#29050#30736#0" />
-                <element signature="e#30742#32868#0" />
-                <element signature="e#30742#33738#0" />
-                <element signature="e#33744#35921#0" />
-                <element signature="e#33744#36082#0" />
-                <element signature="e#36088#37694#0" />
-                <element signature="e#36088#37972#0" />
-                <element signature="e#37978#40006#0" />
-                <element signature="e#37978#40300#0" />
-                <element signature="e#40306#42175#0" />
-                <element signature="e#40306#42383#0" />
-                <element signature="e#42389#46192#0" />
-                <element signature="e#42389#46602#0" />
-                <element signature="e#46608#49963#0" />
-                <element signature="e#46608#50517#0" />
-                <element signature="e#50523#54303#0" />
-                <element signature="e#50523#55031#0" />
-                <element signature="e#55037#59083#0" />
-                <element signature="e#55037#59577#0" />
-                <element signature="e#59583#59883#0" />
-                <element signature="e#59978#60455#0" />
-                <element signature="e#60568#61203#0" />
-                <element signature="e#61336#62062#0" />
-                <element signature="e#61336#62209#0" />
-                <element signature="e#62215#63026#0" />
-                <element signature="e#62215#63193#0" />
-                <element signature="e#63199#64094#0" />
-                <element signature="e#63199#64281#0" />
-                <element signature="e#64287#65265#0" />
-                <element signature="e#64287#65550#0" />
-                <element signature="e#65556#66624#0" />
-                <element signature="e#65556#66929#0" />
-                <element signature="e#66935#68089#0" />
-                <element signature="e#66935#68414#0" />
-                <element signature="e#68420#69657#0" />
-                <element signature="e#68420#70002#0" />
-                <element signature="e#70008#71330#0" />
-                <element signature="e#70008#71699#0" />
-                <element signature="e#71705#72906#0" />
-                <element signature="e#72911#72923#0" />
-                <element signature="e#71705#73780#0" />
-                <element signature="e#73786#75419#0" />
-                <element signature="e#73786#75559#0" />
-                <element signature="e#75565#76401#0" />
-                <element signature="e#75565#76742#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/Platform.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/laFac.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+            <state relative-caret-position="68">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding>
                 <element signature="class#laFacServer#0;class#laFac#0" />
                 <element signature="method#laFacServer#0;class#laFacServer#0;class#laFac#0" />
@@ -186,25 +71,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerState.java">
+        <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/HighTech.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+            <state relative-caret-position="119">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#HighTech#0;class#HighTech#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/CategoryOffer.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/AbstractProduct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="204">
+              <caret line="23" column="107" selection-start-line="23" selection-start-column="107" selection-end-line="23" selection-end-column="107" />
               <folding>
-                <element signature="method#CategoryOffer#0;class#CategoryOffer#0" />
-                <element signature="method#applicable#0;class#CategoryOffer#0" />
+                <element signature="docComment;class#AbstractProduct#0" />
+                <element signature="method#AbstractProduct#0;class#AbstractProduct#0" />
+                <element signature="method#AbstractProduct#1;class#AbstractProduct#0" />
               </folding>
             </state>
           </provider>
@@ -223,213 +109,66 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/AbstractProduct.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-              <folding>
-                <element signature="docComment;class#AbstractProduct#0" />
-                <element signature="method#AbstractProduct#0;class#AbstractProduct#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/AbstractOffer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="39" column="93" lean-forward="true" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="93" />
+            <state relative-caret-position="340">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="docComment;class#AbstractOffer#0" />
                 <element signature="method#AbstractOffer#0;class#AbstractOffer#0" />
-                <element signature="e#1436#1437#0" expanded="true" />
-                <element signature="e#1496#1497#0" expanded="true" />
+                <element signature="method#applicable#0;class#AbstractOffer#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/HashMap.java">
+        <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Product.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="278" column="53" lean-forward="true" selection-start-line="278" selection-start-column="53" selection-end-line="278" selection-end-column="53" />
+            <state relative-caret-position="187">
+              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
               <folding>
-                <element signature="docComment;class#HashMap#0" />
-                <element signature="e#10643#10716#0" />
-                <element signature="e#10788#10968#0" />
-                <element signature="e#11023#11098#0" />
-                <element signature="e#11156#11521#0" />
-                <element signature="e#11571#11786#0" />
-                <element signature="e#11838#12106#0" />
-                <element signature="e#12160#12310#0" />
-                <element signature="e#12461#12639#0" />
-                <element signature="e#12649#12695#0" />
-                <element signature="e#12704#12752#0" />
-                <element signature="e#12761#12821#0" />
-                <element signature="e#12948#13086#0" />
-                <element signature="e#13096#13482#0" />
-                <element signature="e#13554#14507#0" />
-                <element signature="e#13554#14638#0" />
-                <element signature="e#14644#14755#0" />
-                <element signature="e#14644#15513#0" />
-                <element signature="e#15519#15624#0" />
-                <element signature="e#15519#15874#0" />
-                <element signature="e#15880#15957#0" />
-                <element signature="e#15880#16151#0" />
-                <element signature="e#16207#16472#0" />
-                <element signature="e#16511#16626#0" />
-                <element signature="e#16676#16750#0" />
-                <element signature="e#16780#17158#0" />
-                <element signature="e#17192#17297#0" />
-                <element signature="e#17551#17627#0" />
-                <element signature="e#17722#18067#0" />
-                <element signature="e#17722#18688#0" />
-                <element signature="e#18694#18964#0" />
-                <element signature="e#19070#19206#0" />
-                <element signature="e#19318#19736#0" />
-                <element signature="e#19318#19876#0" />
-                <element signature="e#19882#20095#0" />
-                <element signature="e#19882#20837#0" />
-                <element signature="e#20843#20982#0" />
-                <element signature="e#21039#21200#0" />
-                <element signature="e#21269#22070#0" />
-                <element signature="e#21269#22199#0" />
-                <element signature="e#22205#22369#0" />
-                <element signature="e#22205#23204#0" />
-                <element signature="e#23210#23479#0" />
-                <element signature="e#23584#24184#0" />
-                <element signature="e#24290#24622#0" />
-                <element signature="e#24290#26274#0" />
-                <element signature="e#26280#26645#0" />
-                <element signature="e#26280#29708#0" />
-                <element signature="e#29714#29854#0" />
-                <element signature="e#29714#30552#0" />
-                <element signature="e#30558#30886#0" />
-                <element signature="e#30988#31421#0" />
-                <element signature="e#30988#31587#0" />
-                <element signature="e#31593#31960#0" />
-                <element signature="e#31593#33614#0" />
-                <element signature="e#33620#33735#0" />
-                <element signature="e#33620#33973#0" />
-                <element signature="e#33979#34259#0" />
-                <element signature="e#33979#34690#0" />
-                <element signature="e#34696#35461#0" />
-                <element signature="e#34696#35635#0" />
-                <element signature="e#35641#36790#0" />
-                <element signature="e#35693#35749#0" />
-                <element signature="e#35758#35823#0" />
-                <element signature="e#35832#35901#0" />
-                <element signature="e#35910#35976#0" />
-                <element signature="e#36249#36784#0" />
-                <element signature="e#36796#37602#0" />
-                <element signature="e#36796#37790#0" />
-                <element signature="e#37796#38826#0" />
-                <element signature="e#37855#37911#0" />
-                <element signature="e#37920#37985#0" />
-                <element signature="e#37994#38065#0" />
-                <element signature="e#38074#38142#0" />
-                <element signature="e#38283#38820#0" />
-                <element signature="e#38832#39693#0" />
-                <element signature="e#38832#39850#0" />
-                <element signature="e#39856#41566#0" />
-                <element signature="e#39923#39979#0" />
-                <element signature="e#39988#40053#0" />
-                <element signature="e#40171#40503#0" />
-                <element signature="e#40512#40862#0" />
-                <element signature="e#40871#41007#0" />
-                <element signature="e#41016#41560#0" />
-                <element signature="e#41620#41791#0" />
-                <element signature="e#42064#42419#0" />
-                <element signature="e#42425#42708#0" />
-                <element signature="e#42714#43072#0" />
-                <element signature="e#42714#45001#0" />
-                <element signature="e#45007#45369#0" />
-                <element signature="e#45007#46173#0" />
-                <element signature="e#46179#46541#0" />
-                <element signature="e#46179#48486#0" />
-                <element signature="e#48492#48854#0" />
-                <element signature="e#48492#51025#0" />
-                <element signature="e#51031#51544#0" />
-                <element signature="e#51550#52114#0" />
-                <element signature="e#52225#52403#0" />
-                <element signature="e#52408#52438#0" />
-                <element signature="e#52225#52836#0" />
-                <element signature="e#52842#52950#0" />
-                <element signature="e#52955#53111#0" />
-                <element signature="e#53117#53680#0" />
-                <element signature="e#53117#53997#0" />
-                <element signature="e#54003#54271#0" />
-                <element signature="e#54003#56469#0" />
-                <element signature="e#55031#55057#0" />
-                <element signature="e#55713#55777#0" />
-                <element signature="e#56564#58094#0" />
-                <element signature="e#56801#57121#0" />
-                <element signature="e#57216#57692#0" />
-                <element signature="e#57702#58088#0" />
-                <element signature="e#58100#58240#0" />
-                <element signature="e#58186#58234#0" />
-                <element signature="e#58246#58390#0" />
-                <element signature="e#58334#58384#0" />
-                <element signature="e#58396#58560#0" />
-                <element signature="e#58497#58554#0" />
-                <element signature="e#58658#59899#0" />
-                <element signature="e#59047#59374#0" />
-                <element signature="e#59384#59770#0" />
-                <element signature="e#59780#59893#0" />
-                <element signature="e#59905#62615#0" />
-                <element signature="e#60028#60207#0" />
-                <element signature="e#60217#60523#0" />
-                <element signature="e#60533#61590#0" />
-                <element signature="e#61600#62445#0" />
-                <element signature="e#62455#62609#0" />
-                <element signature="e#62621#65308#0" />
-                <element signature="e#62746#62929#0" />
-                <element signature="e#62939#63251#0" />
-                <element signature="e#63261#64320#0" />
-                <element signature="e#64330#65177#0" />
-                <element signature="e#65314#68075#0" />
-                <element signature="e#65452#65635#0" />
-                <element signature="e#65645#65957#0" />
-                <element signature="e#65967#67033#0" />
-                <element signature="e#67043#67905#0" />
-                <element signature="e#67915#68069#0" />
-                <element signature="e#68839#68999#0" />
-                <element signature="e#69005#69158#0" />
-                <element signature="e#69164#69247#0" />
-                <element signature="e#69164#69435#0" />
-                <element signature="e#69441#69531#0" />
-                <element signature="e#69536#69578#0" />
-                <element signature="e#69583#69621#0" />
-                <element signature="e#69627#70065#0" />
-                <element signature="e#70160#70332#0" />
-                <element signature="e#70160#93169#0" />
-                <element signature="e#70727#70796#0" />
-                <element signature="e#70727#71002#0" />
-                <element signature="e#71012#71096#0" />
-                <element signature="e#71012#71967#0" />
-                <element signature="e#71977#72166#0" />
-                <element signature="e#71977#73168#0" />
-                <element signature="e#73178#73230#0" />
-                <element signature="e#73381#73709#0" />
-                <element signature="e#73381#74070#0" />
-                <element signature="e#74080#74153#0" />
-                <element signature="e#74080#75788#0" />
-                <element signature="e#75798#75906#0" />
-                <element signature="e#75798#76311#0" />
-                <element signature="e#76321#76371#0" />
-                <element signature="e#76321#78287#0" />
-                <element signature="e#78297#78893#0" />
-                <element signature="e#78297#82495#0" />
-                <element signature="e#82505#82927#0" />
-                <element signature="e#82505#84622#0" />
-                <element signature="e#84764#85399#0" />
-                <element signature="e#85409#86047#0" />
-                <element signature="e#86057#88218#0" />
-                <element signature="e#88228#92177#0" />
-                <element signature="e#92187#92239#0" />
-                <element signature="e#92187#93163#0" />
+                <element signature="docComment;class#Product#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Discountable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="docComment;class#Discountable#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/FlashOffer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding>
+                <element signature="docComment;class#FlashOffer#0" />
+                <element signature="docComment;field#cart#0;class#FlashOffer#0" />
+                <element signature="docComment;method#FlashOffer#0;class#FlashOffer#0" />
+                <element signature="method#FlashOffer#0;class#FlashOffer#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/ProductOffer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding>
+                <element signature="docComment;class#ProductOffer#0" />
+                <element signature="method#ProductOffer#0;class#ProductOffer#0" />
               </folding>
             </state>
           </provider>
@@ -475,7 +214,6 @@
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/Discountator.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/Cart.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/DiscountableProduct.java" />
-        <option value="$PROJECT_DIR$/src/fr/davidlegras/product/Book.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/MarketingService.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/Main.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/serviceMarketing/CategoryOffer.java" />
@@ -485,12 +223,8 @@
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/Staff.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/AbstractConnectedCustomer.java" />
         <option value="$PROJECT_DIR$/.gitignore/.gitignore" />
-        <option value="$PROJECT_DIR$/src/fr/davidlegras/product/Discountable.java" />
-        <option value="$PROJECT_DIR$/src/fr/davidlegras/product/Product.java" />
-        <option value="$PROJECT_DIR$/src/fr/davidlegras/product/AbstractProduct.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/CommercialOffer.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/ProductOffer.java" />
-        <option value="$PROJECT_DIR$/src/fr/davidlegras/product/HighTech.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/AbstractCustomerState.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/customer/ConnectedCustomer.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/FlashOffer.java" />
@@ -502,6 +236,11 @@
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/AbstractOffer.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/product/CategoryOffer.java" />
         <option value="$PROJECT_DIR$/src/fr/davidlegras/laFac.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/product/Product.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/product/AbstractProduct.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/product/HighTech.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/product/Book.java" />
+        <option value="$PROJECT_DIR$/src/fr/davidlegras/product/Discountable.java" />
       </list>
     </option>
   </component>
@@ -572,7 +311,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545564602472" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545572228838" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -626,7 +365,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79477000" />
+    <option name="totallyTimeSpent" value="80941000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="502" y="0" width="1936" height="1056" extended-state="0" />
@@ -764,18 +503,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/CommercialOffer.java" />
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Book#0;class#Book#0" />
-            <element signature="method#equals#0;class#Book#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/Member.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -812,42 +539,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Discountable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-          <folding>
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/HighTech.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-          <folding>
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#450#451#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/AlreadyConnectedException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -858,17 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="71" column="33" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/ProductOffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="docComment;class#ProductOffer#0" />
-            <element signature="method#ProductOffer#0;class#ProductOffer#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -983,19 +667,6 @@
     </entry>
     <entry file="file://C:/$Recycle.Bin/S-1-5-21-2043667272-823561661-602425729-1001/$RB9XDEL.java">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/FlashOffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="docComment;class#FlashOffer#0" />
-            <element signature="docComment;field#cart#0;class#FlashOffer#0" />
-            <element signature="docComment;method#FlashOffer#0;class#FlashOffer#0" />
-            <element signature="method#FlashOffer#0;class#FlashOffer#0" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/customer/CustomerListener.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1317,27 +988,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/AbstractProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="32" column="35" selection-start-line="32" selection-start-column="35" selection-end-line="32" selection-end-column="35" />
-          <folding>
-            <element signature="docComment;class#AbstractProduct#0" />
-            <element signature="method#AbstractProduct#0;class#AbstractProduct#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Offer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/Platform.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1358,23 +1008,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/AbstractOffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="39" column="93" lean-forward="true" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="93" />
-          <folding>
-            <element signature="docComment;class#AbstractOffer#0" />
-            <element signature="method#AbstractOffer#0;class#AbstractOffer#0" />
-            <element signature="e#1436#1437#0" expanded="true" />
-            <element signature="e#1496#1497#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/CategoryOffer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="187">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="method#CategoryOffer#0;class#CategoryOffer#0" />
             <element signature="method#applicable#0;class#CategoryOffer#0" />
@@ -1382,15 +1019,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/AbstractOffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="docComment;class#AbstractOffer#0" />
+            <element signature="method#AbstractOffer#0;class#AbstractOffer#0" />
+            <element signature="method#applicable#0;class#AbstractOffer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/ProductOffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="docComment;class#ProductOffer#0" />
+            <element signature="method#ProductOffer#0;class#ProductOffer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/FlashOffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="docComment;class#FlashOffer#0" />
+            <element signature="docComment;field#cart#0;class#FlashOffer#0" />
+            <element signature="docComment;method#FlashOffer#0;class#FlashOffer#0" />
+            <element signature="method#FlashOffer#0;class#FlashOffer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Offer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="114" selection-start-line="10" selection-start-column="114" selection-end-line="10" selection-end-column="114" />
+          <folding>
+            <element signature="method#Book#0;class#Book#0" />
+            <element signature="method#equals#0;class#Book#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/HighTech.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="method#HighTech#0;class#HighTech#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/laFac.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="class#laFacServer#0;class#laFac#0" />
             <element signature="method#laFacServer#0;class#laFacServer#0;class#laFac#0" />
             <element signature="method#onConnect#0;class#laFacServer#0;class#laFac#0" />
             <element signature="method#onDisconnect#0;class#laFacServer#0;class#laFac#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Discountable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="docComment;class#Discountable#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+          <folding>
+            <element signature="docComment;class#Product#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fr/davidlegras/product/AbstractProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="23" column="107" selection-start-line="23" selection-start-column="107" selection-end-line="23" selection-end-column="107" />
+          <folding>
+            <element signature="docComment;class#AbstractProduct#0" />
+            <element signature="method#AbstractProduct#0;class#AbstractProduct#0" />
+            <element signature="method#AbstractProduct#1;class#AbstractProduct#0" />
           </folding>
         </state>
       </provider>

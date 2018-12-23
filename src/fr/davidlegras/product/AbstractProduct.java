@@ -14,13 +14,22 @@ public abstract class AbstractProduct implements Product {
 
     private boolean discountable;
 
-    protected AbstractProduct(String productTitle, double price) {
+    protected AbstractProduct(String productTitle, double price, int fidelityPoints) {
         this.productTitle = productTitle;
         this.price = price;
+        this.fidelityPoints = fidelityPoints;
+        this.discountable = isClassDiscountable();
+    }
+
+    protected AbstractProduct(String productTitle, double price, int fidelityPoints, boolean discountable) {
+        this.productTitle = productTitle;
+        this.price = price;
+        this.fidelityPoints = fidelityPoints;
+        this.discountable = discountable;
     }
 
     @Override
-    public String productTitle() {
+    public final String productTitle() {
         return productTitle;
     }
 
@@ -30,7 +39,17 @@ public abstract class AbstractProduct implements Product {
     }
 
     @Override
-    public boolean isDiscountable() {
+    public final int fidelityPoints() {
+        return fidelityPoints;
+    }
+
+    @Override
+    public final boolean isClassDiscountable() {
+        return getClass().isAssignableFrom(Discountable.class);
+    }
+
+    @Override
+    public final boolean isDiscountable() {
         return discountable;
     }
 }

@@ -8,8 +8,8 @@ public class Book extends AbstractProduct {
     private String author;
     private Date release;
 
-    public Book(String productTitle, double price, String title, String author, Date release) {
-        super(productTitle, price);
+    public Book(String productTitle, double price, int fidelityPoints, String title, String author, Date release) {
+        super(productTitle, price, fidelityPoints);
         this.title = title;
         this.author = author;
         this.release = release;
