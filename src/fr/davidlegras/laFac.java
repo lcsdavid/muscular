@@ -20,6 +20,10 @@ public class laFac implements Platform {
     private Collection<Product> products = new ArrayList<>();
     private Collection<Offer> offers = new ArrayList<>();
 
+    public laFac() {
+        server().
+    }
+
     @Override
     public Collection<Product> products() {
         return products;
@@ -33,17 +37,6 @@ public class laFac implements Platform {
     @Override
     public Customer customer() {
         return null;
-    }
-
-
-
-    public void initProductTest1(){
-        products.add(new Book("La_tempête_du_siècle", 20, 2, "Stéphen_King", new Date(1999, 01, 01)));
-        products.add(new Book("La_ligne_verte", 20, 2, "Stéphen_King", new Date(1996, 01, 01)));
-        products.add(new HighTech("Switch", 294, 30));
-        products.add(new HighTech("Pad", 100, 15));
-        products.add(new HighTech("Mannette", 70, 10));
-        products.add(new HighTech("Mannette", -70, 10));
     }
 
 
@@ -70,7 +63,7 @@ public class laFac implements Platform {
 
     @Override
     public Server server() {
-        return null;
+        return SERVER;
     }
 
     /**
@@ -135,5 +128,15 @@ public class laFac implements Platform {
 
         @Override
         public void disconnect() {}
+
+        @Override
+        public Collection<String[]> products() {
+            return customers;
+        }
+
+        @Override
+        public Collection<String[]> offers() {
+            return offers;
+        }
     }
 }
