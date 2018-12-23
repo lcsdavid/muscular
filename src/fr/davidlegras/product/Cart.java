@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class Cart implements Iterable<Map.Entry<Product, Integer>>, Cloneable {
-    private Map<Product, Integer> cart = new HashMap<>();
+    private HashMap<Product, Integer> cart = new HashMap<>();
 
     public Cart() {
         super();
@@ -82,14 +82,26 @@ public class Cart implements Iterable<Map.Entry<Product, Integer>>, Cloneable {
         return productsRemoved;
     }
 
+    public void empty() {
+        cart.clear();
+    }
+
     @Override
     public Iterator<Map.Entry<Product, Integer>> iterator() {
         return cart.entrySet().iterator();
     }
 
     @Override
-    public Cart clone() throws CloneNotSupportedException {
-        Cart clone = (Cart) super.clone();
+    public Object clone() {
+        Cart clone = null;
+        try {
+            clone = (Cart) super.clone();
+        } catch (CloneNotSupportedException e) {
+            /* Ne peux jamais arriver en l'état des choses. */
+            /* this shouldn't happen, since we are Cloneable */
+            throw new InternalError(e);
+        }
+        clone.empty();
         clone.addAll(this);
         return clone;
     }

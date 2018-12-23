@@ -1,5 +1,10 @@
 package fr.davidlegras.product;
 
+import fr.davidlegras.customer.Customer;
+import fr.davidlegras.customer.CustomerState;
+
+import java.util.Map;
+
 /**
  * TODO
  *
@@ -7,7 +12,7 @@ package fr.davidlegras.product;
  * @author Lucas David
  * @author Théo Legras
  * @see AbstractOffer
- * @see Product
+ * @see CustomerState
  */
 public class FlashOffer extends AbstractOffer {
     /**
@@ -16,15 +21,31 @@ public class FlashOffer extends AbstractOffer {
      */
     private Cart target;
 
+    public FlashOffer(double discount, Cart target) throws DiscountException {
+        super(discount);
+        for (Map.Entry<Product, Integer> entry: target)
+            if (!entry.getKey().isDiscountable())
+                throw new NotDiscountableException();
+        this.target = target.clone();
+    }
+
     /**
      *
      * @param discount pourcentage de réduction sur la panier.
-     * @param targetCart panier sensible à la réduction.
-     * @throws NotInBoundsDiscountException
+     * @param target panier sensible à la réduction.
+     * @throws DiscountException
      */
-    public FlashOffer(double discount, Cart target) throws DiscountException {
-        super(discount);
+    public FlashOffer(double discount, Class<? extends CustomerState> customerStateClass, Cart target) throws DiscountException {
+        super(discount, customerStateClass);
+        for (Map.Entry<Product, Integer> entry: target)
+            if (!entry.getKey().isDiscountable())
+                throw new NotDiscountableException();
         this.target = target.clone();
+    }
+
+    @Override
+    public boolean applicable(Customer customer, Product product) {
+        return super.applicable(customer, product) && customer.cart().contains(target);
     }
 
 }

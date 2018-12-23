@@ -15,7 +15,7 @@ public class laFac implements Platform {
     private EventListenerList listeners = new EventListenerList();
 
     private Collection<Product> products = new ArrayList<>();
-    private Collection<Offer<Product, CustomerState>> offers = new ArrayList<>();
+    private Collection<Offer> offers = new ArrayList<>();
 
 
 
@@ -26,7 +26,7 @@ public class laFac implements Platform {
     }
 
     @Override
-    public Collection<Offer<Product, CustomerState>> offers() {
+    public Collection<Offer> offers() {
         return offers;
     }
 
