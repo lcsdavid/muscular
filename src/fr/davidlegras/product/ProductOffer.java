@@ -5,6 +5,7 @@ import fr.davidlegras.customer.CustomerState;
 import fr.davidlegras.serviceMarketing.NotInBoundsDiscountException;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Map;
 import java.util.Set;
 
@@ -17,7 +18,7 @@ import java.util.Set;
  * @see Discountable
  * @see Product
  */
-public class ProductOffer<T extends Product & Discountable > extends CommercialOffer<T> {
+public class ProductOffer<T extends Product & Discountable> extends CommercialOffer<T> {
     private ArrayList<T> targetProduct;
 
 
@@ -32,10 +33,9 @@ public class ProductOffer<T extends Product & Discountable > extends CommercialO
     }
 
     @Override
-    public boolean applicable(Cart<? extends T> cart) {
-        Cart<Product> nouv = (Cart<Product>)cart;// a cette endroit du code, nos contraintes sur les types nous garantisses que ce cast est legal
-        for (int i = 0; i<targetProduct.size(); i++) {
-            if(nouv.contains(targetProduct.get(i)))
+    public boolean applicable(Cart cart) {
+        for (T product : targetProduct) {
+            if (cart.contains(product))
                 return true;
         }
         return false;

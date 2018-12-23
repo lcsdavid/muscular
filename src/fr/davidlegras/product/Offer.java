@@ -1,8 +1,8 @@
 package fr.davidlegras.product;
 
-public interface Offer<T> {
+public interface Offer {
 
-    boolean applicable(Cart<? extends T> cart);
+    boolean applicable(Cart cart);
 
     double applyOffer(double price);
 }
