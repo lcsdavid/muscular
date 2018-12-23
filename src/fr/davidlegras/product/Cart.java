@@ -1,9 +1,10 @@
 package fr.davidlegras.product;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
-public class Cart {
+public class Cart implements Iterable<Map.Entry<Product, Integer>> {
     private Map<Product, Integer> cart = new HashMap<>();
 
     public Cart() {
@@ -78,5 +79,10 @@ public class Cart {
         for(Map.Entry<Product, Integer> entry: other.cart.entrySet())
             productsRemoved += remove(entry.getKey(), entry.getValue());
         return productsRemoved;
+    }
+
+    @Override
+    public Iterator<Map.Entry<Product, Integer>> iterator() {
+        return cart.entrySet().iterator();
     }
 }
