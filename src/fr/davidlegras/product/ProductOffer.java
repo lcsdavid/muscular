@@ -12,10 +12,13 @@ import fr.davidlegras.serviceMarketing.NotInBoundsDiscountException;
  * @see Discountable
  * @see Product
  */
-public class ProductOffer<P extends Product, C extends CustomerState> extends AbstractOffer<P, C> {
-    public ProductOffer(float discount) throws NotInBoundsDiscountException {
-        super(discount);
-    }
+public class ProductOffer extends AbstractOffer {
+    private Product target;
 
-    
+    public ProductOffer(Product target, float discount) throws NotInBoundsDiscountException, NotDiscountableException {
+        super(discount);
+        if (!target.isDiscountable())
+            throw new NotDiscountableException();
+        this.target = target;
+    }
 }

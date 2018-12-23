@@ -15,7 +15,9 @@ public interface Product {
         return 0;
     }
 
-    boolean isClassDiscountable();
-
     boolean isDiscountable();
+
+    static boolean isProductDiscountable(Class<? extends Product> productClass) {
+        return productClass.isAssignableFrom(Discountable.class);
+    }
 }

@@ -18,6 +18,8 @@ public class laFac implements Platform {
     private Collection<Offer<Product, CustomerState>> offers = new ArrayList<>();
 
 
+
+
     @Override
     public Collection<Product> products() {
         return products;

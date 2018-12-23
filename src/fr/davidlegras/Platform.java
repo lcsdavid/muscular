@@ -13,9 +13,7 @@ public interface Platform {
     Collection<Product> products ();
     Collection<Offer<Product, CustomerState>> offers();
 
-
-
-
+    Offer<Product, CustomerState> createOffer();
 
     Server server();
 
