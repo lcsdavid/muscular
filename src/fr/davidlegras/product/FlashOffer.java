@@ -1,12 +1,6 @@
 package fr.davidlegras.product;
 
-import fr.davidlegras.customer.Customer;
-import fr.davidlegras.customer.CustomerState;
 import fr.davidlegras.serviceMarketing.NotInBoundsDiscountException;
-
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Set;
 
 /**
  * TODO
@@ -14,53 +8,35 @@ import java.util.Set;
  *
  * @author Lucas David
  * @author Théo Legras
- * @see CommercialOffer
+ * @see AbstractOffer
  * @see Discountable
  * @see Product
  */
-public class FlashOffer<T extends Product &  Discountable> extends CommercialOffer<T> {
+public class FlashOffer<T, C> extends AbstractOffer<T, C> {
     /**
      * Tableau dont les clées représentent les produits concernés et leurs valeurs respectives représente la quantité
      * demandé pour appliquer l'offre.
      */
-    private Cart cart = new Cart();
+    private Cart cart = new Cart<>();
 
     /**
      *
-     * @param discount
-     * @param targets
+     * @param discount pourcentage de réduction sur la panier.
+     * @param targetCart panier sensible à la réduction.
      * @throws NotInBoundsDiscountException
      */
-    FlashOffer(double discount, Cart targetCart, ArrayList<? extends CustomerState> targets) throws NotInBoundsDiscountException {
-        super(discount, targets);
+    public FlashOffer(double discount, Cart targetCart) throws NotInBoundsDiscountException {
+        super(discount);
         cart.addAll(targetCart);
     }
 
     @Override
     public boolean applicable(Cart cart) {
-        Cart nouv = cart;// a cette endroit du code, nos contraintes sur les types nous garantisses que ce cast est legal
-        return nouv.contains(this.cart);
+        return false;
     }
 
     @Override
     public double applyOffer(double price) {
-
-        return price * (1 + discount());
-    }
-
-
-    public double getReduction(Customer customer){
-        double res =0.0;
-        if(!isTargeted(customer))
-            return res;
-
-        if(applicable(customer.cart())){
-            //Dans ce cas la client a tout ce qu'il faut pour que la réduction s'applique
-            for (Map.Entry<Product, Integer> entry : (Set<Map.Entry<Product, Integer>>) customer.cart().entrySet()) {
-                if((this.cart).contains(entry.getKey()))//si l'entrée sur laquelle on est correspond a un produit sur lequel l'offre s'applique
-                    res += applyOffer(entry.getKey().price()) * entry.getValue();
-            }
-        }
-        return res;
+        return 0;
     }
 }

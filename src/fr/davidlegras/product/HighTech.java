@@ -16,11 +16,6 @@ public class HighTech extends AbstractProduct {
     }
 
     @Override
-    public boolean isDiscountable() {
-        return true;
-    }
-
-    @Override
     public String toString() {
         return super.toString();
     }
