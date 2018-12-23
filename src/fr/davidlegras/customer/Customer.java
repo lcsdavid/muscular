@@ -35,6 +35,10 @@ public class Customer {
         customerState = state;
     }
 
+    public CustomerState getCustomerState(){
+        return this.customerState;
+    }
+
     public Cart cart() {
         return cart;
     }

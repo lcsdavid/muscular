@@ -45,6 +45,11 @@ public abstract class CommercialOffer<T extends Discountable> implements Offer<T
         /* cas où tout le monde est accepté */
         if(targetCustomer == null)
             return true;
+        for (CustomerState entry: targetCustomer) {
+            if(entry.equals(customer.getCustomerState()))
+                return true;
+        }
+        return false;
     }
 
     @Override
