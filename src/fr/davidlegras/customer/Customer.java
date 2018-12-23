@@ -28,10 +28,10 @@ public class Customer {
     }
 
     /* Acesseurs & Mutateurs */
-    CustomerState customerState() {
+    public CustomerState customerState() {
         return customerState;
     }
-    void customerState(CustomerState state) {
+    public void customerState(CustomerState state) {
         customerState = state;
     }
 

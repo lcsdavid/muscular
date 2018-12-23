@@ -24,6 +24,4 @@ public class FidelityCard {
         fidelityPoints = -POINTS_NEEDED_FOR_DISCOUNT;
         return FLAT_DISCOUNT_VALUE;
     }
-
-
 }
