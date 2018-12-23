@@ -2,11 +2,11 @@ package fr.davidlegras.customer;
 
 import fr.davidlegras.Platform;
 
-public class Member implements ConnectedCustomer {
+public class Member extends AbstractConnectedCustomer {
     private String firstName;
     private LoyaltyCard loyaltyCard = new LoyaltyCard();
 
-    public Member(String firstName) {
+    public Member(String name, String lastName, LoyaltyCard... loyaltyCards) {
         super();
         this.firstName = firstName;
     }

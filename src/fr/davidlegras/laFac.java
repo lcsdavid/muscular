@@ -1,8 +1,13 @@
 package fr.davidlegras;
 
+import fr.davidlegras.customer.Customer;
+import fr.davidlegras.customer.CustomerState;
+import fr.davidlegras.customer.LoyaltyCard;
+import fr.davidlegras.customer.WrongCredentials;
 import fr.davidlegras.product.Offer;
 import fr.davidlegras.product.Product;
 
+import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -23,10 +28,39 @@ public class laFac implements Platform {
     }
 
     @Override
+    public Customer customer() {
+        return null;
+    }
+
+    @Override
+    public CustomerState connect(String login, String passwordHash) throws WrongCredentials {
+        String[] customer = server().connect(login, passwordHash);
+        Class<?> customerStateClass = null;
+        try {
+            Class<?> stateClass = Class.forName(customer[3]);
+            Constructor<?> constructor = customerStateClass.getConstructors()[0];
+            LoyaltyCard[] card = new LoyaltyCard[customer.length - 4];
+            for (int i = 4; i < customer.length; i++)
+                card[i - 4] = new LoyaltyCard(Integer.parseInt(customer[i]));
+            constructor.newInstance(customer[1], customer[2], card);
+        } catch (Exception ignored) { /* On considère que pour le test les données sont robustes. */}
+        return null;
+    }
+
+    @Override
+    public void disconnect() {
+
+    }
+
+    @Override
     public Server server() {
         return null;
     }
 
+    /**
+     * Representation/simultation d'un serveur distant. Implémentation de test qui ne représente pas
+     * la réalité. Ce réferer à l'interface {@code Platform} et {@code Platform.Server}.
+     */
     static class laFacServer implements Platform.Server {
         /* Représentation des informations de laFac.com comme si elles étaient vraiment externes. */
         /**
@@ -65,13 +99,25 @@ public class laFac implements Platform {
         }
 
         @Override
-        public void onConnect(String login, String passwordHash) {
-
+        public String[] queryCustomer(String login) {
+            String[] customer = null;
+            for (String[] customerStrings: customers)
+                if (customerStrings[0].equals(login)) {
+                    customer = customerStrings;
+                    break;
+                }
+            return customer;
         }
 
         @Override
-        public void onDisconnect() {
-
+        public String[] connect(String login, String passwordHash) throws WrongCredentials {
+            String[] customer = queryCustomer(login);
+            if (customer == null || customer[1].equals(passwordHash))
+                throw new WrongCredentials();
+            return new String[0];
         }
+
+        @Override
+        public void disconnect() {}
     }
 }

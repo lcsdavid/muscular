@@ -3,7 +3,7 @@ package fr.davidlegras.product;
 import java.util.Date;
 import java.util.Objects;
 
-public class Book extends AbstractProduct {
+public final class Book extends AbstractProduct {
     private String title;
     private String author;
     private Date release;
