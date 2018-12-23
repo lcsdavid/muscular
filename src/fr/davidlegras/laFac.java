@@ -39,6 +39,7 @@ public class laFac implements Platform {
         try {
             Class<?> stateClass = Class.forName(customer[3]);
             Constructor<?> constructor = customerStateClass.getConstructors()[0];
+            /* On fait les Menbre comme ça juste pour le test. Mais l'implémentation dépendra du support. */
             LoyaltyCard[] card = new LoyaltyCard[customer.length - 4];
             for (int i = 4; i < customer.length; i++)
                 card[i - 4] = new LoyaltyCard(Integer.parseInt(customer[i]));
