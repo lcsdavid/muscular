@@ -71,7 +71,7 @@ public class Customer {
 
     /* Connexion & Déconnexion */
 
-    public void connect(final Platform platform, String login, String passwordHash) throws ConnectionException {
+    public void connect(final Platform platform, String login, String passwordHash) throws AlreadyConnectedException, WrongCredentials {
         customerState.connect(platform, this, login, passwordHash);
     }
 
@@ -91,6 +91,11 @@ public class Customer {
         s += "\n\t";
         s += "Prix total = " + rawPrice() + "€.\n\t";
         return s;
+    }
+
+    @Override
+    public String toString() {
+        return customerState.toString();
     }
 
     @Override

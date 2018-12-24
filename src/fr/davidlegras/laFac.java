@@ -49,14 +49,17 @@ public class laFac implements Platform {
     public CustomerState connect(String login, String passwordHash) throws WrongCredentials {
         String[] customer = server().connect(login, passwordHash);
         try {
-            Class<?> stateClass = Class.forName(customer[3]);
+            Class<?> stateClass = Class.forName("Visitor");
             Constructor<?> constructor = stateClass.getConstructors()[0];
             /* On fait les Menbre comme ça juste pour le test. Mais l'implémentation dépendra du support. */
-            LoyaltyCard[] card = new LoyaltyCard[customer.length - 4];
-            for (int i = 4; i < customer.length; i++)
-                card[i - 4] = new LoyaltyCard(Integer.parseInt(customer[i]));
-            return (CustomerState) constructor.newInstance(customer[1], customer[2], card);
-        } catch (Exception ignored) { /* On considère que pour le test les données sont robustes. */}
+            LoyaltyCard[] card = new LoyaltyCard[customer.length - 5];
+            for (int i = 5; i < customer.length; i++)
+                card[i - 5] = new LoyaltyCard(Integer.parseInt(customer[i]));
+            return (CustomerState) constructor.newInstance(customer[2], customer[3], card);
+        } catch (Exception ignored) {
+            /* On considère que pour le test les données sont robustes. */
+            ignored.printStackTrace();
+        }
         return null;
     }
 
@@ -104,9 +107,9 @@ public class laFac implements Platform {
         @Override
         public String[] connect(String login, String passwordHash) throws WrongCredentials {
             String[] customer = queryCustomer(login);
-            if (customer == null || customer[1].equals(passwordHash))
+            if (customer == null || !customer[1].equals(passwordHash))
                 throw new WrongCredentials();
-            return new String[0];
+            return customer;
         }
 
         @Override
