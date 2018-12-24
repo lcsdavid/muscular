@@ -1,5 +1,7 @@
 package fr.davidlegras;
 
+import java.util.Map;
+
 /**
  * TODO abstract
  *
@@ -14,6 +16,13 @@ public class ProductOffer extends AbstractOffer {
 
     public ProductOffer(double discount, Product target) throws NotInBoundsDiscountException, NotDiscountableException {
         super(discount);
+        if (!Products.isProductDiscountable(target.getClass()))
+            throw new NotDiscountableException();
+        this.target = target;
+    }
+
+    public ProductOffer(double discount, Class<? extends CustomerState> customerStateClass, Product target) throws DiscountException {
+        super(discount, customerStateClass);
         if (!Products.isProductDiscountable(target.getClass()))
             throw new NotDiscountableException();
         this.target = target;
