@@ -1,4 +1,4 @@
-package fr.davidlegras.product;
+package fr.davidlegras;
 
 /**
  * Un Discountable est un objet qui escomtable.
@@ -8,4 +8,5 @@ package fr.davidlegras.product;
  * @see ProductOffer
  * @see FlashOffer
  */
-public interface Discountable {}
+public interface Discountable {
+}

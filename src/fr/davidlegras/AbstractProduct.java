@@ -1,4 +1,4 @@
-package fr.davidlegras.product;
+package fr.davidlegras;
 
 /**
  * @author Lucas David
@@ -13,7 +13,7 @@ public abstract class AbstractProduct implements Product {
 
     protected AbstractProduct(String productTitle, double price, int gainInLoyaltyPoints) throws NegativePriceException {
         super();
-        if(price < 0)
+        if (price < 0)
             throw new NegativePriceException("Le prix est négatif et ne peut pas être attribué !");
         this.productTitle = productTitle;
         this.price = price;

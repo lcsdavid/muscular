@@ -1,8 +1,5 @@
 package fr.davidlegras;
 
-import fr.davidlegras.customer.*;
-import fr.davidlegras.product.*;
-
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -96,7 +93,7 @@ public class laFac implements Platform {
         @Override
         public String[] queryCustomer(String login) {
             String[] customer = null;
-            for (String[] customerStrings: customers)
+            for (String[] customerStrings : customers)
                 if (customerStrings[0].equals(login)) {
                     customer = customerStrings;
                     break;
@@ -113,6 +110,7 @@ public class laFac implements Platform {
         }
 
         @Override
-        public void disconnect() {}
+        public void disconnect() {
+        }
     }
 }

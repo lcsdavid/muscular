@@ -1,6 +1,4 @@
-package fr.davidlegras.customer;
-
-import fr.davidlegras.Platform;
+package fr.davidlegras;
 
 public interface NotConnectedCustomer extends CustomerState {
 

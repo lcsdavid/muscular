@@ -1,7 +1,4 @@
-package fr.davidlegras.product;
-
-import fr.davidlegras.customer.Customer;
-import fr.davidlegras.customer.CustomerState;
+package fr.davidlegras;
 
 public class CategoryOffer extends AbstractOffer {
     private Class<? extends Product> productClass;
@@ -25,8 +22,8 @@ public class CategoryOffer extends AbstractOffer {
         return super.applicable(customer, product) && product.getClass().isAssignableFrom(productClass);
     }
 
-    public double getReduction(Product product){
-        if(product.getClass().equals(productClass))
+    public double getReduction(Product product) {
+        if (product.getClass().equals(productClass))
             return discount();
         return 0;
     }

@@ -1,8 +1,4 @@
-package fr.davidlegras.customer;
-
-import fr.davidlegras.Platform;
-import fr.davidlegras.product.Cart;
-import fr.davidlegras.product.Product;
+package fr.davidlegras;
 
 import javax.swing.event.EventListenerList;
 import java.util.Map;

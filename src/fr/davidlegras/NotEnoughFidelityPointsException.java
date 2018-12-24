@@ -1,4 +1,4 @@
-package fr.davidlegras.customer;
+package fr.davidlegras;
 
 public class NotEnoughFidelityPointsException extends Exception {
 

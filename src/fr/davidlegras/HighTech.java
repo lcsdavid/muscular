@@ -1,8 +1,8 @@
-package fr.davidlegras.product;
+package fr.davidlegras;
 
 import java.util.Objects;
 
-public class HighTech extends AbstractProduct implements Discountable {
+public final class HighTech extends AbstractProduct implements Discountable {
 
     public HighTech(String productTitle, double price, int fidelityPoints) throws NegativePriceException {
         super(productTitle, price, fidelityPoints);

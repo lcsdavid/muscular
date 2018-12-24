@@ -1,4 +1,4 @@
-package fr.davidlegras.customer;
+package fr.davidlegras;
 
 import java.util.EventListener;
 

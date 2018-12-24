@@ -1,6 +1,4 @@
-package fr.davidlegras.product;
-
-import fr.davidlegras.customer.Customer;
+package fr.davidlegras;
 
 /**
  * TODO abstract

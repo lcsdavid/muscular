@@ -1,4 +1,4 @@
-package fr.davidlegras.customer;
+package fr.davidlegras;
 
 public interface CustomerStateListener extends CustomerListener {
 

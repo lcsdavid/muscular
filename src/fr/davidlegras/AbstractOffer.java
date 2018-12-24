@@ -1,7 +1,4 @@
-package fr.davidlegras.product;
-
-import fr.davidlegras.customer.Customer;
-import fr.davidlegras.customer.CustomerState;
+package fr.davidlegras;
 
 /**
  * TODO

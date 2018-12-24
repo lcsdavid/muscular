@@ -1,4 +1,4 @@
-package fr.davidlegras.product;
+package fr.davidlegras;
 
 public class NegativePriceException extends Exception {
     public NegativePriceException() {

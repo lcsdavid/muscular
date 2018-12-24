@@ -1,4 +1,4 @@
-package fr.davidlegras.product;
+package fr.davidlegras;
 
 /**
  * TODO

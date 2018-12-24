@@ -1,4 +1,4 @@
-package fr.davidlegras.customer;
+package fr.davidlegras;
 
 public class LoyaltyCard {
     private static int POINTS_NEEDED_FOR_DISCOUNT = 10;

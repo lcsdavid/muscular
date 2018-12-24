@@ -1,4 +1,4 @@
-package fr.davidlegras.customer;
+package fr.davidlegras;
 
 public abstract class AbstractConnectedCustomer implements ConnectedCustomer {
     private String name, lastName;

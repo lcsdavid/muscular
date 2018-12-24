@@ -1,8 +1,4 @@
-package fr.davidlegras.customer;
-
-import fr.davidlegras.Platform;
-import fr.davidlegras.product.Offer;
-import fr.davidlegras.product.Product;
+package fr.davidlegras;
 
 import java.util.Map;
 

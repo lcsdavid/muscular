@@ -1,6 +1,4 @@
-package fr.davidlegras.customer;
-
-import fr.davidlegras.Platform;
+package fr.davidlegras;
 
 public final class Visitor implements NotConnectedCustomer {
     private static Visitor UNIQUE_VISITOR_INSTANCE = null;

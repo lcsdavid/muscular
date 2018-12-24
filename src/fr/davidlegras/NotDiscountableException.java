@@ -1,4 +1,4 @@
-package fr.davidlegras.product;
+package fr.davidlegras;
 
 public class NotDiscountableException extends DiscountException {
     public NotDiscountableException() {

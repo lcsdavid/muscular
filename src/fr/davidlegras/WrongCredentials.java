@@ -1,4 +1,4 @@
-package fr.davidlegras.customer;
+package fr.davidlegras;
 
 public class WrongCredentials extends ConnectionException {
     public static boolean NO_HINTS = false;

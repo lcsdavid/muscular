@@ -1,13 +1,13 @@
 package fr.davidlegras;
 
 
-import fr.davidlegras.customer.*;
-import fr.davidlegras.product.Product;
-
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Scanner;
 
 public class Main {
 
@@ -27,7 +27,7 @@ public class Main {
             if (!customer.isConnected())
                 System.out.println("[SeConnecter]: Se connecter à son profil personnel.");
             else
-            System.out.println("[SeDéconnecter]: Se déconnecter de son profil personnel.");
+                System.out.println("[SeDéconnecter]: Se déconnecter de son profil personnel.");
             System.out.println("[Produits]: Afficher la liste des produits.");
             System.out.println("[Panier]: Pour afficher le panier.");
             System.out.println("[Payer]: Pour passer à la caisse.");
@@ -62,7 +62,8 @@ public class Main {
                     } catch (WrongCredentials e) {
                         e.printStackTrace();
                         System.out.println("Mauvais identifiant ou mot de passe...");
-                    } catch (NoSuchAlgorithmException ignored) {}
+                    } catch (NoSuchAlgorithmException ignored) {
+                    }
                     break;
                 case "SeDéconnecter":
                     try {
@@ -105,7 +106,7 @@ public class Main {
                     break;
                 default:
                     Product toAddProduct = null;
-                    for (Product product: laFacDotCom.products()) {
+                    for (Product product : laFacDotCom.products()) {
                         if (product.productTitle().equals(response)) {
                             toAddProduct = product;
                             break;

@@ -1,6 +1,4 @@
-package fr.davidlegras.customer;
-
-import fr.davidlegras.Platform;
+package fr.davidlegras;
 
 import java.util.ArrayList;
 import java.util.Arrays;

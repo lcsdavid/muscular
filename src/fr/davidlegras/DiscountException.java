@@ -1,4 +1,4 @@
-package fr.davidlegras.product;
+package fr.davidlegras;
 
 public class DiscountException extends Exception {
     public DiscountException() {
