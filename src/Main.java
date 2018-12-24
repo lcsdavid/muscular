@@ -47,7 +47,7 @@ public class Main {
         laFac laFacDotCom = new laFac();
 
 
-        System.out.println("AAAAAAAAAAAAAAA" + laFacDotCom.offers().size());
+        //System.out.println("AAAAAAAAAAAAAAA" + laFacDotCom.offers().size());
 
         Scanner sc = new Scanner(System.in);
         String response = null;
