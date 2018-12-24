@@ -3,14 +3,14 @@ package fr.davidlegras;
 public class CategoryOffer extends AbstractOffer {
     private Class<? extends Product> productClass;
 
-    public CategoryOffer(double discount, Class<? extends Product> productClass) throws DiscountException {
+    public CategoryOffer(double discount, Class<? extends Product> productClass) throws NotInBoundsDiscountException, NotDiscountableException {
         super(discount);
         if (!Products.isProductDiscountable(productClass))
             throw new NotDiscountableException();
         this.productClass = productClass;
     }
 
-    public CategoryOffer(double discount, Class<? extends CustomerState> customerStateClass, Class<? extends Product> productClass) throws DiscountException {
+    public CategoryOffer(double discount, Class<? extends CustomerState> customerStateClass, Class<? extends Product> productClass) throws NotInBoundsDiscountException, NotDiscountableException {
         super(discount, customerStateClass);
         if (!Products.isProductDiscountable(productClass))
             throw new NotDiscountableException();

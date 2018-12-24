@@ -3,12 +3,45 @@ import fr.davidlegras.*;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
+
+    public static String textToSHA256(String text) {
+        MessageDigest messageDigest = null;
+        try { messageDigest = MessageDigest.getInstance("SHA-256"); }
+        catch (NoSuchAlgorithmException ignored) { /* L'algorithme existe. */ }
+        byte[] hash = messageDigest.digest(text.getBytes(StandardCharsets.UTF_8));
+        String result = "";
+        for (byte b : hash) {
+            String hex = Integer.toHexString(0xff & b);
+            if (hex.length() == 1)
+                result += '0';
+            result += hex;
+        }
+        return result;
+    }
+
+    public static void test(Platform platform) {
+        /* Fonction ou vous pouvez faire ce que vous voulez pour ajouter des produits, offres, etc... (en plus des notres)
+         * En dehors de la construction par défaut de notre classe laFac.
+         */
+        try { /* exemples */
+            /* Testez comme bon vous semble. */
+            platform.addProduct(new Book("La Machine infernale", 8.60, 20, "Jean Cocteau", new Date(1934,4, 10)));
+            platform.addOffer(new CategoryOffer(-0.1, Book.class));
+
+            /* On considère que pour le test les données sont robustes donc pas de bêtises. */
+            platform.server().createAccount("bogato", textToSHA256("coquillage"), "Quentin", "B", Member.class, new LoyaltyCard(), new LoyaltyCard(50));
+
+        } catch (NegativePriceException e) {
+            System.out.println("Vous avez trop jouer avec la fonction de test Monsieur, le prix est négatif !");
+        } catch (NotDiscountableException e) {
+            System.out.println("Vous avez trop jouer avec la fonction de test Monsieur, vous avez créé une offre sur une catégorie qui ne peut être en promo !");
+        } catch (NotInBoundsDiscountException e) {
+            System.out.println("Vous avez trop jouer avec la fonction de test Monsieur, votre réduction rend le produit gratuit ou le rend plus chère !");
+        }
+    }
 
     public static void main(String[] args) {
         laFac laFacDotCom = new laFac();

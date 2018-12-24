@@ -2,8 +2,10 @@ package fr.davidlegras;
 
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
+import java.util.stream.Stream;
 
 public class laFac implements Platform {
     private static laFacServer SERVER = new laFacServer();
@@ -40,6 +42,14 @@ public class laFac implements Platform {
     @Override
     public Collection<Offer> offers() {
         return offers;
+    }
+
+    public void addProduct(Product product) {
+        products.add(product);
+    }
+
+    public void addOffer(Offer offer) {
+        offers.add(offer);
     }
 
     @Override
@@ -114,6 +124,19 @@ public class laFac implements Platform {
 
         @Override
         public void disconnect() {
+        }
+
+        @Override
+        public void createAccount(String login, String passwordHash, String name, String lastName, Class<? extends CustomerState> stateClass, LoyaltyCard... args) {
+            String[] loyaltyCards = new String[0];
+            if (args != null && stateClass.equals(Member.class)) {
+                loyaltyCards = new String[args.length];
+                for (int i = 0; i < args.length; i++)
+                    loyaltyCards[i] = args[i].toString();
+            }
+            customers.add((String[]) Stream.concat(
+                    Arrays.stream(new String[]{login, passwordHash, name, lastName, stateClass.getSimpleName()}),
+                    Arrays.stream(loyaltyCards)).toArray());
         }
     }
 }

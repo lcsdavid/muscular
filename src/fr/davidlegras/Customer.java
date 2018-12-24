@@ -54,7 +54,7 @@ public class Customer {
 
     /* Prix */
 
-    public float price(final Platform platform) {
+    public double price(final Platform platform) {
         return customerState.price(platform, this);
     }
 

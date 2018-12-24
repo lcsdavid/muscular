@@ -17,6 +17,9 @@ public interface Platform {
      */
     Collection<Offer> offers();
 
+    void addProduct(Product product);
+
+    void addOffer(Offer offer);
 
     /**
      * Permet de se connecter en tant que client sur la plateforme. Renvoie la statut correspondant de la personne en
@@ -50,5 +53,7 @@ public interface Platform {
         String[] connect(String login, String passwordHash) throws WrongCredentials;
 
         void disconnect();
+
+        void createAccount(String login, String passwordHash, String name, String lastName, Class<? extends CustomerState> stateClass, LoyaltyCard... args);
     }
 }
