@@ -12,7 +12,7 @@ public interface CustomerState {
                 if (offer.applicable(context, entry.getKey()))
                     productDiscount *= (1 + offer.discount());
             }
-            res += entry.getKey().price() * productDiscount;
+            res += entry.getKey().price() * entry.getValue() * productDiscount;
         }
         return res;
     }

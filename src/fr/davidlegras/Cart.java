@@ -25,9 +25,12 @@ public class Cart implements Iterable<Map.Entry<Product, Integer>> {
     }
 
     public boolean contains(Cart other) {
-        for (Map.Entry<Product, Integer> entry : other.cart.entrySet())
-            if (!contains(entry.getKey()) || !(cart.get(entry.getKey()) < entry.getValue()))
+        for (Map.Entry<Product, Integer> entry : other.cart.entrySet()) {
+            if (!contains(entry.getKey()))
                 return false;
+            if (cart.get(entry.getKey()) < entry.getValue())
+                return false;
+        }
         return true;
     }
 
