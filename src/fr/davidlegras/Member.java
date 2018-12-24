@@ -27,10 +27,10 @@ public class Member extends AbstractConnectedCustomer {
 
     @Override
     public String toString() {
-        String s = super.toString() + " [Cartes de fidelité possédées: ";
+        String s = super.toString() + " [Cartes de fidelité possédées:";
         for (LoyaltyCard loyaltyCard : loyaltyCards)
             s += " " + loyaltyCard.toString();
-        s += " points.]";
+        s += " points]";
         return s;
     }
 }

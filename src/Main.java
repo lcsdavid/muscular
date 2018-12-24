@@ -28,7 +28,9 @@ public class Main {
          */
         try { /* exemples */
             /* Testez comme bon vous semble. */
-            // platform.addProduct(new Book("La Machine infernale", 8.60, 20, "Jean Cocteau", new Date(1934,4, 10))); exception
+            // platform.addProduct(new Book("La Machine infernale", -8.60, 20, "Jean Cocteau", new Date(1934,4, 10))); exception
+            platform.addProduct(new HighTech("Playstation 3", 50.2, 4));
+
             platform.addOffer(new CategoryOffer(-0.1, HighTech.class));
             // platform.addOffer(new CategoryOffer(-0.1, Book.class)); exception
 
@@ -68,7 +70,7 @@ public class Main {
             System.out.println("Pour ajouter un ou plusieurs produits à votre panier entrez le nom du produit.");
 
             /* Réponse du programme. */
-            response = sc.next();
+            response = sc.nextLine();
             for (int i = 0; i < 2; i++) System.out.println(); /* C'est moche je sais... */
             switch (response) {
                 case "SeConnecter":
@@ -119,11 +121,11 @@ public class Main {
                         System.out.println(offer.toString());
                     break;
                 case "Panier":
-                    System.out.println("Panier :" + (customer.cart().count() == 0 ? "vide" : ""));
+                    System.out.println("Panier :" + (customer.cart().count() == 0 ? " vide" : ""));
                     System.out.println(customer.cart().toString());
                     break;
                 case "Payer":
-                    System.out.println("Récap du panier :" + (customer.cart().count() == 0 ? "vide" : ""));
+                    System.out.println("Récap du panier :" + (customer.cart().count() == 0 ? " vide" : ""));
                     System.out.println(customer.cart().toString());
                     System.out.println((customer.cart().count() == 0 ? "Ce que vous payez : " + customer.price(laFacDotCom) : "EUR 0"));
                     break;
