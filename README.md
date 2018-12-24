@@ -7,3 +7,4 @@ Dans les diagrammes de séquences "affichage menu" signifie qu'on affiche au clie
 
 	Pour les besoins de la visibilité des tests certains problèmes/exceptions auront
  un affichage intelligible afin de permettre une meilleure lisibilité des tests.
+	Pour la même raison de visibilité on va afficher les listenners qui "repèrent" quelque chose.
