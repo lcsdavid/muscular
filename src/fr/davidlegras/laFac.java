@@ -30,7 +30,6 @@ public class laFac implements Platform {
 
             @Override
             public void stateChanged(CustomerStateEvent e) {
-                System.out.println("ALOOOOOOOOOOO");
                 new StateAlert(e).printAlert();
             }
         });

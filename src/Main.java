@@ -28,8 +28,10 @@ public class Main {
          */
         try { /* exemples */
             /* Testez comme bon vous semble. */
-            platform.addProduct(new Book("La Machine infernale", 8.60, 20, "Jean Cocteau", new Date(1934,4, 10)));
-            platform.addOffer(new CategoryOffer(-0.1, Book.class));
+            platform.addProduct(new Book("La Machine infernale", 8.60, 20, "Jean Cocteau", new Date(1934,4, 10))); exception
+            platform.addOffer(new CategoryOffer(-0.1, HighTech.class));
+            // platform.addOffer(new CategoryOffer(-0.1, Book.class)); exception
+
 
             /* On considère que pour le test les données sont robustes donc pas de bêtises. */
             platform.server().createAccount("bogato", textToSHA256("coquillage"), "Quentin", "B", Member.class, new LoyaltyCard(), new LoyaltyCard(50));
@@ -45,9 +47,6 @@ public class Main {
 
     public static void main(String[] args) {
         laFac laFacDotCom = new laFac();
-
-
-        System.out.println("AAAAAAAAAAAAAAA" + laFacDotCom.offers().size());
 
         Scanner sc = new Scanner(System.in);
         String response = null;
