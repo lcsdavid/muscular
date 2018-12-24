@@ -86,6 +86,14 @@ public class Cart implements Iterable<Map.Entry<Product, Integer>>, Cloneable {
     }
 
     @Override
+    public String toString() {
+        String s = "";
+        for (Map.Entry<Product, Integer> entry : this)
+            s += entry.getKey().toString() + " : " + entry.getValue().toString() + '\n';
+        return s;
+    }
+
+    @Override
     public Iterator<Map.Entry<Product, Integer>> iterator() {
         return cart.entrySet().iterator();
     }

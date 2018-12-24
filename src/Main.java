@@ -23,7 +23,7 @@ public class Main {
     }
 
     public static void test(Platform platform) {
-        /* Fonction ou vous pouvez faire ce que vous voulez pour ajouter des produits, offres, etc... (en plus des notres)
+          /* Fonction ou vous pouvez faire ce que vous voulez pour ajouter des produits, offres, etc... (en plus des notres)
          * En dehors de la construction par défaut de notre classe laFac.
          */
         try { /* exemples */
@@ -49,17 +49,15 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String response = null;
 
-        Customer customer = new Customer();
+        Customer customer = laFacDotCom.customer();
 
         System.out.println("Bienvenue cher/chère client.e.s !\n");
         boolean end = false;
         while (!end) {
             /* Affichage des instructions. */
             System.out.println(customer.toString() + ", choisissez parmis les choix suivants:");
-            if (!customer.isConnected())
-                System.out.println("[SeConnecter]: Se connecter à son profil personnel.");
-            else
-                System.out.println("[SeDéconnecter]: Se déconnecter de son profil personnel.");
+            if (!customer.isConnected()) System.out.println("[SeConnecter]: Se connecter à son profil personnel.");
+            else System.out.println("[SeDéconnecter]: Se déconnecter de son profil personnel.");
             System.out.println("[Produits]: Afficher la liste des produits.");
             System.out.println("[Panier]: Pour afficher le panier.");
             System.out.println("[Payer]: Pour passer à la caisse.");
@@ -69,31 +67,19 @@ public class Main {
 
             /* Réponse du programme. */
             response = sc.next();
-            for (int i = 0; i < 10; i++) System.out.println(); /* C'est moche je sais... */
+            for (int i = 0; i < 4; i++) System.out.println(); /* C'est moche je sais... */
             switch (response) {
                 case "SeConnecter":
                     System.out.println("Entrez votre nom d'utilisateur : ");
                     String login = sc.next();
                     System.out.println("Entrez votre mot de passe : ");
-                    /* Sécurité */
                     try {
-                        String passwordHash = "";
-                        MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
-                        byte[] hash = messageDigest.digest(sc.next().getBytes(StandardCharsets.UTF_8));
-                        for (byte b : hash) {
-                            String hex = Integer.toHexString(0xff & b);
-                            if (hex.length() == 1)
-                                passwordHash += '0';
-                            passwordHash += hex;
-                        }
-                        System.out.println(passwordHash);
-                        /* Connexion */
+                        String passwordHash = textToSHA256(sc.next());
                         customer.connect(laFacDotCom, login, passwordHash);
                     } catch (AlreadyConnectedException e) {
                         System.out.println("Vous êtes déjà connecté... Déconnectez vous avant de pouvoir vous reconnecter.");
                     } catch (WrongCredentials e) {
                         System.out.println("Mauvais identifiant ou mot de passe...");
-                    } catch (NoSuchAlgorithmException ignored) {
                     }
                     break;
                 case "SeDéconnecter":
@@ -109,27 +95,20 @@ public class Main {
                     System.out.println("[Catégorie] Trier par catégorie.");
                     switch (sc.next()) {
                         case "Catégorie":
-                            Collections.sort((ArrayList<Product>) laFacDotCom.products(), new Comparator<Product>() {
-                                @Override
-                                public int compare(Product o1, Product o2) {
-                                    return o1.getClass().getSimpleName().compareTo(o2.getClass().getSimpleName());
-                                }
-                            });
+                            ((ArrayList<Product>) laFacDotCom.products()).sort(Comparator.comparing(o -> o.getClass().getSimpleName()));
                             break;
-
                         default:
-                            Collections.sort((ArrayList<Product>) laFacDotCom.products(),
-                                    Comparator.comparing(Product::productTitle));
+                            ((ArrayList<Product>) laFacDotCom.products()).sort(Comparator.comparing(Product::productTitle));
                             break;
                     }
                     break;
                 case "Panier":
                     System.out.println("Panier :");
-                    customer.cart().toString();
+                    System.out.println(customer.cart().toString());
                     break;
                 case "Payer":
                     System.out.println("Récap du panier :");
-                    customer.cart().toString();
+                    System.out.println(customer.cart().toString());
                     System.out.println("Ce que vous payer : " + customer.price(laFacDotCom));
                     break;
                 case "Quitter":

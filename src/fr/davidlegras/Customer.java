@@ -1,6 +1,7 @@
 package fr.davidlegras;
 
 import javax.swing.event.EventListenerList;
+import java.util.EventListener;
 import java.util.Map;
 
 /**
@@ -34,18 +35,17 @@ public class Customer {
         customerState = state;
     }
 
-    public CustomerState getCustomerState() {
-        return this.customerState;
-    }
-
     public Cart cart() {
         return cart;
     }
 
     public void addToCart(Product product, int count) {
+        Cart old = cart;
         if (product == null)
             throw new NullPointerException();
         cart.add(product, count);
+        for (CustomerListener listener :listeners.getListeners(CustomerListener.class))
+            listener.productAdded(new CartEvent(this, old, cart, product, count));
     }
 
     public void addToCart(Product product) {
@@ -68,40 +68,26 @@ public class Customer {
     /* Connexion & Déconnexion */
 
     public void connect(final Platform platform, String login, String passwordHash) throws AlreadyConnectedException, WrongCredentials {
+        CustomerState old = customerState;
         customerState.connect(platform, this, login, passwordHash);
+        for (CustomerListener listener :listeners.getListeners(CustomerListener.class))
+            listener.stateChanged(new CustomerStateEvent(this, old, customerState));
     }
 
     public void disconnect(final Platform platform) throws NotConnectedException {
+        CustomerState old = customerState;
         customerState.disconnect(platform, this);
+        for (CustomerListener listener :listeners.getListeners(CustomerListener.class))
+            listener.stateChanged(new CustomerStateEvent(this, old, customerState));
     }
 
     public boolean isConnected() {
-        return customerState.getClass().isAssignableFrom(ConnectedCustomer.class);
+        return ConnectedCustomer.class.isAssignableFrom(customerState.getClass());
     }
 
     /* Affichage */
-    public String cartToString() {
-        String s = "";
-        for (Map.Entry<Product, Integer> entry : cart)
-            s += entry.getKey().toString() + " : " + entry.getValue().toString() + '\n';
-        s += "\n\t";
-        s += "Prix total = " + rawPrice() + "€.\n\t";
-        return s;
-    }
-
     @Override
     public String toString() {
         return customerState.toString();
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        if (object == null)
-            return false;
-        if (object == this)
-            return true;
-        if (object.getClass().equals(this.getClass()))
-            return true;
-        return false;
     }
 }

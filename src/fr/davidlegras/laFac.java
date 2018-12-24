@@ -10,10 +10,32 @@ import java.util.stream.Stream;
 public class laFac implements Platform {
     private static laFacServer SERVER = new laFacServer();
 
+    private Customer customer = new Customer();
+
     private Collection<Product> products = new ArrayList<>();
     private Collection<Offer> offers = new ArrayList<>();
 
     public laFac() {
+        /* Ajout des alertes. */
+        customer.addCustomerListener(CustomerListener.class, new CustomerListener() {
+            @Override
+            public void productAdded(CartEvent e) {
+                if (((Customer) e.getSource()).rawPrice() >= 100)
+                    new CartAlert(e.getSource() + " a dépassé les 100€ dans son panier. Il faut tracker cette poule aux oeufs d'or !").printAlert();
+            }
+
+            @Override
+            public void productRemoved(CartEvent e) {
+                new CartAlert(e).printAlert();
+            }
+
+            @Override
+            public void stateChanged(CustomerStateEvent e) {
+                System.out.println("ALOOOOOOOOOOO");
+                new StateAlert(e).printAlert();
+            }
+        });
+
         /* Ajout d'exemple de Product. */
         try {
             products.add(new Book("La Ligne verte Poche – 23 avril 2008", 8.30, 2, "Stephen King", new Date(2008, 4, 23)));
@@ -35,6 +57,11 @@ public class laFac implements Platform {
     }
 
     @Override
+    public Customer customer() {
+        return customer;
+    }
+
+    @Override
     public Collection<Product> products() {
         return products;
     }
@@ -44,10 +71,12 @@ public class laFac implements Platform {
         return offers;
     }
 
+    @Override
     public void addProduct(Product product) {
         products.add(product);
     }
 
+    @Override
     public void addOffer(Offer offer) {
         offers.add(offer);
     }
@@ -62,14 +91,16 @@ public class laFac implements Platform {
             Class<?> stateClass = Class.forName("fr.davidlegras." + customer[4]);
             if (stateClass.getConstructors().length == 0) /* On sait qu'il y aura une méthode static pour construire l'objet. */
                 return (CustomerState) stateClass.getMethod("get" + customer[4]).invoke(null);
-            LoyaltyCard[] card = null;
+            LoyaltyCard[] card = new LoyaltyCard[0];
             if (customer.length > 5) { /* On sait que l'on est sur des cartes de fidelité à constuire. */
                 card = new LoyaltyCard[customer.length - 5];
                 for (int i = 5; i < customer.length; i++)
                     card[i - 5] = new LoyaltyCard(Integer.parseInt(customer[i]));
+                return (CustomerState) stateClass.getConstructors()[0].newInstance(customer[2], customer[3], card);
             }
-            return (CustomerState) stateClass.getConstructors()[0].newInstance(customer[2], customer[3], card);
-        } catch (Exception ignored) { /* On considère que pour le test les données sont robustes. */ }
+            return (CustomerState) stateClass.getConstructors()[0].newInstance(customer[2], customer[3]);
+        } catch (Exception ignored) {
+            ignored.printStackTrace();/* On considère que pour le test les données sont robustes. */ }
         return null; /* N'arrive jamais si la base de données est robuste. */
     }
 

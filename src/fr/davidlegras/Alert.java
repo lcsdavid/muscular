@@ -2,14 +2,12 @@ package fr.davidlegras;
 
 import java.io.PrintStream;
 
-public class Alert extends Exception {
-
-    public Alert() {
-        super();
-    }
+public class Alert {
+    private String message;
 
     public Alert(String message) {
-        super(message);
+        super();
+        this.message = message;
     }
 
     public void printAlert() {
@@ -17,6 +15,6 @@ public class Alert extends Exception {
     }
 
     public void printAlert(PrintStream s) {
-        s.println(getMessage());
+        s.println(message);
     }
 }

@@ -39,7 +39,7 @@ public abstract class AbstractOffer implements Offer {
 
     @Override
     public boolean applicable(Customer customer, Product product) {
-        return customer.getCustomerState().getClass().isAssignableFrom(customerStateClass);
+        return customerStateClass.isAssignableFrom(customer.customerState().getClass());
     }
 
     @Override
