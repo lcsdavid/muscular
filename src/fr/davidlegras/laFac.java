@@ -1,6 +1,5 @@
 package fr.davidlegras;
 
-import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -100,7 +99,8 @@ public class laFac implements Platform {
             }
             return (CustomerState) stateClass.getConstructors()[0].newInstance(customer[2], customer[3]);
         } catch (Exception ignored) {
-            ignored.printStackTrace();/* On considère que pour le test les données sont robustes. */ }
+            ignored.printStackTrace();/* On considère que pour le test les données sont robustes. */
+        }
         return null; /* N'arrive jamais si la base de données est robuste. */
     }
 

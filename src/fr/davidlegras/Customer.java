@@ -1,7 +1,6 @@
 package fr.davidlegras;
 
 import javax.swing.event.EventListenerList;
-import java.util.EventListener;
 import java.util.Map;
 
 /**
@@ -44,7 +43,7 @@ public class Customer {
         if (product == null)
             throw new NullPointerException();
         cart.add(product, count);
-        for (CustomerListener listener :listeners.getListeners(CustomerListener.class))
+        for (CustomerListener listener : listeners.getListeners(CustomerListener.class))
             listener.productAdded(new CartEvent(this, old, cart, product, count));
     }
 
@@ -70,14 +69,14 @@ public class Customer {
     public void connect(final Platform platform, String login, String passwordHash) throws AlreadyConnectedException, WrongCredentials {
         CustomerState old = customerState;
         customerState.connect(platform, this, login, passwordHash);
-        for (CustomerListener listener :listeners.getListeners(CustomerListener.class))
+        for (CustomerListener listener : listeners.getListeners(CustomerListener.class))
             listener.stateChanged(new CustomerStateEvent(this, old, customerState));
     }
 
     public void disconnect(final Platform platform) throws NotConnectedException {
         CustomerState old = customerState;
         customerState.disconnect(platform, this);
-        for (CustomerListener listener :listeners.getListeners(CustomerListener.class))
+        for (CustomerListener listener : listeners.getListeners(CustomerListener.class))
             listener.stateChanged(new CustomerStateEvent(this, old, customerState));
     }
 

@@ -4,12 +4,14 @@ import java.util.Collection;
 
 public interface Platform {
     Customer customer();
+
     /**
      * Renvoie la collection des {@code Product} de la plateforme (actuellement chargé).
      *
      * @return la collection des {@code Product} de la plateforme.
      */
     Collection<Product> products();
+
     /**
      * Renvoie la collection des {@code Offer} de la plateforme (actuellement chargé).
      *
@@ -31,6 +33,7 @@ public interface Platform {
      * @throws WrongCredentials si l'identifiant ou le mot de passe est incorrect.
      */
     CustomerState connect(String login, String passwordHash) throws WrongCredentials;
+
     /**
      * Déconnecte le client et effectue des opérations si nécessaire.
      */
@@ -42,6 +45,7 @@ public interface Platform {
      * @return le serveur relié à l'instance actuel de la plateforme.
      */
     Server server();
+
     /**
      * Interface interne qui represente la relation avec un serveur extérieur pour accèder aux données de la plateforme.
      */

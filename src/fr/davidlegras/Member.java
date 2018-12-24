@@ -15,11 +15,12 @@ public class Member extends AbstractConnectedCustomer {
     @Override
     public double price(final Platform platform, final Customer context) {
         double price = super.price(platform, context);
-        for (LoyaltyCard loyaltyCard: loyaltyCards)
+        for (LoyaltyCard loyaltyCard : loyaltyCards)
             if (loyaltyCard.isUsable() && price > LoyaltyCard.FLAT_DISCOUNT_VALUE) {
                 try {
                     price -= loyaltyCard.discount();
-                } catch (NotEnoughFidelityPointsException ignored) {}
+                } catch (NotEnoughFidelityPointsException ignored) {
+                }
             }
         return price;
     }
@@ -27,7 +28,7 @@ public class Member extends AbstractConnectedCustomer {
     @Override
     public String toString() {
         String s = super.toString() + " [Cartes de fidelité possédées: ";
-        for (LoyaltyCard loyaltyCard: loyaltyCards)
+        for (LoyaltyCard loyaltyCard : loyaltyCards)
             s += " " + loyaltyCard.toString();
         s += " points.]";
         return s;
