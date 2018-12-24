@@ -46,6 +46,9 @@ public class Main {
     public static void main(String[] args) {
         laFac laFacDotCom = new laFac();
 
+
+        System.out.println("AAAAAAAAAAAAAAA" + laFacDotCom.offers().size());
+
         Scanner sc = new Scanner(System.in);
         String response = null;
 
@@ -59,15 +62,17 @@ public class Main {
             if (!customer.isConnected()) System.out.println("[SeConnecter]: Se connecter à son profil personnel.");
             else System.out.println("[SeDéconnecter]: Se déconnecter de son profil personnel.");
             System.out.println("[Produits]: Afficher la liste des produits.");
+            System.out.println("[Offres]: Afficher la liste des offres.");
             System.out.println("[Panier]: Pour afficher le panier.");
             System.out.println("[Payer]: Pour passer à la caisse.");
             System.out.println("[Quitter]: Quitter le magasin (vos achats seront alors perdu).");
+            System.out.println("\t\t[Test]: Pour lancer votre fonction de test.");
             System.out.println();
             System.out.println("Pour ajouter un ou plusieurs produits à votre panier entrez le nom du produit.");
 
             /* Réponse du programme. */
             response = sc.next();
-            for (int i = 0; i < 4; i++) System.out.println(); /* C'est moche je sais... */
+            for (int i = 0; i < 2; i++) System.out.println(); /* C'est moche je sais... */
             switch (response) {
                 case "SeConnecter":
                     System.out.println("Entrez votre nom d'utilisateur : ");
@@ -91,28 +96,45 @@ public class Main {
                     break;
                 case "Produits":
                     System.out.println(customer.toString() + ", choisissez parmis les choix suivants:");
-                    System.out.println("(default) [Alpha] Trier par ordre alphabétique.");
+                    System.out.println("[Alphabétique] Trier par ordre alphabétique.");
                     System.out.println("[Catégorie] Trier par catégorie.");
                     switch (sc.next()) {
                         case "Catégorie":
                             ((ArrayList<Product>) laFacDotCom.products()).sort(Comparator.comparing(o -> o.getClass().getSimpleName()));
+                            Class<? extends Product> productClass = null;
+                            for (Product product: laFacDotCom.products()) {
+                                if (!product.getClass().equals(productClass)) {
+                                    System.out.println(product.getClass().getSimpleName());
+                                    productClass = product.getClass();
+                                }
+                                System.out.println("\t" + product.toString());
+                            }
                             break;
                         default:
                             ((ArrayList<Product>) laFacDotCom.products()).sort(Comparator.comparing(Product::productTitle));
+                            for (Product product: laFacDotCom.products())
+                                System.out.println(product.toString());
                             break;
                     }
                     break;
+                case "Offres":
+                    for (Offer offer: laFacDotCom.offers())
+                        System.out.println(offer.toString());
+                    break;
                 case "Panier":
-                    System.out.println("Panier :");
+                    System.out.println("Panier :" + (customer.cart().count() == 0 ? "vide" : ""));
                     System.out.println(customer.cart().toString());
                     break;
                 case "Payer":
-                    System.out.println("Récap du panier :");
+                    System.out.println("Récap du panier :" + (customer.cart().count() == 0 ? "vide" : ""));
                     System.out.println(customer.cart().toString());
-                    System.out.println("Ce que vous payer : " + customer.price(laFacDotCom));
+                    System.out.println((customer.cart().count() == 0 ? "Ce que vous payez : " + customer.price(laFacDotCom) : "EUR 0"));
                     break;
                 case "Quitter":
                     end = true;
+                    break;
+                case "Test":
+                    test(laFacDotCom);
                     break;
                 default:
                     Product toAddProduct = null;

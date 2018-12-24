@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
-public class Cart implements Iterable<Map.Entry<Product, Integer>>, Cloneable {
+public class Cart implements Iterable<Map.Entry<Product, Integer>> {
     private HashMap<Product, Integer> cart = new HashMap<>();
 
     public Cart() {
@@ -89,27 +89,12 @@ public class Cart implements Iterable<Map.Entry<Product, Integer>>, Cloneable {
     public String toString() {
         String s = "";
         for (Map.Entry<Product, Integer> entry : this)
-            s += entry.getKey().toString() + " : " + entry.getValue().toString() + '\n';
+            s += entry.getKey().toString() + " x" + entry.getValue().toString() + '\n';
         return s;
     }
 
     @Override
     public Iterator<Map.Entry<Product, Integer>> iterator() {
         return cart.entrySet().iterator();
-    }
-
-    @Override
-    public Object clone() {
-        Cart clone = null;
-        try {
-            clone = (Cart) super.clone();
-        } catch (CloneNotSupportedException e) {
-            /* Ne peux jamais arriver en l'état des choses. */
-            /* this shouldn't happen, since we are Cloneable */
-            throw new InternalError(e);
-        }
-        clone.empty();
-        clone.addAll(this);
-        return clone;
     }
 }

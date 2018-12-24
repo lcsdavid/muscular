@@ -44,8 +44,6 @@ public abstract class AbstractOffer implements Offer {
 
     @Override
     public String toString() {
-        return Double.toString(discount * 100) + '%';
+        return Double.toString(discount * 100) + '%' + (!customerStateClass.equals(CustomerState.class) ? " reservé au " + customerStateClass.getSimpleName() : "");
     }
-
-
 }

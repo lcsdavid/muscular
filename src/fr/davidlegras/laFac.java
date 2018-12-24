@@ -44,10 +44,11 @@ public class laFac implements Platform {
             products.add(new HighTech("Nintendo Wii U Pad", 42, 2));
 
             /* Ajout d'exemple de Offer. */
-            offers.add(new ProductOffer(-0.5, ((ArrayList<Product>) products).get(0)));
+            // offers.add(new ProductOffer(-0.5, ((ArrayList<Product>) products).get(0))); /* Ne passe pas car Book pas Discountable. */
+            offers.add(new ProductOffer(-0.5, ((ArrayList<Product>) products).get(1)));
             Cart cart = new Cart();
             cart.add(((ArrayList<Product>) products).get(1), 1); /* Nintendo Switch */
-            cart.add(((ArrayList<Product>) products).get(1), 2); /* Nintendo Switch Joy Con */
+            cart.add(((ArrayList<Product>) products).get(3), 2); /* Nintendo Switch Joy Con */
             offers.add(new FlashOffer(-0.2, Staff.class, cart));
         } catch (Exception ignored) {
             /* On a pas de prix négatif là. */

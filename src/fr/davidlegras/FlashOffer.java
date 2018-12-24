@@ -22,7 +22,7 @@ public class FlashOffer extends AbstractOffer {
         for (Map.Entry<Product, Integer> entry : target)
             if (!Products.isProductDiscountable(entry.getKey().getClass()))
                 throw new NotDiscountableException();
-        this.target = (Cart) target.clone();
+        this.target = target;
     }
 
     /**
@@ -35,7 +35,7 @@ public class FlashOffer extends AbstractOffer {
         for (Map.Entry<Product, Integer> entry : target)
             if (!Products.isProductDiscountable(entry.getKey().getClass()))
                 throw new NotDiscountableException();
-        this.target = (Cart) target.clone();
+        this.target = target;
     }
 
     @Override
@@ -43,4 +43,8 @@ public class FlashOffer extends AbstractOffer {
         return super.applicable(customer, product) && customer.cart().contains(target);
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + " sur le panier suivant:\n" + target.toString();
+    }
 }

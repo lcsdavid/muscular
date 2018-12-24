@@ -23,4 +23,9 @@ public class ProductOffer extends AbstractOffer {
     public boolean applicable(Customer customer, Product product) {
         return super.applicable(customer, product) && product.equals(target);
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " sur le produit " + target.toString();
+    }
 }

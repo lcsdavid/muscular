@@ -34,4 +34,9 @@ public abstract class AbstractProduct implements Product {
     public final int gainInLoyaltyPoints() {
         return gainInLoyaltyPoints;
     }
+
+    @Override
+    public String toString() {
+        return productTitle + " EUR " + price;
+    }
 }
