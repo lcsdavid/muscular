@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="807b764d-bfa5-443e-8747-90ab2412eca4" name="Default Changelist" comment="" />
+    <list default="true" id="807b764d-bfa5-443e-8747-90ab2412eca4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Diagramme_de_classes[LEGRAS-DAVID].mdj" beforeDir="false" afterPath="$PROJECT_DIR$/Diagramme_de_classes[LEGRAS-DAVID].mdj" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +262,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="181" />
     <option name="y" value="56" />
     <option name="width" value="960" />
@@ -339,12 +341,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54397000" />
+    <option name="totallyTimeSpent" value="55683000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="181" y="56" width="960" height="1008" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.39222223" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.39222223" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -354,7 +356,7 @@
       <window_info id="simpleUML" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32942098" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.55263156" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.55263156" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3998435" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
