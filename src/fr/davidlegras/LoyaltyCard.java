@@ -1,8 +1,11 @@
 package fr.davidlegras;
 
 public class LoyaltyCard {
-    private static int POINTS_NEEDED_FOR_DISCOUNT = 10;
-    private static int FLAT_DISCOUNT_VALUE = 20;
+
+    public final static int POINTS_NEEDED_FOR_DISCOUNT = 10;
+
+    public final static int FLAT_DISCOUNT_VALUE = 20;
+
     private int loyaltyPoints;
 
     public LoyaltyCard() {
@@ -18,12 +21,15 @@ public class LoyaltyCard {
         return POINTS_NEEDED_FOR_DISCOUNT <= loyaltyPoints;
     }
 
-    public int discount() throws NotEnoughFidelityPointsException {
+    public double discount() throws NotEnoughFidelityPointsException {
         if (!isUsable())
             throw new NotEnoughFidelityPointsException("Il n'y pas assez de points de fidelité sur votre carte...");
         loyaltyPoints = -POINTS_NEEDED_FOR_DISCOUNT;
         return FLAT_DISCOUNT_VALUE;
     }
 
-
+    @Override
+    public String toString() {
+        return "" + loyaltyPoints;
+    }
 }

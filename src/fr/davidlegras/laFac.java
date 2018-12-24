@@ -45,19 +45,22 @@ public class laFac implements Platform {
     @Override
     public CustomerState connect(String login, String passwordHash) throws WrongCredentials {
         String[] customer = server().connect(login, passwordHash);
+        /* Pas le temps d'exploiter les possibilités du Java mais cela donne une idée approximative de comment on
+         * pourrait faire (si on ne considère pas les égalités faitent pour aller au plus vite pour les tests).
+         */
         try {
-            Class<?> stateClass = Class.forName("Visitor");
-            Constructor<?> constructor = stateClass.getConstructors()[0];
-            /* On fait les Menbre comme ça juste pour le test. Mais l'implémentation dépendra du support. */
-            LoyaltyCard[] card = new LoyaltyCard[customer.length - 5];
-            for (int i = 5; i < customer.length; i++)
-                card[i - 5] = new LoyaltyCard(Integer.parseInt(customer[i]));
-            return (CustomerState) constructor.newInstance(customer[2], customer[3], card);
-        } catch (Exception ignored) {
-            /* On considère que pour le test les données sont robustes. */
-            ignored.printStackTrace();
-        }
-        return null;
+            Class<?> stateClass = Class.forName("fr.davidlegras." + customer[4]);
+            if (stateClass.getConstructors().length == 0) /* On sait qu'il y aura une méthode static pour construire l'objet. */
+                return (CustomerState) stateClass.getMethod("get" + customer[4]).invoke(null);
+            LoyaltyCard[] card = null;
+            if (customer.length > 5) { /* On sait que l'on est sur des cartes de fidelité à constuire. */
+                card = new LoyaltyCard[customer.length - 5];
+                for (int i = 5; i < customer.length; i++)
+                    card[i - 5] = new LoyaltyCard(Integer.parseInt(customer[i]));
+            }
+            return (CustomerState) stateClass.getConstructors()[0].newInstance(customer[2], customer[3], card);
+        } catch (Exception ignored) { /* On considère que pour le test les données sont robustes. */ }
+        return null; /* N'arrive jamais si la base de données est robuste. */
     }
 
     @Override
@@ -87,7 +90,7 @@ public class laFac implements Platform {
             /* Ajout d'exemple de CustomerState. */
             customers.add(new String[]{"lcsdavid", "967520ae23e8ee14888bae72809031b98398ae4a636773e18fff917d77679334", "Lucas", "David", "Staff"});   /* Le mot de passe c'est: motdepasse */
             customers.add(new String[]{"GRUUUUUUU", "938d4bd2706c2a997ccdd47664edc9c31220788096ef35754ab4c517ceeeba52", "Théo", "Legras", "Staff"});  /* Le mot de passe c'est: iltapefort! */
-            customers.add(new String[]{"fv", "ee05aaa41f8af44fa40db1c523f6efbf6e6baba11ac6b84fb7150ddd486897ae", "Frédéric", "Voisin", "Member"});    /* Le mot de passe c'est: alorsçacompile? */
+            customers.add(new String[]{"fv", "ee05aaa41f8af44fa40db1c523f6efbf6e6baba11ac6b84fb7150ddd486897ae", "Frédéric", "Voisin", "Member", "4", "20"});    /* Le mot de passe c'est: alorsçacompile? */
         }
 
         @Override

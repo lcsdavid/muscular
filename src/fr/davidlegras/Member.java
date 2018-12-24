@@ -13,19 +13,23 @@ public class Member extends AbstractConnectedCustomer {
     }
 
     @Override
-    public int price(final Platform platform, final Customer context) {
-        return super.price(platform, context);
-        // TODO
+    public double price(final Platform platform, final Customer context) {
+        double price = super.price(platform, context);
+        for (LoyaltyCard loyaltyCard: loyaltyCards)
+            if (loyaltyCard.isUsable() && price > LoyaltyCard.FLAT_DISCOUNT_VALUE) {
+                try {
+                    price -= loyaltyCard.discount();
+                } catch (NotEnoughFidelityPointsException ignored) {}
+            }
+        return price;
     }
 
     @Override
-    public boolean equals(Object object) {
-        if (object == null)
-            return false;
-        if (object == this)
-            return true;
-        if (object.getClass().equals(this.getClass()))
-            return true;
-        return false;
+    public String toString() {
+        String s = super.toString() + " [Cartes de fidelité possédées: ";
+        for (LoyaltyCard loyaltyCard: loyaltyCards)
+            s += " " + loyaltyCard.toString();
+        s += " points.]";
+        return s;
     }
 }

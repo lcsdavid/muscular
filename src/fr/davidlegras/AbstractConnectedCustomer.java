@@ -16,4 +16,9 @@ public abstract class AbstractConnectedCustomer implements ConnectedCustomer {
     public String lastName() {
         return lastName;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }
