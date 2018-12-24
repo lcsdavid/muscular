@@ -19,7 +19,7 @@ public class CategoryOffer extends AbstractOffer {
 
     @Override
     public boolean applicable(Customer customer, Product product) {
-        return super.applicable(customer, product) && product.getClass().isAssignableFrom(productClass);
+        return super.applicable(customer, product) && productClass.isAssignableFrom(product.getClass());
     }
 
     public double getReduction(Product product) {
