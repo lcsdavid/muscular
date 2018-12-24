@@ -10,7 +10,7 @@ public interface CustomerState {
             double productDiscount = 1;
             for (Offer offer : platform.offers()) {
                 if (offer.applicable(context, entry.getKey()))
-                    productDiscount *= (1 - offer.discount());
+                    productDiscount *= (1 + offer.discount());
             }
             res += entry.getKey().price() * productDiscount;
         }

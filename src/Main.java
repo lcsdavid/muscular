@@ -127,7 +127,7 @@ public class Main {
                 case "Payer":
                     System.out.println("Récap du panier :" + (customer.cart().count() == 0 ? " vide" : ""));
                     System.out.println(customer.cart().toString());
-                    System.out.println((customer.cart().count() == 0 ? "Ce que vous payez : " + customer.price(laFacDotCom) : "EUR 0"));
+                    System.out.println((customer.cart().count() == 0 ? "EUR 0" : "Ce que vous payez : " + customer.price(laFacDotCom)));
                     break;
                 case "Quitter":
                     end = true;

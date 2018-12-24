@@ -17,6 +17,10 @@ public class LoyaltyCard {
         loyaltyPoints = points;
     }
 
+    public void add(int points) {
+        loyaltyPoints += points;
+    }
+
     public boolean isUsable() {
         return POINTS_NEEDED_FOR_DISCOUNT <= loyaltyPoints;
     }
