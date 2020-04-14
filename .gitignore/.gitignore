@@ -1,3 +1,6 @@
+# IDE folder
+.idea
+
 # Compiled class file
 *.class
 
