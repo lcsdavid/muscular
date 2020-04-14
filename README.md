@@ -1,4 +1,8 @@
-# muscular-tp
+# muscular
+
+Autheurs:
+ - Lucas David
+ - Théo Legras
 
 Les diagrammes UML ne comporte que les classes et les fonctionsfonctionnelles, qui permettent de comprendre le fonctionnement de notre application.
 
