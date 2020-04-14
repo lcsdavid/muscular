@@ -1,10 +1,8 @@
 # muscular-tp
 
-	Les diagrammes UML ne comporte que les classes et les fonctions
-fonctionnelles, qui permettent de comprendre le fonctionnement de notre application.
+Les diagrammes UML ne comporte que les classes et les fonctionsfonctionnelles, qui permettent de comprendre le fonctionnement de notre application.
 
-Dans les diagrammes de séquences "affichage menu" signifie qu'on affiche au client le menu de ses possibilités.
+Dans les diagrammes de sÃ©quences "affichage menu" signifie qu'on affiche au client le menu de ses possibilitÃ©s.
 
-	Pour les besoins de la visibilité des tests certains problèmes/exceptions auront
- un affichage intelligible afin de permettre une meilleure lisibilité des tests.
-	Pour la même raison de visibilité on va afficher les listenners qui "repèrent" quelque chose.
+Pour les besoins de la visibilitÃ© des tests certains problÃ¨mes/exceptions auront un affichage intelligible afin de permettre une meilleure lisibilitÃ© des tests.
+Pour la mÃªme raison de visibilitÃ© on va afficher les listenners qui "repÃ¨rent" quelque chose.
